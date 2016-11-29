@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		067E967B1DE54EB000595E22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E967A1DE54EB000595E22 /* AppDelegate.swift */; };
-		067E967D1DE54EB000595E22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E967C1DE54EB000595E22 /* ViewController.swift */; };
 		067E96801DE54EB000595E22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 067E967E1DE54EB000595E22 /* Main.storyboard */; };
 		067E96831DE54EB100595E22 /* EmtDoc.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 067E96811DE54EB000595E22 /* EmtDoc.xcdatamodeld */; };
 		067E96851DE54EB100595E22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067E96841DE54EB100595E22 /* Assets.xcassets */; };
 		067E96881DE54EB100595E22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 067E96861DE54EB100595E22 /* LaunchScreen.storyboard */; };
 		067E96931DE54EB100595E22 /* EmtDocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E96921DE54EB100595E22 /* EmtDocTests.swift */; };
 		067E969E1DE54EB100595E22 /* EmtDocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E969D1DE54EB100595E22 /* EmtDocUITests.swift */; };
+		0C7AE79C1DEE2917001D0FEA /* MainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AE79B1DEE2917001D0FEA /* MainTableVC.swift */; };
+		0C7AE79F1DEE2943001D0FEA /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AE79E1DEE2943001D0FEA /* MainTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 /* Begin PBXFileReference section */
 		067E96771DE54EB000595E22 /* EmtDoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmtDoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		067E967A1DE54EB000595E22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		067E967C1DE54EB000595E22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		067E967F1DE54EB000595E22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		067E96821DE54EB000595E22 /* EmtDoc.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmtDoc.xcdatamodel; sourceTree = "<group>"; };
 		067E96841DE54EB100595E22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		067E96991DE54EB100595E22 /* EmtDocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmtDocUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		067E969D1DE54EB100595E22 /* EmtDocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmtDocUITests.swift; sourceTree = "<group>"; };
 		067E969F1DE54EB100595E22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C7AE79B1DEE2917001D0FEA /* MainTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableVC.swift; path = ../MainTableVC.swift; sourceTree = "<group>"; };
+		0C7AE79E1DEE2943001D0FEA /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +101,10 @@
 		067E96791DE54EB000595E22 /* EmtDoc */ = {
 			isa = PBXGroup;
 			children = (
+				0C7AE79A1DEDFAA4001D0FEA /* Storyboards */,
+				0C7AE79D1DEE291B001D0FEA /* View Controllers */,
 				067E967A1DE54EB000595E22 /* AppDelegate.swift */,
-				067E967C1DE54EB000595E22 /* ViewController.swift */,
-				067E967E1DE54EB000595E22 /* Main.storyboard */,
 				067E96841DE54EB100595E22 /* Assets.xcassets */,
-				067E96861DE54EB100595E22 /* LaunchScreen.storyboard */,
 				067E96891DE54EB100595E22 /* Info.plist */,
 				067E96811DE54EB000595E22 /* EmtDoc.xcdatamodeld */,
 			);
@@ -126,6 +127,25 @@
 				067E969F1DE54EB100595E22 /* Info.plist */,
 			);
 			path = EmtDocUITests;
+			sourceTree = "<group>";
+		};
+		0C7AE79A1DEDFAA4001D0FEA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				067E967E1DE54EB000595E22 /* Main.storyboard */,
+				067E96861DE54EB100595E22 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0C7AE79D1DEE291B001D0FEA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0C7AE79B1DEE2917001D0FEA /* MainTableVC.swift */,
+				0C7AE79E1DEE2943001D0FEA /* MainTableViewCell.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +283,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				067E96831DE54EB100595E22 /* EmtDoc.xcdatamodeld in Sources */,
-				067E967D1DE54EB000595E22 /* ViewController.swift in Sources */,
+				0C7AE79C1DEE2917001D0FEA /* MainTableVC.swift in Sources */,
+				0C7AE79F1DEE2943001D0FEA /* MainTableViewCell.swift in Sources */,
 				067E967B1DE54EB000595E22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +327,7 @@
 				067E967F1DE54EB000595E22 /* Base */,
 			);
 			name = Main.storyboard;
+			path = EmtDoc;
 			sourceTree = "<group>";
 		};
 		067E96861DE54EB100595E22 /* LaunchScreen.storyboard */ = {
@@ -314,6 +336,7 @@
 				067E96871DE54EB100595E22 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = EmtDoc;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -509,6 +532,7 @@
 				067E96A41DE54EB100595E22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		067E96A51DE54EB100595E22 /* Build configuration list for PBXNativeTarget "EmtDocTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +541,7 @@
 				067E96A71DE54EB100595E22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		067E96A81DE54EB100595E22 /* Build configuration list for PBXNativeTarget "EmtDocUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +550,7 @@
 				067E96AA1DE54EB100595E22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
