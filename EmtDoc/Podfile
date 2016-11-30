@@ -1,0 +1,26 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'EmtDoc' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  source 'https://github.com/CocoaPods/Specs.git'
+  use_frameworks!
+
+  # Pods for EmtDoc
+  pod 'Alamofire', '~> 4.0'
+
+  target 'EmtDocTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'Alamofire', '~> 4.0'
+
+  end
+
+  target 'EmtDocUITests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'Alamofire', '~> 4.0'
+
+  end
+
+end

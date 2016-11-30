@@ -16,6 +16,8 @@
 		067E969E1DE54EB100595E22 /* EmtDocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E969D1DE54EB100595E22 /* EmtDocUITests.swift */; };
 		0C7AE79C1DEE2917001D0FEA /* MainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AE79B1DEE2917001D0FEA /* MainTableVC.swift */; };
 		0C7AE79F1DEE2943001D0FEA /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AE79E1DEE2943001D0FEA /* MainTableViewCell.swift */; };
+		44C138F4D6E4EF797A4E8557 /* Pods_EmtDocUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5284E64E501FA02CBDCE62 /* Pods_EmtDocUITests.framework */; };
+		60556228C0C766CDF49E0999 /* Pods_EmtDoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98252B61D6D72A5C04759293 /* Pods_EmtDoc.framework */; };
 		9DED19261DEE7B770092D747 /* Complaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED19211DEE7B770092D747 /* Complaint.swift */; };
 		9DED19271DEE7B770092D747 /* Complaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED19211DEE7B770092D747 /* Complaint.swift */; };
 		9DED19281DEE7B770092D747 /* Complaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED19211DEE7B770092D747 /* Complaint.swift */; };
@@ -31,6 +33,7 @@
 		9DED19321DEE7B770092D747 /* Vitals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED19251DEE7B770092D747 /* Vitals.swift */; };
 		9DED19331DEE7B770092D747 /* Vitals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED19251DEE7B770092D747 /* Vitals.swift */; };
 		9DED19341DEE7B770092D747 /* Vitals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED19251DEE7B770092D747 /* Vitals.swift */; };
+		F2CA798B55710F1C74D27597 /* Pods_EmtDocTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D277CD17115CD4BE34A6E3DE /* Pods_EmtDocTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,11 +69,20 @@
 		067E969F1DE54EB100595E22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C7AE79B1DEE2917001D0FEA /* MainTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableVC.swift; path = ../MainTableVC.swift; sourceTree = "<group>"; };
 		0C7AE79E1DEE2943001D0FEA /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		25E2568B028F1F8C9BB19557 /* Pods-EmtDoc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDoc.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDoc/Pods-EmtDoc.release.xcconfig"; sourceTree = "<group>"; };
+		29AA569719AA1895ECA8AFA5 /* Pods-EmtDocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDocTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDocTests/Pods-EmtDocTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5E3029CA9A0EED705A4690BB /* Pods-EmtDocTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDocTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDocTests/Pods-EmtDocTests.release.xcconfig"; sourceTree = "<group>"; };
+		86D8D0E9D41F032E8C6B61DA /* Pods-EmtDocUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDocUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDocUITests/Pods-EmtDocUITests.release.xcconfig"; sourceTree = "<group>"; };
+		98252B61D6D72A5C04759293 /* Pods_EmtDoc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmtDoc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DED19211DEE7B770092D747 /* Complaint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Complaint.swift; sourceTree = "<group>"; };
 		9DED19221DEE7B770092D747 /* Exam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exam.swift; sourceTree = "<group>"; };
 		9DED19231DEE7B770092D747 /* PersonID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonID.swift; sourceTree = "<group>"; };
 		9DED19241DEE7B770092D747 /* Procedure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Procedure.swift; sourceTree = "<group>"; };
 		9DED19251DEE7B770092D747 /* Vitals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vitals.swift; sourceTree = "<group>"; };
+		D277CD17115CD4BE34A6E3DE /* Pods_EmtDocTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmtDocTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBB2EE83E06E34D1CA48699F /* Pods-EmtDoc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDoc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDoc/Pods-EmtDoc.debug.xcconfig"; sourceTree = "<group>"; };
+		F2DFC9A7E32E1F7AC70EB2ED /* Pods-EmtDocUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDocUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDocUITests/Pods-EmtDocUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC5284E64E501FA02CBDCE62 /* Pods_EmtDocUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmtDocUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60556228C0C766CDF49E0999 /* Pods_EmtDoc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2CA798B55710F1C74D27597 /* Pods_EmtDocTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44C138F4D6E4EF797A4E8557 /* Pods_EmtDocUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +120,8 @@
 				067E96911DE54EB100595E22 /* EmtDocTests */,
 				067E969C1DE54EB100595E22 /* EmtDocUITests */,
 				067E96781DE54EB000595E22 /* Products */,
+				AB0FE99D2DF2284E1FDA1C57 /* Pods */,
+				CAE6B2D703B882ABF66C5677 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,6 +198,29 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		AB0FE99D2DF2284E1FDA1C57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DBB2EE83E06E34D1CA48699F /* Pods-EmtDoc.debug.xcconfig */,
+				25E2568B028F1F8C9BB19557 /* Pods-EmtDoc.release.xcconfig */,
+				29AA569719AA1895ECA8AFA5 /* Pods-EmtDocTests.debug.xcconfig */,
+				5E3029CA9A0EED705A4690BB /* Pods-EmtDocTests.release.xcconfig */,
+				F2DFC9A7E32E1F7AC70EB2ED /* Pods-EmtDocUITests.debug.xcconfig */,
+				86D8D0E9D41F032E8C6B61DA /* Pods-EmtDocUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CAE6B2D703B882ABF66C5677 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98252B61D6D72A5C04759293 /* Pods_EmtDoc.framework */,
+				D277CD17115CD4BE34A6E3DE /* Pods_EmtDocTests.framework */,
+				FC5284E64E501FA02CBDCE62 /* Pods_EmtDocUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 067E96A21DE54EB100595E22 /* Build configuration list for PBXNativeTarget "EmtDoc" */;
 			buildPhases = (
+				B850B6B3C408CDE59B288286 /* [CP] Check Pods Manifest.lock */,
 				067E96731DE54EB000595E22 /* Sources */,
 				067E96741DE54EB000595E22 /* Frameworks */,
 				067E96751DE54EB000595E22 /* Resources */,
+				C702583F3396247B4D6984DB /* [CP] Embed Pods Frameworks */,
+				6165E2C69AF7A7C8D9DA2535 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,9 +248,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 067E96A51DE54EB100595E22 /* Build configuration list for PBXNativeTarget "EmtDocTests" */;
 			buildPhases = (
+				C659EFB194DEA396BF6E343F /* [CP] Check Pods Manifest.lock */,
 				067E968A1DE54EB100595E22 /* Sources */,
 				067E968B1DE54EB100595E22 /* Frameworks */,
 				067E968C1DE54EB100595E22 /* Resources */,
+				6235E431695B922ACE6BADE4 /* [CP] Embed Pods Frameworks */,
+				81BA9751C67B421A423A63F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -223,9 +269,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 067E96A81DE54EB100595E22 /* Build configuration list for PBXNativeTarget "EmtDocUITests" */;
 			buildPhases = (
+				6886761BB2A99214DF2D4491 /* [CP] Check Pods Manifest.lock */,
 				067E96951DE54EB100595E22 /* Sources */,
 				067E96961DE54EB100595E22 /* Frameworks */,
 				067E96971DE54EB100595E22 /* Resources */,
+				819210133E91353202DC3585 /* [CP] Embed Pods Frameworks */,
+				59F203AAD39165B703A583E3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -309,6 +358,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		59F203AAD39165B703A583E3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmtDocUITests/Pods-EmtDocUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6165E2C69AF7A7C8D9DA2535 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmtDoc/Pods-EmtDoc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6235E431695B922ACE6BADE4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmtDocTests/Pods-EmtDocTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6886761BB2A99214DF2D4491 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		819210133E91353202DC3585 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmtDocUITests/Pods-EmtDocUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81BA9751C67B421A423A63F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmtDocTests/Pods-EmtDocTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B850B6B3C408CDE59B288286 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C659EFB194DEA396BF6E343F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C702583F3396247B4D6984DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmtDoc/Pods-EmtDoc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		067E96731DE54EB000595E22 /* Sources */ = {
@@ -485,6 +672,7 @@
 		};
 		067E96A31DE54EB100595E22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBB2EE83E06E34D1CA48699F /* Pods-EmtDoc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EmtDoc/Info.plist;
@@ -497,6 +685,7 @@
 		};
 		067E96A41DE54EB100595E22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25E2568B028F1F8C9BB19557 /* Pods-EmtDoc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EmtDoc/Info.plist;
@@ -509,6 +698,7 @@
 		};
 		067E96A61DE54EB100595E22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29AA569719AA1895ECA8AFA5 /* Pods-EmtDocTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -523,6 +713,7 @@
 		};
 		067E96A71DE54EB100595E22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E3029CA9A0EED705A4690BB /* Pods-EmtDocTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -537,6 +728,7 @@
 		};
 		067E96A91DE54EB100595E22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2DFC9A7E32E1F7AC70EB2ED /* Pods-EmtDocUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = EmtDocUITests/Info.plist;
@@ -550,6 +742,7 @@
 		};
 		067E96AA1DE54EB100595E22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86D8D0E9D41F032E8C6B61DA /* Pods-EmtDocUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = EmtDocUITests/Info.plist;
