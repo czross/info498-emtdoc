@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class Procedure {
+    let medChoices: [String] = [
+        "Epinephrine",
+        "Bircarb",
+        "Insulin",
+        "Amiodarone"
+    ]
+    
+    
+}
