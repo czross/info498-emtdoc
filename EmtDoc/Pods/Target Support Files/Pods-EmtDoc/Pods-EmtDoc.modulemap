@@ -1,0 +1,6 @@
+framework module Pods_EmtDoc {
+  umbrella header "Pods-EmtDoc-umbrella.h"
+
+  export *
+  module * { export * }
+}
