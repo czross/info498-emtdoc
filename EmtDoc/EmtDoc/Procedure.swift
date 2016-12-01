@@ -16,5 +16,54 @@ class Procedure {
         "Amiodarone"
     ]
     
+    let procedureChoices: [String] = [
+        "IV",
+        "Backboard",
+        "Neck Collar",
+        "Bag-mask Ventilation",
+        "Intubation",
+        "CPR",
+        "Defibrillation",
+        "Chest Tube",
+        "Central Line",
+        "Compression Bandage",
+        "Spint"
+    ]
     
+    let splintLocation : [String] = [
+        "Left Arm",
+        "Right Arm",
+        "Left Leg",
+        "Right leg",
+    ]
+    
+    var bandageLocation : [String]
+    var proceduresDone: [String]?
+    var procedureLocation: [String]?
+    
+    init() {
+        self.bandageLocation = self.splintLocation + [
+            "Head",
+            "Neck",
+            "Upper Front Torso",
+            "Upper Back Torso",
+            "Lower Front Torse",
+            "Lower Back Torso"
+            ]
+        self.proceduresDone = []
+        self.procedureLocation = []
+    }
+    
+    func done(procedure: String, location : String = "not specified") {
+        self.proceduresDone?.append(procedure)
+        self.procedureLocation?.append(location)
+    }
+    
+    func get() -> ([String], [String]) {
+        return (self.proceduresDone!, self.procedureLocation!)
+    }
 }
+
+
+
+
