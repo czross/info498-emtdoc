@@ -59,9 +59,26 @@ class Procedure {
         self.procedureLocation?.append(location)
     }
     
-    func get() -> ([String], [String]) {
+    func getInput() -> ([String], [String]) {
         return (self.proceduresDone!, self.procedureLocation!)
     }
+    
+    func getMeds() -> [String]{
+        return self.medChoices
+    }
+    
+    func getProcedures() -> [String] {
+        return self.procedureChoices
+    }
+    
+    func getProcLocation() -> [String] {
+        return self.procedureLocation!
+    }
+    
+    func getBandageLocation() -> [String] {
+        return self.bandageLocation
+    }
+
 }
 
 
