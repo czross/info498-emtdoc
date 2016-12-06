@@ -1,1 +1,7 @@
-testing.json
+{
+	"test": "first",
+	"data": {
+		"data_1": 1,
+		"data_2": 2
+	}
+}
