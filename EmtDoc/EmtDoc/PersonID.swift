@@ -79,6 +79,86 @@ public class PersonID {
         
         self.dob = date!
     }
+    
+    func set(age : Int) {
+        self.age = age
+    }
+    
+    func set(weight : Double) {
+        self.weight = weight
+    }
+    
+    func set(race : String) {
+        self.race = race.trim()
+    }
+    
+    func set(advanced : String) {
+        self.advanced = advanced.trim()
+    }
+    
+    func set(address : String ) {
+        self.address = address.trim()
+    }
+    
+    func set(city: String) {
+        self.city = city.trim()
+    }
+    
+    func set(state : String) {
+        self.state = state.trim()
+    }
+    
+    func set(zip : String) {
+        self.zip = zip.trim()
+    }
+    
+    func set(telephone : String) {
+        self.telephone = telephone.trim()
+    }
+    
+    func set(physician : String) {
+        self.physician = physician.trim()
+    }
+    
+    func set(medications : Set<String>) {
+        self.medications = medications
+    }
+    
+    func set(allergies : Set<String>) {
+        self.allergies = allergies
+    }
+    
+    func add(medication : String) {
+        self.medications.insert(medication.uppercased().trim())
+    }
+    
+    func add(allergy : String) {
+        self.allergies.insert(allergy.uppercased().trim())
+    }
+    
+    func remove(medication : String) {
+        let newMedication = medication.uppercased().trim()
+        if self.medications.contains(newMedication) {
+            self.medications.remove(newMedication)
+        }
+    }
+    
+    func remove(allergy : String) {
+        let newAllergy = allergy.uppercased().trim()
+        if self.allergies.contains(newAllergy) {
+            self.allergies.remove(newAllergy)
+        }
+    }
+    
+    func isAllergic(to : String) -> Bool {
+        return self.allergies.contains(to.uppercased().trim())
+    }
+    
+    func isUsing(medication : String) -> Bool {
+        return self.medications.contains(medication.uppercased().trim())
+    }
 }
+
+
 
 

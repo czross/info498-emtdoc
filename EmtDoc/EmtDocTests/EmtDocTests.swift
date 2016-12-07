@@ -57,6 +57,51 @@ class EmtDocTests: XCTestCase {
         
     }
     
+    func testOtherStrings() {
+        person.set(race: "Caucasion")
+        person.set(advanced: "Very Advanced")
+        person.set(address: "12 Main Street")
+        person.set(city: "Seattle ")
+        person.set(state: "Washington")
+        person.set(zip: "98115")
+        person.set(telephone: "2065555555")
+        person.set(telephone: "2065555551")
+        person.set(physician: "Lit")
+
+        
+        XCTAssert(person.race == "Caucasion")
+        XCTAssert(person.advanced == "Very Advanced")
+        XCTAssert(person.address == "12 Main Street")
+        XCTAssert(person.city == "Seattle")
+        XCTAssert(person.state == "Washington")
+        XCTAssert(person.zip == "98115")
+        XCTAssert(person.telephone == "2065555551")
+        XCTAssert(person.physician == "Lit")
+    }
+    
+    func testAddingAndRemovingAllergies() {
+        person.add(allergy: "Ibuprofen")
+        person.add(allergy: "Tylenol")
+        
+        person.remove(allergy: "tylenol")
+        
+        XCTAssert(!person.isAllergic(to : "tylenol"))
+        XCTAssert(person.isAllergic(to : "IBUPROFEN"))
+    }
+    
+    func testAddingAndRemovingMedication() {
+        person.add(medication: "insulin")
+        person.add(medication: "oxycotin")
+        
+        XCTAssert(person.isUsing(medication: "INSULIN "))
+        XCTAssert(person.isUsing(medication: " oXYCoTIN"))
+        XCTAssert(person.isUsing(medication: "insulin"))
+        
+        person.remove(medication: "insulin")
+        XCTAssert(!person.isUsing(medication: "insulin"))
+        XCTAssert(person.isUsing(medication: "oxycotin"))
+    }
+    
 //    func testPerformanceExample() {
 //        // This is an example of a performance test case.
 //        self.measure {
