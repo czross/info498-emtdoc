@@ -7,31 +7,7 @@
 //
 
 import Foundation
-/*
- enum Rhythm {
- case Normal
- case Irregular
- }*/
 
-
-/*public class GlascowDscp {
-    let keyWords = ["Eye (E)", "Verbal (V)", "Motor (M)"]
-    let eyeDscp = [4 : "spontaneous- open with blinking",
-                   3 : "opens to verbal command, speech, or shout",
-                   2 : "opens to pain, not applied to face",
-                   1 : "none"]
-    let verbalDscp = [5 : "Oriented",
-                      4 : "Confused conversation, but able to answer questions",
-                      3 : "Inappropriate responses, words discernible",
-                      2 : "Incomplete ensible speech",
-                      1 : "None"]
-    let motor = [6 : "Obeys commands for movement",
-                 5 : "Purposeful movements to painful stimulus",
-                 4 : "Withdraws from pain",
-                 3 : "Abnormal (spastic) flexion, decorticate posture",
-                 2 : "Extensor (rigid) response, decerebrate posture",
-                 1 : "None"]
-}*/
 
 public class VitalSigns {
     public var weight : Double = -1.0
@@ -71,6 +47,22 @@ public class VitalSigns {
     public init() {
         glascowTtl = glascow["Eye (E)"]! + glascow["Verbal (V)"]!
         glascowTtl += glascow["Motor (M)"]!
+    }
+    
+    func getRhythmChoices() -> [String] {
+        return self.rhythmChoices
+    }
+    func getGlascowKeyWords() -> [String] {
+        return self.glascowKeyWords
+    }
+    func getEyeChoices() -> [Int : String] {
+        return self.eyeChoices
+    }
+    func getVerbalChoices() -> [Int: String]{
+        return self.verbalChoices
+    }
+    func getMotorChoices() -> [Int: String] {
+        return self.motorChoices
     }
     
 }
