@@ -10,7 +10,7 @@ import XCTest
 @testable import EmtDoc
 
 class EmtDocTests: XCTestCase {
-    let proc: Procedure?
+    var proc: Procedure? = nil
 
     
     var person = PersonID()

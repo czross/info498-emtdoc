@@ -38,7 +38,7 @@ public class VitalSigns {
     public var bloodPrs : [String: Int] = ["Systolic" : -1, "Diastolic" : -1]
     public var heartRate : Int = -1
     //?? right way to use enum
-    public var rhythm = Rhythm.Normal
+    //public var rhythm = Rhythm.Normal
     public var respRate : Int = -1
     public var o2Saturation : Double = -1.0
     public var endTidalCO2 : Double = -1.0
@@ -46,6 +46,6 @@ public class VitalSigns {
     public var pain : Int = -1
     
     public var glascow : [String: Int] = ["Eye (E)" : -1, "Verbal (V)" : -1, "Motor (M)" : -1]
-    public var glascowTtl: Int = self.glascow["Eye (E)"] + self.glascow["Verbal (V)"] + self.glascow[ "Motor (M)"]
+    //public var glascowTtl: Int = self.glascow["Eye (E)"] + self.glascow["Verbal (V)"] + self.glascow[ "Motor (M)"]
     
 }
