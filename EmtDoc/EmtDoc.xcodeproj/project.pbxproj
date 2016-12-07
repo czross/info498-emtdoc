@@ -18,6 +18,8 @@
 		0C7AE79F1DEE2943001D0FEA /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AE79E1DEE2943001D0FEA /* MainTableViewCell.swift */; };
 		44C138F4D6E4EF797A4E8557 /* Pods_EmtDocUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5284E64E501FA02CBDCE62 /* Pods_EmtDocUITests.framework */; };
 		60556228C0C766CDF49E0999 /* Pods_EmtDoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98252B61D6D72A5C04759293 /* Pods_EmtDoc.framework */; };
+		9D365E7A1DF7A12200089DA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E967A1DE54EB000595E22 /* AppDelegate.swift */; };
+		9D365E7B1DF7A13C00089DA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067E96841DE54EB100595E22 /* Assets.xcassets */; };
 		9DED19261DEE7B770092D747 /* Complaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED19211DEE7B770092D747 /* Complaint.swift */; };
 		9DED19271DEE7B770092D747 /* Complaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED19211DEE7B770092D747 /* Complaint.swift */; };
 		9DED19281DEE7B770092D747 /* Complaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED19211DEE7B770092D747 /* Complaint.swift */; };
@@ -298,10 +300,12 @@
 				TargetAttributes = {
 					067E96761DE54EB000595E22 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					067E968D1DE54EB100595E22 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 067E96761DE54EB000595E22;
 					};
@@ -347,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D365E7B1DF7A13C00089DA0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +527,7 @@
 				9DED192D1DEE7B770092D747 /* PersonID.swift in Sources */,
 				9DED19271DEE7B770092D747 /* Complaint.swift in Sources */,
 				9DED19301DEE7B770092D747 /* Procedure.swift in Sources */,
+				9D365E7A1DF7A12200089DA0 /* AppDelegate.swift in Sources */,
 				9DED19331DEE7B770092D747 /* Vitals.swift in Sources */,
 				9DED192A1DEE7B770092D747 /* Exam.swift in Sources */,
 			);
@@ -675,10 +681,12 @@
 			baseConfigurationReference = DBB2EE83E06E34D1CA48699F /* Pods-EmtDoc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EmtDoc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ischool.uw.eduFormatHealth.EmtDoc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -688,6 +696,7 @@
 			baseConfigurationReference = 25E2568B028F1F8C9BB19557 /* Pods-EmtDoc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EmtDoc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ischool.uw.eduFormatHealth.EmtDoc;
@@ -702,10 +711,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EmtDocTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ischool.uw.eduFormatHealth.EmtDocTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmtDoc.app/EmtDoc";
 			};
@@ -717,6 +728,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EmtDocTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ischool.uw.eduFormatHealth.EmtDocTests;
