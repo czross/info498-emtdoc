@@ -14,6 +14,9 @@
 		067E96881DE54EB100595E22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 067E96861DE54EB100595E22 /* LaunchScreen.storyboard */; };
 		067E96931DE54EB100595E22 /* EmtDocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E96921DE54EB100595E22 /* EmtDocTests.swift */; };
 		067E969E1DE54EB100595E22 /* EmtDocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E969D1DE54EB100595E22 /* EmtDocUITests.swift */; };
+		06FE00771DFA50EC003DE4AA /* HospitalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FE00761DFA50EC003DE4AA /* HospitalTableViewController.swift */; };
+		06FE00781DFA50EC003DE4AA /* HospitalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FE00761DFA50EC003DE4AA /* HospitalTableViewController.swift */; };
+		06FE00791DFA50EC003DE4AA /* HospitalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FE00761DFA50EC003DE4AA /* HospitalTableViewController.swift */; };
 		0C7AE79C1DEE2917001D0FEA /* MainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AE79B1DEE2917001D0FEA /* MainTableVC.swift */; };
 		0C7AE79F1DEE2943001D0FEA /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AE79E1DEE2943001D0FEA /* MainTableViewCell.swift */; };
 		44C138F4D6E4EF797A4E8557 /* Pods_EmtDocUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5284E64E501FA02CBDCE62 /* Pods_EmtDocUITests.framework */; };
@@ -73,6 +76,7 @@
 		067E96991DE54EB100595E22 /* EmtDocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmtDocUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		067E969D1DE54EB100595E22 /* EmtDocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmtDocUITests.swift; sourceTree = "<group>"; };
 		067E969F1DE54EB100595E22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06FE00761DFA50EC003DE4AA /* HospitalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalTableViewController.swift; sourceTree = "<group>"; };
 		0C7AE79B1DEE2917001D0FEA /* MainTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableVC.swift; path = ../MainTableVC.swift; sourceTree = "<group>"; };
 		0C7AE79E1DEE2943001D0FEA /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		25E2568B028F1F8C9BB19557 /* Pods-EmtDoc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDoc.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDoc/Pods-EmtDoc.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 				0C7AE79E1DEE2943001D0FEA /* MainTableViewCell.swift */,
 				9D365E861DF7A6E800089DA0 /* HomeTableViewController.swift */,
 				9D365E8A1DF7A8B600089DA0 /* OptionsTableViewCell.swift */,
+				06FE00761DFA50EC003DE4AA /* HospitalTableViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -520,6 +525,7 @@
 				067E96831DE54EB100595E22 /* EmtDoc.xcdatamodeld in Sources */,
 				0C7AE79C1DEE2917001D0FEA /* MainTableVC.swift in Sources */,
 				9DED192C1DEE7B770092D747 /* PersonID.swift in Sources */,
+				06FE00771DFA50EC003DE4AA /* HospitalTableViewController.swift in Sources */,
 				9D268CC11DF7AD2B005D585C /* EmtDoc.swift in Sources */,
 				9DED192F1DEE7B770092D747 /* Procedure.swift in Sources */,
 				9D365E8B1DF7A8B600089DA0 /* OptionsTableViewCell.swift in Sources */,
@@ -541,6 +547,7 @@
 				9DED19271DEE7B770092D747 /* Complaint.swift in Sources */,
 				9DED19301DEE7B770092D747 /* Procedure.swift in Sources */,
 				9D365E7A1DF7A12200089DA0 /* AppDelegate.swift in Sources */,
+				06FE00781DFA50EC003DE4AA /* HospitalTableViewController.swift in Sources */,
 				9D268CC71DF7B588005D585C /* EmtDoc.swift in Sources */,
 				9DED19331DEE7B770092D747 /* Vitals.swift in Sources */,
 				9DED192A1DEE7B770092D747 /* Exam.swift in Sources */,
@@ -556,6 +563,7 @@
 				9DED19281DEE7B770092D747 /* Complaint.swift in Sources */,
 				9DED19311DEE7B770092D747 /* Procedure.swift in Sources */,
 				9DED19341DEE7B770092D747 /* Vitals.swift in Sources */,
+				06FE00791DFA50EC003DE4AA /* HospitalTableViewController.swift in Sources */,
 				9DED192B1DEE7B770092D747 /* Exam.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
