@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeTableViewController: UITableViewController {
-    let EmtDocModel = EmtDoc()
+    var EmtDocModel = EmtDoc()
     
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -17,6 +17,11 @@ class HomeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Fetch the EmtDocModel from app delegate singleton
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        self.EmtDocModel = appDelegate.EmtDocModel
         options = self.EmtDocModel.mainChoices
 
         // Uncomment the following line to preserve selection between presentations
@@ -46,12 +51,9 @@ class HomeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OptionCell", for: indexPath) as! OptionsTableViewCell
-        
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
         cell.titleLabel.text = options[indexPath.row]
-
         return cell
     }
     
