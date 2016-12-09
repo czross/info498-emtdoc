@@ -13,7 +13,7 @@ class EmtDoc {
     let exam: Exam = Exam()
     let procedures: Procedure = Procedure()
     let vitals: VitalSigns = VitalSigns()
-    let glascow: GlascowDscp = GlascowDscp()
+//    let glascow: GlascowDscp = GlascowDscp()
     
     let mainChoices: [String] = [
         "Chief Complaint",
@@ -70,7 +70,6 @@ class EmtDoc {
         "Procedures",
         "Splints"
     ]
-    
     
     
     init() {
