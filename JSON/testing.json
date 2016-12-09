@@ -1,8 +1,22 @@
-{
-	"gender": "male",
-	"age": 42,
-	"complaint": {
-		"data_1": "head",
-		"data_2": "bleeding"
-	}
-}
+[
+	{
+		"name": "Harborview Medical Center",
+		"email": "address"
+	},
+	{
+		"name": "Children University Medical",
+		"email": "address"
+	},
+	{
+		"name": "Swedish Cherry Hill Campus",
+		"email": "address"
+	},
+	{
+		"name": "Virginia Mason Hospital",
+		"email": "address"
+	},
+	{
+		"name": "Seattle Cancer Care Alliance",
+		"email": "address"
+	},			
+]
