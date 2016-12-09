@@ -29,9 +29,8 @@ class HomeTableViewController: UITableViewController {
         // testing http function downloadData
         downloadData {
             self.tableView.reloadData()
-            NSLog("Downloaded")
+            NSLog("Downloaded: \(self.hospitals![0]["name"]!)!")
         }
-        NSLog("Hospitals: \(hospitals)")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -47,20 +46,15 @@ class HomeTableViewController: UITableViewController {
     
     // MARK: - Http helper functions
     
+    // grabs the hotel json object from github and stores it into a local variable
     func downloadData(completed: @escaping DownloadComplete) {
-        
         Alamofire.request(BASE_URL).responseJSON { response in
             NSLog("inside alamofire")
             let result = response.result
             NSLog("result: \(result)")
             if let hospitalList = result.value as? [Dictionary<String, String>] {
-                NSLog("Hospital List: \(hospitalList)")
                 self.hospitals = hospitalList
-//                for hospital in hospitalList {
-//                    NSLog("Hospital name: \(hospital.name)")
-//                }
             }
-            
             completed()
         }
     }
