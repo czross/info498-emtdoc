@@ -8,6 +8,25 @@
 
 import Foundation
 
+public class GlascowDscp {
+    public let keyWords = ["Eye (E)", "Verbal (V)", "Motor (M)"]
+    public let eyeDscp = [4 : "spontaneous- open with blinking",
+                   3 : "opens to verbal command, speech, or shout",
+                   2 : "opens to pain, not applied to face",
+                   1 : "none"]
+    public let verbalDscp = [5 : "Oriented",
+                      4 : "Confused conversation, but able to answer questions",
+                      3 : "Inappropriate responses, words discernible",
+                      2 : "Incomplete ensible speech",
+                      1 : "None"]
+    public let motorDscp = [6 : "Obeys commands for movement",
+                 5 : "Purposeful movements to painful stimulus",
+                 4 : "Withdraws from pain",
+                 3 : "Abnormal (spastic) flexion, decorticate posture",
+                 2 : "Extensor (rigid) response, decerebrate posture",
+                 1 : "None"]
+}
+
 
 public class VitalSigns {
     public var weight : Double = -1.0
@@ -20,35 +39,43 @@ public class VitalSigns {
     public var temp : Double = -1.0
     public var pain : Int = -1
     
-    public var glascow : [String: Int] = ["Eye (E)" : -1, "Verbal (V)" : -1, "Motor (M)" : -1]
+    var glascow : [String: Int] = ["Eye" : -1, "Verbal" : -1, "Motor" : -1]
     public var glascowTtl: Int = 0
     
+    let painDscp = "1-10"
     //Choices for rhythm
     let rhythmChoices = ["Normal", "Irregular"]
     
     //Description for Glascow shown in TableView
-    let glascowKeyWords = ["Eye (E)", "Verbal (V)", "Motor (M)"]
-    let eyeChoices = [4 : "spontaneous- open with blinking",
-                      3 : "opens to verbal command, speech, or shout",
-                      2 : "opens to pain, not applied to face",
-                      1 : "none"]
-    let verbalChoices = [5 : "Oriented",
-                        4 : "Confused conversation, but able to answer questions",
-                        3 : "Inappropriate responses, words discernible",
-                        2 : "Incomplete ensible speech",
-                        1 : "None"]
-    let motorChoices = [6 : "Obeys commands for movement",
-                        5 : "Purposeful movements to painful stimulus",
-                        4 : "Withdraws from pain",
-                        3 : "Abnormal (spastic) flexion, decorticate posture",
-                        2 : "Extensor (rigid) response, decerebrate posture",
-                        1 : "None"]
+    public let glascowDscp = GlascowDscp()
+    public let glascowKeyWords : [String]
+    public let eyeChoices : [Int: String]
+    public let verbalChoices : [Int: String]
+    public let motorChoices : [Int: String]
     
     public init() {
-        glascowTtl = glascow["Eye (E)"]! + glascow["Verbal (V)"]!
-        glascowTtl += glascow["Motor (M)"]!
+        glascowTtl = glascow["Eye"]! + glascow["Verbal"]!
+        glascowTtl += glascow["Motor"]!
+        glascowKeyWords = glascowDscp.keyWords
+        eyeChoices = glascowDscp.eyeDscp
+        verbalChoices = glascowDscp.verbalDscp
+        motorChoices = glascowDscp.motorDscp
     }
     
+    func setGlascow(eye: Int, verbal: Int, motor: Int) {
+        glascow["Eye"] = eye
+        glascow["Verbal"] = verbal
+        glascow["Motor"] = motor
+        glascowTtl = glascow["Eye"]! + glascow["Verbal"]!
+        glascowTtl += glascow["Motor"]!
+    }
+    func getGlascow() -> [String: Int] {
+        return self.glascow
+    }
+    
+    func getPainDscp() -> String {
+        return self.painDscp
+    }
     func getRhythmChoices() -> [String] {
         return self.rhythmChoices
     }
