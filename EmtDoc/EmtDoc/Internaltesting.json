@@ -1,0 +1,27 @@
+{
+    "Person": [
+               {
+               "fNmae": "Bob",
+               "lName": "Smith",
+               "middleInitial": "K",
+               "gender": "Male",
+               "dob": "Date",
+               "age": 42,
+               "weight": 123.0,
+               "race": "Asian",
+               "advanced": "stuff",
+               "address": {
+               "address": "123 street",
+               "city": "Seattle",
+               "state": "WA",
+               "zip": 98105,
+               },
+               "telephone": "2065556789",
+               "physician": "Dr. SomeoneCool",
+               "mediations": [
+                              "med1", "med2"
+                              ],
+               "allergies": ["peanuts", "mango"]
+               }
+               ]
+}
