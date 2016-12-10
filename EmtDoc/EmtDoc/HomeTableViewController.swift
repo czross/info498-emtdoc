@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class HomeTableViewController: UITableViewController {
     var EmtDocModel = EmtDoc()
@@ -14,7 +15,8 @@ class HomeTableViewController: UITableViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     var options : [String] = []
-
+    var hospitals: [Dictionary<String,String>]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +25,12 @@ class HomeTableViewController: UITableViewController {
         
         self.EmtDocModel = appDelegate.EmtDocModel
         options = self.EmtDocModel.mainChoices
+        
+        // testing http function downloadData
+        downloadData {
+            self.tableView.reloadData()
+            NSLog("Downloaded: \(self.hospitals![0]["name"]!)!")
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -35,6 +43,22 @@ class HomeTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Http helper functions
+    
+    // grabs the hotel json object from github and stores it into a local variable
+    func downloadData(completed: @escaping DownloadComplete) {
+        Alamofire.request(BASE_URL).responseJSON { response in
+            NSLog("inside alamofire")
+            let result = response.result
+            NSLog("result: \(result)")
+            if let hospitalList = result.value as? [Dictionary<String, String>] {
+                self.hospitals = hospitalList
+            }
+            completed()
+        }
+    }
+    
 
     // MARK: - Table view data source
 

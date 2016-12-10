@@ -58,29 +58,29 @@ class VitalsTests: XCTestCase {
     }
     
     func testGetChoices(){
-        var s1 = vitals.getPainDscp()
+        let s1 = vitals.getPainDscp()
         XCTAssertEqual(s1, "1-10")
         
-        var s2 = vitals.getRhythmChoices()
+        let s2 = vitals.getRhythmChoices()
         XCTAssertEqual(s2, ["Normal", "Irregular"])
         
-        var s3 = vitals.getGlascowKeyWords()
+        let s3 = vitals.getGlascowKeyWords()
         XCTAssertEqual(s3, ["Eye (E)", "Verbal (V)", "Motor (M)"])
         
-        var s4 = vitals.getEyeChoices()
+        let s4 = vitals.getEyeChoices()
         XCTAssertEqual(s4, [4 : "spontaneous- open with blinking",
                             3 : "opens to verbal command, speech, or shout",
                             2 : "opens to pain, not applied to face",
                             1 : "none"])
         
-        var s5 = vitals.getVerbalChoices()
+        let s5 = vitals.getVerbalChoices()
         XCTAssertEqual(s5, [5 : "Oriented",
                             4 : "Confused conversation, but able to answer questions",
                             3 : "Inappropriate responses, words discernible",
                             2 : "Incomplete ensible speech",
                             1 : "None"])
         
-        var s6 = vitals.getMotorChoices()
+        let s6 = vitals.getMotorChoices()
         XCTAssertEqual(s6, [6 : "Obeys commands for movement",
                             5 : "Purposeful movements to painful stimulus",
                             4 : "Withdraws from pain",
