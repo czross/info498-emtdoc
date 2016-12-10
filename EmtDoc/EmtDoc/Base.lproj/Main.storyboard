@@ -54,6 +54,9 @@
                                 <rect key="frame" x="267" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Hospitals"/>
+                                <connections>
+                                    <segue destination="Txw-fo-CTd" kind="show" id="lhI-nB-ufA"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -61,6 +64,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rk2-S0-AaB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="141.59999999999999" y="130.88455772113943"/>
+        </scene>
+        <!--Hospital Table View Controller-->
+        <scene sceneID="Pfm-bS-4Go">
+            <objects>
+                <tableViewController id="Txw-fo-CTd" customClass="HospitalTableViewController" customModule="EmtDoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2BN-v7-cLg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="resuseIdentifier" selectionStyle="default" indentationWidth="10" reuseIdentifier="hospitalNames" id="WI5-E8-zHG" customClass="HospitalTableViewCell" customModule="EmtDoc" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WI5-E8-zHG" id="Nij-vf-Eag">
+                                    <frame key="frameInset" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mm1-Hs-01D">
+                                            <frame key="frameInset" minX="20" minY="11" width="334" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLable" destination="mm1-Hs-01D" id="eAX-1B-vdl"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Txw-fo-CTd" id="ayl-Wz-tuV"/>
+                            <outlet property="delegate" destination="Txw-fo-CTd" id="Pm0-GJ-jzb"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4lR-ff-s7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.60000000000002" y="-417.8410794602699"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fac-Oh-tED">
