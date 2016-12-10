@@ -9,6 +9,14 @@
 import UIKit
 
 class HospitalTableViewController: UITableViewController {
+    var options: [String] = [
+        "Harborview",
+        "UW Medical Center",
+        "Virginia Mason",
+        "Northwest Hospital",
+        "Swedish"
+    ]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +47,11 @@ class HospitalTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "hospitalNames", for: indexPath) as! HospitalTableViewCell
 
         // Configure the cell...
+        let hosp = options[indexPath.row]
+        cell.titleLable.text = hosp
 
         return cell
     }
