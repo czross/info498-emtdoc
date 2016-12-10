@@ -17,6 +17,7 @@
 		0C7AE79C1DEE2917001D0FEA /* MainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AE79B1DEE2917001D0FEA /* MainTableVC.swift */; };
 		0C7AE79F1DEE2943001D0FEA /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AE79E1DEE2943001D0FEA /* MainTableViewCell.swift */; };
 		44C138F4D6E4EF797A4E8557 /* Pods_EmtDocUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5284E64E501FA02CBDCE62 /* Pods_EmtDocUITests.framework */; };
+		5CB21EE81DFCBAB900B38847 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB21EE71DFCBAB900B38847 /* Constants.swift */; };
 		60556228C0C766CDF49E0999 /* Pods_EmtDoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98252B61D6D72A5C04759293 /* Pods_EmtDoc.framework */; };
 		9D268CC11DF7AD2B005D585C /* EmtDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D268CC01DF7AD2B005D585C /* EmtDoc.swift */; };
 		9D268CC71DF7B588005D585C /* EmtDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D268CC01DF7AD2B005D585C /* EmtDoc.swift */; };
@@ -77,6 +78,7 @@
 		0C7AE79E1DEE2943001D0FEA /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		25E2568B028F1F8C9BB19557 /* Pods-EmtDoc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDoc.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDoc/Pods-EmtDoc.release.xcconfig"; sourceTree = "<group>"; };
 		29AA569719AA1895ECA8AFA5 /* Pods-EmtDocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDocTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDocTests/Pods-EmtDocTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5CB21EE71DFCBAB900B38847 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5E3029CA9A0EED705A4690BB /* Pods-EmtDocTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDocTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDocTests/Pods-EmtDocTests.release.xcconfig"; sourceTree = "<group>"; };
 		86D8D0E9D41F032E8C6B61DA /* Pods-EmtDocUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDocUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDocUITests/Pods-EmtDocUITests.release.xcconfig"; sourceTree = "<group>"; };
 		98252B61D6D72A5C04759293 /* Pods_EmtDoc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmtDoc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				9D268CC01DF7AD2B005D585C /* EmtDoc.swift */,
+				5CB21EE71DFCBAB900B38847 /* Constants.swift */,
 				9DED19211DEE7B770092D747 /* Complaint.swift */,
 				9DED19221DEE7B770092D747 /* Exam.swift */,
 				9DED19231DEE7B770092D747 /* PersonID.swift */,
@@ -524,6 +527,7 @@
 				9DED192F1DEE7B770092D747 /* Procedure.swift in Sources */,
 				9D365E8B1DF7A8B600089DA0 /* OptionsTableViewCell.swift in Sources */,
 				9D365E871DF7A6E800089DA0 /* HomeTableViewController.swift in Sources */,
+				5CB21EE81DFCBAB900B38847 /* Constants.swift in Sources */,
 				9DED19321DEE7B770092D747 /* Vitals.swift in Sources */,
 				9DED19291DEE7B770092D747 /* Exam.swift in Sources */,
 				9DED19261DEE7B770092D747 /* Complaint.swift in Sources */,
