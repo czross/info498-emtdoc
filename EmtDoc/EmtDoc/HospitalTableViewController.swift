@@ -9,6 +9,7 @@
 import UIKit
 
 class HospitalTableViewController: UITableViewController {
+    
     var options: [String] = [
         "Harborview",
         "UW Medical Center",
@@ -42,12 +43,12 @@ class HospitalTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return options.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "hospitalNames", for: indexPath) as! HospitalTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HospitalCell", for: indexPath) as! HospitalTableViewCell
 
         // Configure the cell...
         let hosp = options[indexPath.row]
