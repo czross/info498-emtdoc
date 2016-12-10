@@ -1,36 +1,25 @@
 //
-//  HomeTableViewController.swift
+//  HospitalTableViewController.swift
 //  EmtDoc
 //
-//  Created by iGuest on 12/6/16.
+//  Created by Brian Ross on 12/8/16.
 //  Copyright © 2016 FormatHealth. All rights reserved.
 //
 
 import UIKit
-import Alamofire
 
-class HomeTableViewController: UITableViewController {
-    var EmtDocModel = EmtDoc()
+class HospitalTableViewController: UITableViewController {
+    var options: [String] = [
+        "Harborview",
+        "UW Medical Center",
+        "Virginia Mason",
+        "Northwest Hospital",
+        "Swedish"
+    ]
     
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    var options : [String] = []
-    var hospitals: [Dictionary<String,String>]?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Fetch the EmtDocModel from app delegate singleton
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
-        self.EmtDocModel = appDelegate.EmtDocModel
-        options = self.EmtDocModel.mainChoices
-        
-        // testing http function downloadData
-        downloadData {
-            self.tableView.reloadData()
-//            NSLog("Downloaded: \(self.hospitals![0]["name"]!)!")
-        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -43,22 +32,6 @@ class HomeTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // MARK: - Http helper functions
-    
-    // grabs the hotel json object from github and stores it into a local variable
-    func downloadData(completed: @escaping DownloadComplete) {
-        Alamofire.request(BASE_URL).responseJSON { response in
-//            NSLog("inside alamofire")
-            let result = response.result
-//            NSLog("result: \(result)")
-            if let hospitalList = result.value as? [Dictionary<String, String>] {
-                self.hospitals = hospitalList
-            }
-            completed()
-        }
-    }
-    
 
     // MARK: - Table view data source
 
@@ -69,15 +42,17 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return options.count
+        return 1
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OptionCell", for: indexPath) as! OptionsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "hospitalNames", for: indexPath) as! HospitalTableViewCell
 
         // Configure the cell...
-        cell.titleLabel.text = options[indexPath.row]
+        let hosp = options[indexPath.row]
+        cell.titleLabel.text = hosp
+
         return cell
     }
     

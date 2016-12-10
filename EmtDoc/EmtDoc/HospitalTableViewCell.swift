@@ -1,17 +1,17 @@
 //
-//  OptionsTableViewCell.swift
+//  HospitalTableViewCell.swift
 //  EmtDoc
 //
-//  Created by iGuest on 12/6/16.
+//  Created by Brian Ross on 12/8/16.
 //  Copyright © 2016 FormatHealth. All rights reserved.
 //
 
 import UIKit
 
-class OptionsTableViewCell: UITableViewCell {
+class HospitalTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
