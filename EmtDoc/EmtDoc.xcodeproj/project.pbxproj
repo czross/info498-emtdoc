@@ -14,11 +14,15 @@
 		067E96881DE54EB100595E22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 067E96861DE54EB100595E22 /* LaunchScreen.storyboard */; };
 		067E96931DE54EB100595E22 /* EmtDocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E96921DE54EB100595E22 /* EmtDocTests.swift */; };
 		067E969E1DE54EB100595E22 /* EmtDocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E969D1DE54EB100595E22 /* EmtDocUITests.swift */; };
+		06EBA26E1DFCBA82009B8DC0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EBA26D1DFCBA82009B8DC0 /* Constants.swift */; };
+		06EBA26F1DFCBA82009B8DC0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EBA26D1DFCBA82009B8DC0 /* Constants.swift */; };
+		06EBA2701DFCBA82009B8DC0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EBA26D1DFCBA82009B8DC0 /* Constants.swift */; };
+		06EBA2721DFCBB1E009B8DC0 /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EBA2711DFCBB1E009B8DC0 /* HospitalTableViewCell.swift */; };
+		06EBA2731DFCBB1E009B8DC0 /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EBA2711DFCBB1E009B8DC0 /* HospitalTableViewCell.swift */; };
+		06EBA2741DFCBB1E009B8DC0 /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EBA2711DFCBB1E009B8DC0 /* HospitalTableViewCell.swift */; };
 		06FE00771DFA50EC003DE4AA /* HospitalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FE00761DFA50EC003DE4AA /* HospitalTableViewController.swift */; };
 		06FE00781DFA50EC003DE4AA /* HospitalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FE00761DFA50EC003DE4AA /* HospitalTableViewController.swift */; };
 		06FE00791DFA50EC003DE4AA /* HospitalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FE00761DFA50EC003DE4AA /* HospitalTableViewController.swift */; };
-		0C7AE79C1DEE2917001D0FEA /* MainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AE79B1DEE2917001D0FEA /* MainTableVC.swift */; };
-		0C7AE79F1DEE2943001D0FEA /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AE79E1DEE2943001D0FEA /* MainTableViewCell.swift */; };
 		44C138F4D6E4EF797A4E8557 /* Pods_EmtDocUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5284E64E501FA02CBDCE62 /* Pods_EmtDocUITests.framework */; };
 		60556228C0C766CDF49E0999 /* Pods_EmtDoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98252B61D6D72A5C04759293 /* Pods_EmtDoc.framework */; };
 		9D268CC11DF7AD2B005D585C /* EmtDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D268CC01DF7AD2B005D585C /* EmtDoc.swift */; };
@@ -27,9 +31,6 @@
 		9D365E7B1DF7A13C00089DA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067E96841DE54EB100595E22 /* Assets.xcassets */; };
 		9D365E871DF7A6E800089DA0 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D365E861DF7A6E800089DA0 /* HomeTableViewController.swift */; };
 		9D365E8B1DF7A8B600089DA0 /* OptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D365E8A1DF7A8B600089DA0 /* OptionsTableViewCell.swift */; };
-		9DED19261DEE7B770092D747 /* Complaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED19211DEE7B770092D747 /* Complaint.swift */; };
-		9DED19271DEE7B770092D747 /* Complaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED19211DEE7B770092D747 /* Complaint.swift */; };
-		9DED19281DEE7B770092D747 /* Complaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED19211DEE7B770092D747 /* Complaint.swift */; };
 		9DED19291DEE7B770092D747 /* Exam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED19221DEE7B770092D747 /* Exam.swift */; };
 		9DED192A1DEE7B770092D747 /* Exam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED19221DEE7B770092D747 /* Exam.swift */; };
 		9DED192B1DEE7B770092D747 /* Exam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED19221DEE7B770092D747 /* Exam.swift */; };
@@ -76,9 +77,9 @@
 		067E96991DE54EB100595E22 /* EmtDocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmtDocUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		067E969D1DE54EB100595E22 /* EmtDocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmtDocUITests.swift; sourceTree = "<group>"; };
 		067E969F1DE54EB100595E22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06EBA26D1DFCBA82009B8DC0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		06EBA2711DFCBB1E009B8DC0 /* HospitalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalTableViewCell.swift; sourceTree = "<group>"; };
 		06FE00761DFA50EC003DE4AA /* HospitalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalTableViewController.swift; sourceTree = "<group>"; };
-		0C7AE79B1DEE2917001D0FEA /* MainTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableVC.swift; path = ../MainTableVC.swift; sourceTree = "<group>"; };
-		0C7AE79E1DEE2943001D0FEA /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		25E2568B028F1F8C9BB19557 /* Pods-EmtDoc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDoc.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDoc/Pods-EmtDoc.release.xcconfig"; sourceTree = "<group>"; };
 		29AA569719AA1895ECA8AFA5 /* Pods-EmtDocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDocTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDocTests/Pods-EmtDocTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E3029CA9A0EED705A4690BB /* Pods-EmtDocTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDocTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDocTests/Pods-EmtDocTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,7 +88,6 @@
 		9D268CC01DF7AD2B005D585C /* EmtDoc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmtDoc.swift; sourceTree = "<group>"; };
 		9D365E861DF7A6E800089DA0 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		9D365E8A1DF7A8B600089DA0 /* OptionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsTableViewCell.swift; sourceTree = "<group>"; };
-		9DED19211DEE7B770092D747 /* Complaint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Complaint.swift; sourceTree = "<group>"; };
 		9DED19221DEE7B770092D747 /* Exam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exam.swift; sourceTree = "<group>"; };
 		9DED19231DEE7B770092D747 /* PersonID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonID.swift; sourceTree = "<group>"; };
 		9DED19241DEE7B770092D747 /* Procedure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Procedure.swift; sourceTree = "<group>"; };
@@ -193,11 +193,10 @@
 		0C7AE79D1DEE291B001D0FEA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0C7AE79B1DEE2917001D0FEA /* MainTableVC.swift */,
-				0C7AE79E1DEE2943001D0FEA /* MainTableViewCell.swift */,
 				9D365E861DF7A6E800089DA0 /* HomeTableViewController.swift */,
 				9D365E8A1DF7A8B600089DA0 /* OptionsTableViewCell.swift */,
 				06FE00761DFA50EC003DE4AA /* HospitalTableViewController.swift */,
+				06EBA2711DFCBB1E009B8DC0 /* HospitalTableViewCell.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -206,7 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				9D268CC01DF7AD2B005D585C /* EmtDoc.swift */,
-				9DED19211DEE7B770092D747 /* Complaint.swift */,
+				06EBA26D1DFCBA82009B8DC0 /* Constants.swift */,
 				9DED19221DEE7B770092D747 /* Exam.swift */,
 				9DED19231DEE7B770092D747 /* PersonID.swift */,
 				9DED19241DEE7B770092D747 /* Procedure.swift */,
@@ -523,17 +522,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				067E96831DE54EB100595E22 /* EmtDoc.xcdatamodeld in Sources */,
-				0C7AE79C1DEE2917001D0FEA /* MainTableVC.swift in Sources */,
 				9DED192C1DEE7B770092D747 /* PersonID.swift in Sources */,
 				06FE00771DFA50EC003DE4AA /* HospitalTableViewController.swift in Sources */,
 				9D268CC11DF7AD2B005D585C /* EmtDoc.swift in Sources */,
 				9DED192F1DEE7B770092D747 /* Procedure.swift in Sources */,
+				06EBA2721DFCBB1E009B8DC0 /* HospitalTableViewCell.swift in Sources */,
 				9D365E8B1DF7A8B600089DA0 /* OptionsTableViewCell.swift in Sources */,
 				9D365E871DF7A6E800089DA0 /* HomeTableViewController.swift in Sources */,
 				9DED19321DEE7B770092D747 /* Vitals.swift in Sources */,
 				9DED19291DEE7B770092D747 /* Exam.swift in Sources */,
-				9DED19261DEE7B770092D747 /* Complaint.swift in Sources */,
-				0C7AE79F1DEE2943001D0FEA /* MainTableViewCell.swift in Sources */,
+				06EBA26E1DFCBA82009B8DC0 /* Constants.swift in Sources */,
 				067E967B1DE54EB000595E22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,9 +542,10 @@
 			files = (
 				067E96931DE54EB100595E22 /* EmtDocTests.swift in Sources */,
 				9DED192D1DEE7B770092D747 /* PersonID.swift in Sources */,
-				9DED19271DEE7B770092D747 /* Complaint.swift in Sources */,
 				9DED19301DEE7B770092D747 /* Procedure.swift in Sources */,
+				06EBA2731DFCBB1E009B8DC0 /* HospitalTableViewCell.swift in Sources */,
 				9D365E7A1DF7A12200089DA0 /* AppDelegate.swift in Sources */,
+				06EBA26F1DFCBA82009B8DC0 /* Constants.swift in Sources */,
 				06FE00781DFA50EC003DE4AA /* HospitalTableViewController.swift in Sources */,
 				9D268CC71DF7B588005D585C /* EmtDoc.swift in Sources */,
 				9DED19331DEE7B770092D747 /* Vitals.swift in Sources */,
@@ -560,11 +559,12 @@
 			files = (
 				067E969E1DE54EB100595E22 /* EmtDocUITests.swift in Sources */,
 				9DED192E1DEE7B770092D747 /* PersonID.swift in Sources */,
-				9DED19281DEE7B770092D747 /* Complaint.swift in Sources */,
 				9DED19311DEE7B770092D747 /* Procedure.swift in Sources */,
 				9DED19341DEE7B770092D747 /* Vitals.swift in Sources */,
 				06FE00791DFA50EC003DE4AA /* HospitalTableViewController.swift in Sources */,
+				06EBA2741DFCBB1E009B8DC0 /* HospitalTableViewCell.swift in Sources */,
 				9DED192B1DEE7B770092D747 /* Exam.swift in Sources */,
+				06EBA2701DFCBA82009B8DC0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

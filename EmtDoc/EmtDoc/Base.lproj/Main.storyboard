@@ -32,7 +32,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="titleLabel" destination="XbZ-7Q-NOh" id="eQ7-8a-vZS"/>
+                                    <outlet property="titleLabel" destination="XbZ-7Q-NOh" id="g0g-j5-3lF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -54,10 +54,10 @@
                                 <rect key="frame" x="267" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Hospitals"/>
-                                <connections>
-                                    <segue destination="Txw-fo-CTd" kind="show" id="lhI-nB-ufA"/>
-                                </connections>
                             </button>
+                            <connections>
+                                <segue destination="sAj-Ta-pSc" kind="show" id="m3S-Hd-bYq"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
@@ -66,23 +66,30 @@
             <point key="canvasLocation" x="141.59999999999999" y="130.88455772113943"/>
         </scene>
         <!--Hospital Table View Controller-->
-        <scene sceneID="Pfm-bS-4Go">
+        <scene sceneID="qnG-Wg-f5f">
             <objects>
-                <tableViewController id="Txw-fo-CTd" customClass="HospitalTableViewController" customModule="EmtDoc" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2BN-v7-cLg">
+                <tableViewController id="sAj-Ta-pSc" customClass="HospitalTableViewController" customModule="EmtDoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8Ql-oS-Zez">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="oPY-Jh-Sqq">
+                            <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Title" id="rWS-Qh-Noc"/>
+                            </items>
+                        </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="resuseIdentifier" selectionStyle="default" indentationWidth="10" reuseIdentifier="hospitalNames" id="WI5-E8-zHG" customClass="HospitalTableViewCell" customModule="EmtDoc" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="lAk-XL-UOW" customClass="HospitalTableViewCell" customModule="EmtDoc" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="136" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WI5-E8-zHG" id="Nij-vf-Eag">
-                                    <frame key="frameInset" width="375" height="44"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lAk-XL-UOW" id="KqK-Gw-hCe">
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mm1-Hs-01D">
-                                            <frame key="frameInset" minX="20" minY="11" width="334" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ih9-OY-028">
+                                            <frame key="frameInset" minX="8" minY="11" width="359" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -91,19 +98,19 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="titleLable" destination="mm1-Hs-01D" id="eAX-1B-vdl"/>
+                                    <outlet property="titleLabel" destination="ih9-OY-028" id="Cfj-Uv-A9i"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="Txw-fo-CTd" id="ayl-Wz-tuV"/>
-                            <outlet property="delegate" destination="Txw-fo-CTd" id="Pm0-GJ-jzb"/>
+                            <outlet property="dataSource" destination="sAj-Ta-pSc" id="XCw-s7-sVn"/>
+                            <outlet property="delegate" destination="sAj-Ta-pSc" id="L6K-yT-BdI"/>
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4lR-ff-s7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tCT-vy-WZg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989.60000000000002" y="-417.8410794602699"/>
+            <point key="canvasLocation" x="1061.5999999999999" y="-331.48425787106447"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fac-Oh-tED">

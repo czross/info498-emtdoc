@@ -51,7 +51,7 @@ class HospitalTableViewController: UITableViewController {
 
         // Configure the cell...
         let hosp = options[indexPath.row]
-        cell.titleLable.text = hosp
+        cell.titleLabel.text = hosp
 
         return cell
     }

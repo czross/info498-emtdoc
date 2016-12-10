@@ -10,12 +10,7 @@ import UIKit
 
 class HospitalTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var titleLable: UILabel!
-    
-    
-    func configureCell(title: String) {
-        self.titleLable.text = title
-    }
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
