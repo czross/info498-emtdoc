@@ -25,7 +25,7 @@ public class PersonID {
     // TODO: Date class for dob
     public var dob : String = ""
     public var age: Int = -1
-    public var weight : Double = 0.0
+    public var weight : Int = 0
     public var race : String = ""
     public var advanced : String = ""
     
@@ -74,7 +74,7 @@ public class PersonID {
         self.age = age
     }
     
-    func set(weight : Double) {
+    func set(weight : Int) {
         self.weight = weight
     }
     
