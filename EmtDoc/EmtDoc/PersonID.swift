@@ -36,8 +36,8 @@ public class PersonID {
     public var telephone : String = ""
     public var physician : String = ""
     
-    public var medications = Set<String>()
-    public var allergies = Set<String>()
+    public var medications = ""
+    public var allergies = ""
     
     
     public init () {
@@ -110,42 +110,12 @@ public class PersonID {
         self.physician = physician.trim()
     }
     
-    func set(medications : Set<String>) {
+    func set(medications : String) {
         self.medications = medications
     }
     
-    func set(allergies : Set<String>) {
+    func set(allergies : String) {
         self.allergies = allergies
-    }
-    
-    func add(medication : String) {
-        self.medications.insert(medication.uppercased().trim())
-    }
-    
-    func add(allergy : String) {
-        self.allergies.insert(allergy.uppercased().trim())
-    }
-    
-    func remove(medication : String) {
-        let newMedication = medication.uppercased().trim()
-        if self.medications.contains(newMedication) {
-            self.medications.remove(newMedication)
-        }
-    }
-    
-    func remove(allergy : String) {
-        let newAllergy = allergy.uppercased().trim()
-        if self.allergies.contains(newAllergy) {
-            self.allergies.remove(newAllergy)
-        }
-    }
-    
-    func isAllergic(to : String) -> Bool {
-        return self.allergies.contains(to.uppercased().trim())
-    }
-    
-    func isUsing(medication : String) -> Bool {
-        return self.medications.contains(medication.uppercased().trim())
     }
 }
 

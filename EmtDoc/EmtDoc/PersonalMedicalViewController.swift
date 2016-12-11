@@ -12,18 +12,16 @@ class PersonalMedicalViewController: UIViewController {
     
     var EmtDocModel = EmtDoc()
     
-    
-    @IBOutlet weak var medications: UILabel!
-    @IBOutlet weak var allergies: UILabel!
-    @IBOutlet weak var txtAddMedication: UITextField!
-    @IBOutlet weak var txtAddAllergy: UITextField!
+    @IBOutlet weak var txtMedications: UITextView!
 
+    @IBOutlet weak var txtAllergies: UITextView!
+    
     @IBAction func updateButton(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let mainModel = appDelegate.EmtDocModel.person
         
-        mainModel.add(allergy: txtAddAllergy.text!)
-        mainModel.add(medication: txtAddMedication.text!)
+        mainModel.set(allergies: txtAllergies.text!)
+        mainModel.set(medications: txtMedications.text!)
         
     }
     
@@ -37,9 +35,9 @@ class PersonalMedicalViewController: UIViewController {
         
         self.EmtDocModel = appDelegate.EmtDocModel
         
-        medications.text = "placeholder"
+        txtAllergies.text = EmtDocModel.person.allergies
         
-        allergies.text = "placeholder2"
+        txtMedications.text = EmtDocModel.person.medications
     }
 
     override func didReceiveMemoryWarning() {
