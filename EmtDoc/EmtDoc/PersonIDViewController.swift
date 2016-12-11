@@ -35,28 +35,28 @@ class PersonIDViewController: UIViewController {
     @IBAction func updateButton(sender: UIButton) {
         var updatedPersonID = PersonID()
         
-        updatedPersonID.set(fName: txtFName.text)
-        updatedPersonID.set(lName: txtLName.text)
-        updatedPersonID.set(middleInitial: txtMiddleInitial)
+        updatedPersonID.set(fName: txtFName.text!)
+        updatedPersonID.set(lName: txtLName.text!)
+        updatedPersonID.set(middleInitial: txtMiddleInitial.text!)
         
-        updatedPersonID.set(gender: txtGender.text)
-        updatedPersonID.set(dob: txtDob.text)
-        updatedPersonID.set(age: txtAge.text as? Int)
-        updatedPersonID.set(weight: txtWeight.text as? Double)
-        updatedPersonID.set(race: txtRace.text)
-        updatedPersonID.set(advanced: txtAdvanced.text)
+        updatedPersonID.set(gender: txtGender.text!)
+        updatedPersonID.set(dob: txtDob.text!)
+        updatedPersonID.set(age: (txtAge.text as? Int)!)
+        updatedPersonID.set(weight: (txtWeight.text as? Double)!)
+        updatedPersonID.set(race: txtRace.text!)
+        updatedPersonID.set(advanced: txtAdvanced.text!)
         
-        updatedPersonID.set(address: txtAddress.text)
-        updatedPersonID.set(city: txtCity.text)
-        updatedPersonID.set(state: txtState.text)
-        updatedPersonID.set(zip: txtZip.text)
-        updatedPersonID.set(telephone: txtTelephone.text)
-        updatedPersonID.set(physician: txtPhysician.text)
+        updatedPersonID.set(address: txtAddress.text!)
+        updatedPersonID.set(city: txtCity.text!)
+        updatedPersonID.set(state: txtState.text!)
+        updatedPersonID.set(zip: txtZip.text!)
+        updatedPersonID.set(telephone: txtTelephone.text!)
+        updatedPersonID.set(physician: txtPhysician.text!)
         
         updatedPersonID.set(allergies: EmtDocModel.person.allergies)
         updatedPersonID.set(medications: EmtDocModel.person.medications)
-        updatedPersonID.add(medication: txtAddMedication.text)
-        updatedPersonID.add(allergy: txtAddAllergies.text)
+        updatedPersonID.add(medication: txtAddMedication.text!)
+        updatedPersonID.add(allergy: txtAddAllergies.text!)
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.EmtDocModel.person = updatedPersonID
@@ -76,7 +76,12 @@ class PersonIDViewController: UIViewController {
         
         // Prepopulate person info
         
-        txtFName.text = EmtDocModel.person.fName
+        if EmtDocModel.person.fName != nil {
+            print("DAFUQ")
+            print(txtFName.text)
+            txtFName.text = EmtDocModel.person.fName
+        }
+        
         txtLName.text = EmtDocModel.person.lName
         txtMiddleInitial.text = EmtDocModel.person.middleInitial
         
