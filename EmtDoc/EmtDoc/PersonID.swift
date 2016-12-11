@@ -23,7 +23,7 @@ public class PersonID {
     public var gender : String = ""
     
     // TODO: Date class for dob
-    public var dob : Date?
+    public var dob : String = ""
     public var age: Int = -1
     public var weight : Double = 0.0
     public var race : String = ""
@@ -67,17 +67,10 @@ public class PersonID {
     }
     
     func set(dobMonth : Int, dobDay : Int, dobYear : Int) {
-        
-        // Initialize Date components
-        let components = NSDateComponents()
-        components.month = dobMonth
-        components.day = dobDay
-        components.year = dobYear
-        
-        // Get NSDate given the above date components
-        let date = NSCalendar(identifier: NSCalendar.Identifier.gregorian)?.date(from: components as DateComponents)
-        
-        self.dob = date!
+        if (dobMonth > 12 || dobMonth < 1 || dobDay < 1 || dobDay > 31) {
+            self.dob = "Invalid Date"
+        }
+        self.dob = "\(dobMonth)/\(dobDay)/\(dobYear)"
     }
     
     func set(age : Int) {
