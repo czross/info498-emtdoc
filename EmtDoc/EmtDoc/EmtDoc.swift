@@ -9,7 +9,7 @@
 import Foundation
 
 class EmtDoc {
-    let person: PersonID = PersonID()
+    var person: PersonID = PersonID()
     let exam: Exam = Exam()
     let procedures: Procedure = Procedure()
     let vitals: VitalSigns = VitalSigns()

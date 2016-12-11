@@ -17,9 +17,11 @@
 		06EBA27D1DFDD92C009B8DC0 /* JsonIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B7D1DFDD1BD0041283E /* JsonIO.swift */; };
 		06EBA27E1DFDD92C009B8DC0 /* JsonIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B7D1DFDD1BD0041283E /* JsonIO.swift */; };
 		44C138F4D6E4EF797A4E8557 /* Pods_EmtDocUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5284E64E501FA02CBDCE62 /* Pods_EmtDocUITests.framework */; };
+		492241931DFDEF7E00B53A78 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492241921DFDEF7E00B53A78 /* PersonalInfoViewController.swift */; };
+		492241971DFDEFE000B53A78 /* PersonalMedicalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492241961DFDEFE000B53A78 /* PersonalMedicalViewController.swift */; };
+		492241991DFDF0BA00B53A78 /* PersonalContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492241981DFDF0BA00B53A78 /* PersonalContactViewController.swift */; };
 		5C334B6D1DFCC1540041283E /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B6B1DFCC1540041283E /* HospitalTableViewCell.swift */; };
 		5C334B6E1DFCC1540041283E /* HospitalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B6C1DFCC1540041283E /* HospitalTableViewController.swift */; };
-		5C334B701DFDCFC90041283E /* PersonIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B6F1DFDCFC90041283E /* PersonIDViewController.swift */; };
 		5C334B721DFDCFD80041283E /* ProcedureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B711DFDCFD80041283E /* ProcedureViewController.swift */; };
 		5C334B741DFDCFE10041283E /* VitalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B731DFDCFE10041283E /* VitalsViewController.swift */; };
 		5C334B761DFDCFEB0041283E /* ExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B751DFDCFEB0041283E /* ExamViewController.swift */; };
@@ -85,9 +87,11 @@
 		067E969F1DE54EB100595E22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25E2568B028F1F8C9BB19557 /* Pods-EmtDoc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDoc.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDoc/Pods-EmtDoc.release.xcconfig"; sourceTree = "<group>"; };
 		29AA569719AA1895ECA8AFA5 /* Pods-EmtDocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDocTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDocTests/Pods-EmtDocTests.debug.xcconfig"; sourceTree = "<group>"; };
+		492241921DFDEF7E00B53A78 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
+		492241961DFDEFE000B53A78 /* PersonalMedicalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalMedicalViewController.swift; sourceTree = "<group>"; };
+		492241981DFDF0BA00B53A78 /* PersonalContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalContactViewController.swift; sourceTree = "<group>"; };
 		5C334B6B1DFCC1540041283E /* HospitalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalTableViewCell.swift; sourceTree = "<group>"; };
 		5C334B6C1DFCC1540041283E /* HospitalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalTableViewController.swift; sourceTree = "<group>"; };
-		5C334B6F1DFDCFC90041283E /* PersonIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonIDViewController.swift; sourceTree = "<group>"; };
 		5C334B711DFDCFD80041283E /* ProcedureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcedureViewController.swift; sourceTree = "<group>"; };
 		5C334B731DFDCFE10041283E /* VitalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitalsViewController.swift; sourceTree = "<group>"; };
 		5C334B751DFDCFEB0041283E /* ExamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamViewController.swift; sourceTree = "<group>"; };
@@ -213,11 +217,13 @@
 				9D365E8A1DF7A8B600089DA0 /* HomeTableViewCell.swift */,
 				5C334B6C1DFCC1540041283E /* HospitalTableViewController.swift */,
 				5C334B6B1DFCC1540041283E /* HospitalTableViewCell.swift */,
-				5C334B6F1DFDCFC90041283E /* PersonIDViewController.swift */,
 				5C334B711DFDCFD80041283E /* ProcedureViewController.swift */,
 				5C334B731DFDCFE10041283E /* VitalsViewController.swift */,
 				5C334B751DFDCFEB0041283E /* ExamViewController.swift */,
 				5C334B7F1DFDD3980041283E /* ComplaintViewController.swift */,
+				492241921DFDEF7E00B53A78 /* PersonalInfoViewController.swift */,
+				492241961DFDEFE000B53A78 /* PersonalMedicalViewController.swift */,
+				492241981DFDF0BA00B53A78 /* PersonalContactViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -556,15 +562,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				492241971DFDEFE000B53A78 /* PersonalMedicalViewController.swift in Sources */,
 				067E96831DE54EB100595E22 /* EmtDoc.xcdatamodeld in Sources */,
 				9DED192C1DEE7B770092D747 /* PersonID.swift in Sources */,
 				5C334B6D1DFCC1540041283E /* HospitalTableViewCell.swift in Sources */,
 				9D268CC11DF7AD2B005D585C /* EmtDoc.swift in Sources */,
+				492241931DFDEF7E00B53A78 /* PersonalInfoViewController.swift in Sources */,
 				9DED192F1DEE7B770092D747 /* Procedure.swift in Sources */,
 				5C334B6E1DFCC1540041283E /* HospitalTableViewController.swift in Sources */,
 				9D365E8B1DF7A8B600089DA0 /* HomeTableViewCell.swift in Sources */,
 				9D365E871DF7A6E800089DA0 /* HomeTableViewController.swift in Sources */,
-				5C334B701DFDCFC90041283E /* PersonIDViewController.swift in Sources */,
 				5C334B7A1DFDD1AE0041283E /* HttpJSON.swift in Sources */,
 				5CB21EE81DFCBAB900B38847 /* Constants.swift in Sources */,
 				9DED19321DEE7B770092D747 /* Vitals.swift in Sources */,
@@ -575,6 +582,7 @@
 				5C334B721DFDCFD80041283E /* ProcedureViewController.swift in Sources */,
 				5C334B7E1DFDD1BD0041283E /* JsonIO.swift in Sources */,
 				5C334B761DFDCFEB0041283E /* ExamViewController.swift in Sources */,
+				492241991DFDF0BA00B53A78 /* PersonalContactViewController.swift in Sources */,
 				067E967B1DE54EB000595E22 /* AppDelegate.swift in Sources */,
 				5C334B741DFDCFE10041283E /* VitalsViewController.swift in Sources */,
 			);
