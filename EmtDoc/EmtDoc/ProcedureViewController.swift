@@ -13,8 +13,10 @@ class ProcedureViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var EmtDocModel = EmtDoc()
     var procedures: [String] = []
     var location: [String] = []
+    var pickerData: [[String]] = []
     
     @IBOutlet weak var picker: UIPickerView!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,7 @@ class ProcedureViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         self.EmtDocModel = appDelegate.EmtDocModel
         self.procedures = self.EmtDocModel.procedures.getProcedures()
         self.location = self.EmtDocModel.procedures.getBandageLocation()
+        self.pickerData = [self.procedures, self.location]
         
         self.picker.delegate = self
         self.picker.dataSource = self
@@ -41,13 +44,16 @@ class ProcedureViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.procedures.count
+        return self.pickerData.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.procedures[row]
+        return self.pickerData[component][row]
     }
     
+    @IBAction func addProcedure(_ sender: Any) {
+        
+    }
     /*
     // MARK: - Navigation
 
