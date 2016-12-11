@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OptionsTableViewCell: UITableViewCell {
+class HomeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
 

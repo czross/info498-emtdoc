@@ -8,11 +8,13 @@ target 'EmtDoc' do
 
   # Pods for EmtDoc
   pod 'Alamofire', '~> 4.0'
+  pod 'SwiftyJSON'
 
   target 'EmtDocTests' do
     inherit! :search_paths
     # Pods for testing
     pod 'Alamofire', '~> 4.0'
+    pod 'SwiftyJSON'
 
   end
 
@@ -20,6 +22,7 @@ target 'EmtDoc' do
     inherit! :search_paths
     # Pods for testing
     pod 'Alamofire', '~> 4.0'
+    pod 'SwiftyJSON'
 
   end
 
