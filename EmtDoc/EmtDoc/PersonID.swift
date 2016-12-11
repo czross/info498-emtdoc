@@ -25,7 +25,7 @@ public class PersonID {
     // TODO: Date class for dob
     public var dob : String = ""
     public var age: Int = -1
-    public var weight : Double = 0.0
+    public var weight : Int = 0
     public var race : String = ""
     public var advanced : String = ""
     
@@ -66,18 +66,15 @@ public class PersonID {
         self.gender = gender
     }
     
-    func set(dobMonth : Int, dobDay : Int, dobYear : Int) {
-        if (dobMonth > 12 || dobMonth < 1 || dobDay < 1 || dobDay > 31) {
-            self.dob = "Invalid Date"
-        }
-        self.dob = "\(dobMonth)/\(dobDay)/\(dobYear)"
+    func set(dob : String) {
+        self.dob = dob
     }
     
     func set(age : Int) {
         self.age = age
     }
     
-    func set(weight : Double) {
+    func set(weight : Int) {
         self.weight = weight
     }
     

@@ -29,13 +29,14 @@ public class JsonIO {
                 "zip": "zip",
                 "allergies": ["allergies"]] as [String : Any]
     var json = JSON(data)
+
     json["fname"].string = person.fName
     json["lname"].string = person.lName
     json["middleInitial"].string = person.middleInitial
     json["gender"].string = person.gender
     json["dob"].string = person.dob
     json["age"].intValue = person.age
-    json["weight"].doubleValue = person.weight
+    json["weight"].intValue = person.weight
     json["race"].string = person.race
     json["advanced"].string = person.advanced
     json["address"].string = person.address
@@ -46,6 +47,7 @@ public class JsonIO {
     json["physician"].string = person.physician
     json["medications"].arrayObject = Array(person.medications)
     json["allergies"].arrayObject = Array(person.allergies)
+    
     if let jsonString = json.rawString() {
       do {
         let documentDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -75,10 +77,7 @@ public class JsonIO {
         person.set(middleInitial: json["middleInitial"].string!)
         let dob = json["dob"].string!
         let dobArray = dob.components(separatedBy: "/")
-        let dobDay = Int(dobArray[1])!
-        let dobMonth = Int(dobArray[0])!
-        let dobYear = Int(dobArray[2])!
-        person.set(dobMonth: dobMonth, dobDay: dobDay, dobYear: dobYear)
+        person.set(dob: json["dob"].string!)
         person.set(advanced: json["advanced"].string!)
         person.set(race: json["race"].string!)
         person.set(gender: json["gender"].string!)
