@@ -45,19 +45,8 @@ class EmtDocTests: XCTestCase {
     }
     
     func testPatientDob() {
-        // Initialize Date components
-        let components = NSDateComponents()
-        components.month = 4
-        components.day = 5
-        components.year = 1995
-        // Get NSDate given the above date components
-        let testDate = NSCalendar(identifier: NSCalendar.Identifier.gregorian)?.date(from: components as DateComponents)
-        
         person.set(dobMonth: 4, dobDay: 5, dobYear: 1995)
-        
-        
-        XCTAssert(person.dob! == testDate)
-        
+        XCTAssert(person.dob == "4/5/1995")
     }
     
     func testOtherStrings() {
