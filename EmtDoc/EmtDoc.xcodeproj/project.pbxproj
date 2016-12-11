@@ -14,6 +14,8 @@
 		067E96881DE54EB100595E22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 067E96861DE54EB100595E22 /* LaunchScreen.storyboard */; };
 		067E96931DE54EB100595E22 /* EmtDocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E96921DE54EB100595E22 /* EmtDocTests.swift */; };
 		067E969E1DE54EB100595E22 /* EmtDocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E969D1DE54EB100595E22 /* EmtDocUITests.swift */; };
+		06EBA27D1DFDD92C009B8DC0 /* JsonIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B7D1DFDD1BD0041283E /* JsonIO.swift */; };
+		06EBA27E1DFDD92C009B8DC0 /* JsonIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B7D1DFDD1BD0041283E /* JsonIO.swift */; };
 		44C138F4D6E4EF797A4E8557 /* Pods_EmtDocUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5284E64E501FA02CBDCE62 /* Pods_EmtDocUITests.framework */; };
 		5C334B6D1DFCC1540041283E /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B6B1DFCC1540041283E /* HospitalTableViewCell.swift */; };
 		5C334B6E1DFCC1540041283E /* HospitalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B6C1DFCC1540041283E /* HospitalTableViewController.swift */; };
@@ -583,6 +585,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				067E96931DE54EB100595E22 /* EmtDocTests.swift in Sources */,
+				06EBA27D1DFDD92C009B8DC0 /* JsonIO.swift in Sources */,
 				9DED192D1DEE7B770092D747 /* PersonID.swift in Sources */,
 				9DED19301DEE7B770092D747 /* Procedure.swift in Sources */,
 				9D365E7A1DF7A12200089DA0 /* AppDelegate.swift in Sources */,
@@ -599,6 +602,7 @@
 				067E969E1DE54EB100595E22 /* EmtDocUITests.swift in Sources */,
 				9DED192E1DEE7B770092D747 /* PersonID.swift in Sources */,
 				9DED19311DEE7B770092D747 /* Procedure.swift in Sources */,
+				06EBA27E1DFDD92C009B8DC0 /* JsonIO.swift in Sources */,
 				9DED19341DEE7B770092D747 /* Vitals.swift in Sources */,
 				9DED192B1DEE7B770092D747 /* Exam.swift in Sources */,
 			);
