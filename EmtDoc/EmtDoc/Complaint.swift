@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class {
+public class Complaint {
     let areaChoice: [String] = [
         "Head",
         "Neck",
@@ -21,7 +21,7 @@ public class {
         "Right Arm",
         "Left Arm"
     ]
-    let intensityChoice: [Int] = [1...10]
+    let intensityChoice: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     var descritption: String
     var signsSymptoms: String
     var bodyArea: String
@@ -29,7 +29,11 @@ public class {
     var intensity: Int
     
     init() {
-        self.description = ""
+        self.descritption = ""
+        self.signsSymptoms = ""
+        self.bodyArea = ""
+        self.duration = ""
+        self.intensity = 0
     }
     
 }

@@ -19,7 +19,7 @@ public class JsonIO {
     json["lname"] = JSON(person.lName)
     json["middleInitial"] = JSON(person.middleInitial)
     json["gender"] = JSON(person.gender)
-    json["dob"] = JSON(person.dob!)
+    json["dob"] = JSON(person.dob)
     json["age"] = JSON(person.age)
     json["weight"] = JSON(person.weight)
     json["race"] = JSON(person.race)
