@@ -45,8 +45,8 @@ public class JsonIO {
     json["zip"].string = person.zip
     json["telephone"].string = person.telephone
     json["physician"].string = person.physician
-    json["medications"].arrayObject = Array(person.medications)
-    json["allergies"].arrayObject = Array(person.allergies)
+    json["medications"].string = person.medications
+    json["allergies"].string = person.allergies
     
     if let jsonString = json.rawString() {
       do {
@@ -88,14 +88,8 @@ public class JsonIO {
         person.set(zip: json["zip"].string!)
         person.set(telephone: json["telephone"].string!)
         person.set(physician: json["physician"].string!)
-        let medications = json["medications"].arrayValue
-        for medication in medications {
-          person.add(medication: medication.string!)
-        }
-        let allergies = json["allergies"].arrayValue
-        for allergy in allergies {
-          person.add(allergy: allergy.string!)
-        }
+        person.set(medications: json["medications"].string!)
+        person.set(allergies: json["allergies"].string!)
       }
     }
     catch {}
