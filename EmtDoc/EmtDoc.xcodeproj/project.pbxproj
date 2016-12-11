@@ -21,6 +21,10 @@
 		5C334B721DFDCFD80041283E /* ProcedureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B711DFDCFD80041283E /* ProcedureViewController.swift */; };
 		5C334B741DFDCFE10041283E /* VitalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B731DFDCFE10041283E /* VitalsViewController.swift */; };
 		5C334B761DFDCFEB0041283E /* ExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B751DFDCFEB0041283E /* ExamViewController.swift */; };
+		5C334B781DFDD1A50041283E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B771DFDD1A50041283E /* File.swift */; };
+		5C334B7A1DFDD1AE0041283E /* HttpJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B791DFDD1AE0041283E /* HttpJSON.swift */; };
+		5C334B7C1DFDD1B60041283E /* Internaltesting.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C334B7B1DFDD1B60041283E /* Internaltesting.json */; };
+		5C334B7E1DFDD1BD0041283E /* JsonIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B7D1DFDD1BD0041283E /* JsonIO.swift */; };
 		5CB21EE81DFCBAB900B38847 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB21EE71DFCBAB900B38847 /* Constants.swift */; };
 		60556228C0C766CDF49E0999 /* Pods_EmtDoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98252B61D6D72A5C04759293 /* Pods_EmtDoc.framework */; };
 		9D268CC11DF7AD2B005D585C /* EmtDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D268CC01DF7AD2B005D585C /* EmtDoc.swift */; };
@@ -83,6 +87,10 @@
 		5C334B711DFDCFD80041283E /* ProcedureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcedureViewController.swift; sourceTree = "<group>"; };
 		5C334B731DFDCFE10041283E /* VitalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitalsViewController.swift; sourceTree = "<group>"; };
 		5C334B751DFDCFEB0041283E /* ExamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamViewController.swift; sourceTree = "<group>"; };
+		5C334B771DFDD1A50041283E /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		5C334B791DFDD1AE0041283E /* HttpJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpJSON.swift; sourceTree = "<group>"; };
+		5C334B7B1DFDD1B60041283E /* Internaltesting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Internaltesting.json; sourceTree = "<group>"; };
+		5C334B7D1DFDD1BD0041283E /* JsonIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonIO.swift; sourceTree = "<group>"; };
 		5CB21EE71DFCBAB900B38847 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5E3029CA9A0EED705A4690BB /* Pods-EmtDocTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDocTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDocTests/Pods-EmtDocTests.release.xcconfig"; sourceTree = "<group>"; };
 		86D8D0E9D41F032E8C6B61DA /* Pods-EmtDocUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDocUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDocUITests/Pods-EmtDocUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -210,6 +218,10 @@
 		9DED19201DEE7B5C0092D747 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5C334B7B1DFDD1B60041283E /* Internaltesting.json */,
+				5C334B791DFDD1AE0041283E /* HttpJSON.swift */,
+				5C334B771DFDD1A50041283E /* File.swift */,
+				5C334B7D1DFDD1BD0041283E /* JsonIO.swift */,
 				9D268CC01DF7AD2B005D585C /* EmtDoc.swift */,
 				5CB21EE71DFCBAB900B38847 /* Constants.swift */,
 				9DED19221DEE7B770092D747 /* Exam.swift */,
@@ -364,6 +376,7 @@
 				067E96881DE54EB100595E22 /* LaunchScreen.storyboard in Resources */,
 				067E96851DE54EB100595E22 /* Assets.xcassets in Resources */,
 				067E96801DE54EB000595E22 /* Main.storyboard in Resources */,
+				5C334B7C1DFDD1B60041283E /* Internaltesting.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,10 +549,13 @@
 				9D365E8B1DF7A8B600089DA0 /* OptionsTableViewCell.swift in Sources */,
 				9D365E871DF7A6E800089DA0 /* HomeTableViewController.swift in Sources */,
 				5C334B701DFDCFC90041283E /* PersonIDViewController.swift in Sources */,
+				5C334B7A1DFDD1AE0041283E /* HttpJSON.swift in Sources */,
 				5CB21EE81DFCBAB900B38847 /* Constants.swift in Sources */,
 				9DED19321DEE7B770092D747 /* Vitals.swift in Sources */,
+				5C334B781DFDD1A50041283E /* File.swift in Sources */,
 				9DED19291DEE7B770092D747 /* Exam.swift in Sources */,
 				5C334B721DFDCFD80041283E /* ProcedureViewController.swift in Sources */,
+				5C334B7E1DFDD1BD0041283E /* JsonIO.swift in Sources */,
 				5C334B761DFDCFEB0041283E /* ExamViewController.swift in Sources */,
 				067E967B1DE54EB000595E22 /* AppDelegate.swift in Sources */,
 				5C334B741DFDCFE10041283E /* VitalsViewController.swift in Sources */,
