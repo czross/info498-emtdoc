@@ -11,6 +11,7 @@ import Alamofire
 
 class HomeTableViewController: UITableViewController {
     var EmtDocModel = EmtDoc()
+    var email = Email()
     var hospitals: [Dictionary<String,String>]?
     // hospitals array of array structure: [["name": "", "email": ""],[...],[...]]
     
@@ -65,6 +66,9 @@ class HomeTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func sendEmailButton(_ sender: Any) {
+        email.prepareEmail()
+    }
 
     // MARK: - Table view data source
 
