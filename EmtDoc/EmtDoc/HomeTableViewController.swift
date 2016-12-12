@@ -12,6 +12,7 @@ import CoreLocation
 
 class HomeTableViewController: UITableViewController, CLLocationManagerDelegate {
     var EmtDocModel = EmtDoc()
+    var email = Email()
     var hospitals: [Dictionary<String,String>]?
     // hospitals array of array structure: [["name": "", "email": ""],[...],[...]]
     
@@ -82,6 +83,9 @@ class HomeTableViewController: UITableViewController, CLLocationManagerDelegate 
         }
     }
     
+    @IBAction func sendEmailButton(_ sender: Any) {
+        email.prepareEmail()
+    }
 
     // MARK: - Table view data source
 

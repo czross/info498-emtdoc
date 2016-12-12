@@ -29,7 +29,6 @@ public class JsonIO {
                 "zip": "zip",
                 "allergies": ["allergies"]] as [String : Any]
     var json = JSON(data)
-
     json["fname"].string = person.fName
     json["lname"].string = person.lName
     json["middleInitial"].string = person.middleInitial
