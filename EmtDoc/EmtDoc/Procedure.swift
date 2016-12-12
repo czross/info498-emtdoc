@@ -27,7 +27,7 @@ class Procedure {
         "Chest Tube",
         "Central Line",
         "Compression Bandage",
-        "Spint"
+        "Splint"
     ]
     
     let splintLocation : [String] = [
