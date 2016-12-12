@@ -14,6 +14,10 @@
 		067E96881DE54EB100595E22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 067E96861DE54EB100595E22 /* LaunchScreen.storyboard */; };
 		067E96931DE54EB100595E22 /* EmtDocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E96921DE54EB100595E22 /* EmtDocTests.swift */; };
 		067E969E1DE54EB100595E22 /* EmtDocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E969D1DE54EB100595E22 /* EmtDocUITests.swift */; };
+		069A19241DFF5236009E86D7 /* ProcedureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B711DFDCFD80041283E /* ProcedureViewController.swift */; };
+		069A19251DFF5238009E86D7 /* ProcedureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B711DFDCFD80041283E /* ProcedureViewController.swift */; };
+		06EBA27D1DFDD92C009B8DC0 /* JsonIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B7D1DFDD1BD0041283E /* JsonIO.swift */; };
+		06EBA27E1DFDD92C009B8DC0 /* JsonIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B7D1DFDD1BD0041283E /* JsonIO.swift */; };
 		44C138F4D6E4EF797A4E8557 /* Pods_EmtDocUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5284E64E501FA02CBDCE62 /* Pods_EmtDocUITests.framework */; };
 		492241931DFDEF7E00B53A78 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492241921DFDEF7E00B53A78 /* PersonalInfoViewController.swift */; };
 		492241971DFDEFE000B53A78 /* PersonalMedicalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492241961DFDEFE000B53A78 /* PersonalMedicalViewController.swift */; };
@@ -591,9 +595,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				067E96931DE54EB100595E22 /* EmtDocTests.swift in Sources */,
+				06EBA27D1DFDD92C009B8DC0 /* JsonIO.swift in Sources */,
 				9DED192D1DEE7B770092D747 /* PersonID.swift in Sources */,
 				9DED19301DEE7B770092D747 /* Procedure.swift in Sources */,
 				9D365E7A1DF7A12200089DA0 /* AppDelegate.swift in Sources */,
+				069A19241DFF5236009E86D7 /* ProcedureViewController.swift in Sources */,
 				9D268CC71DF7B588005D585C /* EmtDoc.swift in Sources */,
 				9DED19331DEE7B770092D747 /* Vitals.swift in Sources */,
 				9DED192A1DEE7B770092D747 /* Exam.swift in Sources */,
@@ -607,7 +613,9 @@
 				067E969E1DE54EB100595E22 /* EmtDocUITests.swift in Sources */,
 				9DED192E1DEE7B770092D747 /* PersonID.swift in Sources */,
 				9DED19311DEE7B770092D747 /* Procedure.swift in Sources */,
+				06EBA27E1DFDD92C009B8DC0 /* JsonIO.swift in Sources */,
 				9DED19341DEE7B770092D747 /* Vitals.swift in Sources */,
+				069A19251DFF5238009E86D7 /* ProcedureViewController.swift in Sources */,
 				9DED192B1DEE7B770092D747 /* Exam.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
