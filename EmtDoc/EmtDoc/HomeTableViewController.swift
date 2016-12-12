@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import CoreLocation
 
 class HomeTableViewController: UITableViewController {
     var EmtDocModel = EmtDoc()
@@ -15,7 +16,10 @@ class HomeTableViewController: UITableViewController {
     var hospitals: [Dictionary<String,String>]?
     // hospitals array of array structure: [["name": "", "email": ""],[...],[...]]
     
+    
+    
     @IBOutlet weak var titleLabel: UILabel!
+    
     
     var options : [String] = []
     
