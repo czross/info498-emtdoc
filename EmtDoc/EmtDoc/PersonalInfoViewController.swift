@@ -22,22 +22,6 @@ class PersonalInfoViewController: UIViewController {
     @IBOutlet weak var txtWeight: UITextField!
     @IBOutlet weak var txtRace: UITextField!
     @IBOutlet weak var txtAdvanced: UITextField!
-    
-    @IBAction func updateButton(_ sender: Any) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let mainModel = appDelegate.EmtDocModel.person
-        
-        mainModel.set(fName: txtFName.text!)
-        mainModel.set(lName: txtLName.text!)
-        mainModel.set(middleInitial: txtMiddleInitial.text!)
-        
-        mainModel.set(gender: txtGender.text!)
-        mainModel.set(dob: txtDob.text!)
-        mainModel.set(age: Int(txtAge.text!)!)
-        mainModel.set(weight: Int(txtWeight.text!)!)
-        mainModel.set(race: txtRace.text!)
-        mainModel.set(advanced: txtAdvanced.text!)
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +48,22 @@ class PersonalInfoViewController: UIViewController {
         txtWeight.text = String(EmtDocModel.person.weight)
         txtRace.text = EmtDocModel.person.race
         txtAdvanced.text = EmtDocModel.person.advanced
-
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let mainModel = appDelegate.EmtDocModel.person
+        
+        mainModel.set(fName: txtFName.text!)
+        mainModel.set(lName: txtLName.text!)
+        mainModel.set(middleInitial: txtMiddleInitial.text!)
+        
+        mainModel.set(gender: txtGender.text!)
+        mainModel.set(dob: txtDob.text!)
+        mainModel.set(age: Int(txtAge.text!)!)
+        mainModel.set(weight: Int(txtWeight.text!)!)
+        mainModel.set(race: txtRace.text!)
+        mainModel.set(advanced: txtAdvanced.text!)
     }
 
     override func didReceiveMemoryWarning() {
