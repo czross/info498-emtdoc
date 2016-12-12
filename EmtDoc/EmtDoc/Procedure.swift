@@ -54,7 +54,7 @@ class Procedure {
         self.procedureLocation = []
     }
     
-    func done(procedure: String, location : String = "not specified") {
+    func done(procedure: String, location : String ) {
         self.proceduresDone?.append(procedure)
         self.procedureLocation?.append(location)
     }
