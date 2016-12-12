@@ -8,7 +8,7 @@
 
 import Foundation
 
-var baseURL = "https://raw.githubusercontent.com/czross/info498-emtdoc/http-json/JSON/testing.json"
+var baseURL = "https://raw.githubusercontent.com/czross/info498-emtdoc/master/JSON/testing.json"
 let BASE_URL = URL(string: baseURL)!
 
 typealias DownloadComplete = () -> ()

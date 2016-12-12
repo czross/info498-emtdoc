@@ -424,12 +424,12 @@
                     <navigationItem key="navigationItem" title="Emt Doc" id="l9K-Gq-pOX">
                         <barButtonItem key="leftBarButtonItem" title="Personal Info" id="oJr-we-FeF">
                             <connections>
-                                <segue destination="Zcz-5X-kWA" kind="show" id="1X1-im-vFo"/>
+                                <segue destination="Zcz-5X-kWA" kind="show" identifier="" id="1X1-im-vFo"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Hospital" id="rbY-IJ-u7a">
                             <connections>
-                                <segue destination="331-gg-943" kind="show" id="Ekk-oa-arZ"/>
+                                <segue destination="331-gg-943" kind="show" identifier="HospitalTableViewController" id="Ekk-oa-arZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -643,19 +643,22 @@
                                     <action selector="rhythmButtonPress:" destination="j3c-YS-Lhk" eventType="touchUpInside" id="gk7-cc-Hba"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIO-qk-ju9">
-                                <rect key="frame" x="302" y="82" width="92" height="30"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Vitals" id="nGM-hT-EsS">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="H19-YJ-0VZ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kIO-qk-ju9">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Glascow Test"/>
                                 <connections>
                                     <segue destination="9wF-Hv-YfU" kind="show" id="aOK-J6-maj"/>
                                 </connections>
                             </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Vitals" id="nGM-hT-EsS"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="rhythmButton" destination="lbe-Ob-4X2" id="9pg-DN-iEH"/>

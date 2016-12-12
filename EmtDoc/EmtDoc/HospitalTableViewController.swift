@@ -10,14 +10,8 @@ import UIKit
 
 class HospitalTableViewController: UITableViewController {
     
-    var options: [String] = [
-        "Harborview",
-        "UW Medical Center",
-        "Virginia Mason",
-        "Northwest Hospital",
-        "Swedish"
-    ]
-    
+    var hospitals: [Dictionary<String, String>]?
+    var selectedHospital: [String:String]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +37,7 @@ class HospitalTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return options.count
+        return hospitals!.count
     }
 
     
@@ -51,13 +45,22 @@ class HospitalTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HospitalCell", for: indexPath) as! HospitalTableViewCell
 
         // Configure the cell...
-        let hosp = options[indexPath.row]
-        cell.titleLabel.text = hosp
-
+        let hosp = hospitals?[indexPath.row]["name"]
+        // NSLog("hospital name: \(hosp)")
+        cell.titleLabel.text = hosp!
         return cell
     }
     
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedHospital = hospitals?[indexPath.row]
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.EmtDocModel.selectedHospital = selectedHospital
+        NSLog("Saved EmtDoc hospital selected: \(appDelegate.EmtDocModel.selectedHospital!)")
+        
+        // Screen dismissal back to HomeTableViewController
+        
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
