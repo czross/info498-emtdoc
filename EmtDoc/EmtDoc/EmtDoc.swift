@@ -9,6 +9,7 @@
 import Foundation
 
 class EmtDoc {
+    var chiefComplaint : String = ""
     var person: PersonID = PersonID()
     let exam: Exam = Exam()
     let procedures: Procedure = Procedure()
