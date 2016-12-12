@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Alamofire
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var EmtDocModel = EmtDoc()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        IQKeyboardManager.sharedManager().enable = true
         // Override point for customization after application launch.
         return true
     }
