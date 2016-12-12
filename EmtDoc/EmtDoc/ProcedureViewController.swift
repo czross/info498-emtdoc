@@ -48,10 +48,13 @@ class ProcedureViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.pickerData[component][row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print("component \(component)")
         print("row \(row)")
-        print(" \n \(pickerData[component][row]) \n")
-        return self.pickerData[component][row]
+        print(self.pickerData[component][row])
     }
     
     @IBAction func commitProcedure(_ sender: AnyObject) {
