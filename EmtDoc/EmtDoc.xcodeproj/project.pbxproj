@@ -356,6 +356,7 @@
 				TargetAttributes = {
 					067E96761DE54EB000595E22 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 845565R7N6;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
@@ -756,6 +757,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 845565R7N6;
 				INFOPLIST_FILE = EmtDoc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ischool.uw.eduFormatHealth.EmtDoc;
@@ -771,6 +773,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 845565R7N6;
 				INFOPLIST_FILE = EmtDoc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ischool.uw.eduFormatHealth.EmtDoc;
