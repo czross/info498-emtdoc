@@ -33,6 +33,10 @@ class GlascowTestViewController: UIViewController {
     @IBAction func motorButton(_ sender: Any) {
         self.present(motorAlert, animated: true, completion:nil)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

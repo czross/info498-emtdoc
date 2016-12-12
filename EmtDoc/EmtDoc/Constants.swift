@@ -28,7 +28,8 @@ class Email: MFMailComposeViewController, MFMailComposeViewControllerDelegate {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
             mail.setToRecipients(email)
-            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: false)
+            NSLog("Email sending data to: \(email)")
+            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
             
             present(mail, animated: true)
         } else {
