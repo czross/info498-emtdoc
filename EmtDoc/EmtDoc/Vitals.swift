@@ -29,7 +29,6 @@ public class GlascowDscp {
 
 
 public class VitalSigns {
-    public var weight : Double = -1.0
     public var bloodPrs : [String: Int] = ["Systolic" : -1, "Diastolic" : -1]
     public var heartRate : Int = -1
     public var rhythm = "Unspecified"
@@ -39,7 +38,7 @@ public class VitalSigns {
     public var temp : Double = -1.0
     public var pain : Int = -1
     
-    var glascow : [String: Int] = ["Eye" : -1, "Verbal" : -1, "Motor" : -1]
+    public var glascow : [String: Int] = ["Eye" : -1, "Verbal" : -1, "Motor" : -1]
     public var glascowTtl: Int = 0
     
     let painDscp = "1-10"
