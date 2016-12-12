@@ -35,9 +35,12 @@ class PersonalContactViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
+        // Get Model singleton
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.EmtDocModel = appDelegate.EmtDocModel
+        
+        txtTelephone.keyboardType = UIKeyboardType.numbersAndPunctuation
         
         txtAddress.text = EmtDocModel.person.address
         txtCity.text = EmtDocModel.person.city

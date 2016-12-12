@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VitalsViewController: UIViewController {
+class VitalsViewController: UIViewController{
     var EmtDocModel = EmtDoc()
 
     
@@ -71,7 +71,6 @@ class VitalsViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         self.EmtDocModel = appDelegate.EmtDocModel
-        print("SUUPPP")
         
         txtWeight.text = String(EmtDocModel.person.weight)
         

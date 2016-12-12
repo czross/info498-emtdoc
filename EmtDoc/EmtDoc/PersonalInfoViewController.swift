@@ -46,11 +46,14 @@ class PersonalInfoViewController: UIViewController {
         
         // Fetch the EmtDocModel from app delegate singleton
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
         self.EmtDocModel = appDelegate.EmtDocModel
         
-        // Prepopulate
+        // Setup our keyboard types
+        txtDob.keyboardType = UIKeyboardType.numbersAndPunctuation
+        txtAge.keyboardType = UIKeyboardType.numberPad
+        txtWeight.keyboardType = UIKeyboardType.decimalPad
         
+        // Prepopulate
         txtFName.text = EmtDocModel.person.fName
         txtLName.text = EmtDocModel.person.lName
         txtMiddleInitial.text = EmtDocModel.person.middleInitial

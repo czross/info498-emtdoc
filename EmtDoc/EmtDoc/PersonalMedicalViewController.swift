@@ -22,7 +22,6 @@ class PersonalMedicalViewController: UIViewController {
         
         mainModel.set(allergies: txtAllergies.text!)
         mainModel.set(medications: txtMedications.text!)
-        
     }
     
     
@@ -31,12 +30,11 @@ class PersonalMedicalViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        // Get our model simpleton
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
         self.EmtDocModel = appDelegate.EmtDocModel
         
         txtAllergies.text = EmtDocModel.person.allergies
-        
         txtMedications.text = EmtDocModel.person.medications
     }
 
