@@ -29,7 +29,6 @@
 		5C334B7C1DFDD1B60041283E /* Internaltesting.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C334B7B1DFDD1B60041283E /* Internaltesting.json */; };
 		5C334B7E1DFDD1BD0041283E /* JsonIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B7D1DFDD1BD0041283E /* JsonIO.swift */; };
 		5C334B801DFDD3980041283E /* ComplaintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B7F1DFDD3980041283E /* ComplaintViewController.swift */; };
-		5C334B821DFDD4080041283E /* Complaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B811DFDD4080041283E /* Complaint.swift */; };
 		5CB21EE81DFCBAB900B38847 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB21EE71DFCBAB900B38847 /* Constants.swift */; };
 		60556228C0C766CDF49E0999 /* Pods_EmtDoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98252B61D6D72A5C04759293 /* Pods_EmtDoc.framework */; };
 		9D268CC11DF7AD2B005D585C /* EmtDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D268CC01DF7AD2B005D585C /* EmtDoc.swift */; };
@@ -100,7 +99,6 @@
 		5C334B7B1DFDD1B60041283E /* Internaltesting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Internaltesting.json; sourceTree = "<group>"; };
 		5C334B7D1DFDD1BD0041283E /* JsonIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonIO.swift; sourceTree = "<group>"; };
 		5C334B7F1DFDD3980041283E /* ComplaintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplaintViewController.swift; sourceTree = "<group>"; };
-		5C334B811DFDD4080041283E /* Complaint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Complaint.swift; sourceTree = "<group>"; };
 		5CB21EE71DFCBAB900B38847 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5E3029CA9A0EED705A4690BB /* Pods-EmtDocTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDocTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDocTests/Pods-EmtDocTests.release.xcconfig"; sourceTree = "<group>"; };
 		86D8D0E9D41F032E8C6B61DA /* Pods-EmtDocUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDocUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDocUITests/Pods-EmtDocUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -250,7 +248,6 @@
 				9DED19231DEE7B770092D747 /* PersonID.swift */,
 				9DED19241DEE7B770092D747 /* Procedure.swift */,
 				9DED19251DEE7B770092D747 /* Vitals.swift */,
-				5C334B811DFDD4080041283E /* Complaint.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -577,7 +574,6 @@
 				5CB21EE81DFCBAB900B38847 /* Constants.swift in Sources */,
 				9DED19321DEE7B770092D747 /* Vitals.swift in Sources */,
 				5C334B781DFDD1A50041283E /* File.swift in Sources */,
-				5C334B821DFDD4080041283E /* Complaint.swift in Sources */,
 				9DED19291DEE7B770092D747 /* Exam.swift in Sources */,
 				5C334B801DFDD3980041283E /* ComplaintViewController.swift in Sources */,
 				4922419D1DFE0E2500B53A78 /* GlascowTestViewController.swift in Sources */,
