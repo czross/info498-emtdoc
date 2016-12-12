@@ -24,6 +24,7 @@
 		492241991DFDF0BA00B53A78 /* PersonalContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492241981DFDF0BA00B53A78 /* PersonalContactViewController.swift */; };
 		4922419D1DFE0E2500B53A78 /* GlascowTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4922419C1DFE0E2500B53A78 /* GlascowTestViewController.swift */; };
 		4982C6161DFF500B00B17850 /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982C6151DFF500B00B17850 /* Incident.swift */; };
+		4982C6181DFF5C2C00B17850 /* SetLocationTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982C6171DFF5C2C00B17850 /* SetLocationTimeViewController.swift */; };
 		5C334B6D1DFCC1540041283E /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B6B1DFCC1540041283E /* HospitalTableViewCell.swift */; };
 		5C334B6E1DFCC1540041283E /* HospitalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B6C1DFCC1540041283E /* HospitalTableViewController.swift */; };
 		5C334B721DFDCFD80041283E /* ProcedureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B711DFDCFD80041283E /* ProcedureViewController.swift */; };
@@ -95,6 +96,7 @@
 		492241981DFDF0BA00B53A78 /* PersonalContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalContactViewController.swift; sourceTree = "<group>"; };
 		4922419C1DFE0E2500B53A78 /* GlascowTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlascowTestViewController.swift; sourceTree = "<group>"; };
 		4982C6151DFF500B00B17850 /* Incident.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Incident.swift; sourceTree = "<group>"; };
+		4982C6171DFF5C2C00B17850 /* SetLocationTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetLocationTimeViewController.swift; sourceTree = "<group>"; };
 		5C334B6B1DFCC1540041283E /* HospitalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalTableViewCell.swift; sourceTree = "<group>"; };
 		5C334B6C1DFCC1540041283E /* HospitalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalTableViewController.swift; sourceTree = "<group>"; };
 		5C334B711DFDCFD80041283E /* ProcedureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcedureViewController.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				492241921DFDEF7E00B53A78 /* PersonalInfoViewController.swift */,
 				492241961DFDEFE000B53A78 /* PersonalMedicalViewController.swift */,
 				492241981DFDF0BA00B53A78 /* PersonalContactViewController.swift */,
+				4982C6171DFF5C2C00B17850 /* SetLocationTimeViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 				492241991DFDF0BA00B53A78 /* PersonalContactViewController.swift in Sources */,
 				067E967B1DE54EB000595E22 /* AppDelegate.swift in Sources */,
 				5C334B741DFDCFE10041283E /* VitalsViewController.swift in Sources */,
+				4982C6181DFF5C2C00B17850 /* SetLocationTimeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

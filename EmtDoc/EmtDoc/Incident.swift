@@ -11,21 +11,21 @@ import CoreLocation
 
 class Incident {
     public var dateTime: Date?
-    public var latitude: Float?
-    public var longitude: Float?
+    public var coordinates: CLLocationCoordinate2D?
     
     init() {
     }
     
-    init(latitude: Float, longitude: Float) {
-        self.latitude = latitude
-        self.longitude = longitude
+    func set(coordinates: CLLocationCoordinate2D) {
+        self.coordinates = coordinates
     }
     
-    func set(latitude: Float, longitude: Float) {
-        
-        self.latitude = latitude
-        self.longitude = longitude
+    func getLatitude() -> CLLocationDegrees {
+        return (self.coordinates?.latitude)!
+    }
+    
+    func getLongitude() -> CLLocationDegrees {
+        return (self.coordinates?.longitude)!
     }
     
     func set(dateTime: Date) {

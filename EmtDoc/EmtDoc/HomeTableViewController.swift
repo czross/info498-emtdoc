@@ -10,28 +10,15 @@ import UIKit
 import Alamofire
 import CoreLocation
 
-class HomeTableViewController: UITableViewController, CLLocationManagerDelegate {
+class HomeTableViewController: UITableViewController {
     var EmtDocModel = EmtDoc()
     var email = Email()
     var hospitals: [Dictionary<String,String>]?
     // hospitals array of array structure: [["name": "", "email": ""],[...],[...]]
     
-    var locationManager = CLLocationManager()
+    
     
     @IBOutlet weak var titleLabel: UILabel!
-    
-    @IBAction func setIncidentLocation(_ sender: Any) {
-        locationManager.delegate = self
-        
-        if CLLocationManager.authorizationStatus() == .notDetermined {
-            self.locationManager.requestWhenInUseAuthorization()
-        }
-        
-        var userLocationCoordinates = CLLocationCoordinate2DMake((locationManager.location?.coordinate.latitude)!, (locationManager.location?.coordinate.longitude)!)
-        
-        print("WE HEREEEE")
-        print(userLocationCoordinates)
-    }
     
     
     var options : [String] = []
