@@ -14,6 +14,8 @@ class ProcedureViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var procedures: [String] = []
     var location: [String] = []
     var pickerData: [[String]] = []
+    var procedureChosen: String = ""
+    var locationChosen: String = ""
     
     @IBOutlet weak var picker: UIPickerView!
    
@@ -26,9 +28,12 @@ class ProcedureViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         self.procedures = self.EmtDocModel.procedures.getProcedures()
         self.location = self.EmtDocModel.procedures.getBandageLocation()
         self.pickerData = [self.procedures, self.location]
+        self.procedureChosen = self.procedures[0]
+        self.locationChosen = self.location[0]
         
         self.picker.delegate = self
         self.picker.dataSource = self
+        
 
         // Do any additional setup after loading the view.
     }
