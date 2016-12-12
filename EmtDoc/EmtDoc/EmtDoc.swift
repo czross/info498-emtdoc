@@ -13,6 +13,7 @@ class EmtDoc {
     let exam: Exam = Exam()
     let procedures: Procedure = Procedure()
     let vitals: VitalSigns = VitalSigns()
+    var selectedHospital: [String:String]?
 //    let glascow: GlascowDscp = GlascowDscp()
     
     let mainChoices: [String] = [
