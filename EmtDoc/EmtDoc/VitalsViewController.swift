@@ -54,6 +54,19 @@ class VitalsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        // Set our text inputs as
+        txtWeight.keyboardType = UIKeyboardType.decimalPad
+        txtBPSystolic.keyboardType = UIKeyboardType.numberPad
+        txtBPDiastolic.keyboardType = UIKeyboardType.numberPad
+        txtHeartRate.keyboardType = UIKeyboardType.numberPad
+        txtRespRate.keyboardType = UIKeyboardType.numberPad
+        txtO2Saturation.keyboardType = UIKeyboardType.numberPad
+        txtEndTitalCO2.keyboardType = UIKeyboardType.numberPad
+        txtTemp.keyboardType = UIKeyboardType.decimalPad
+        txtPain.keyboardType = UIKeyboardType.numberPad
+        
+        
+        
         // Fetch the EmtDocModel from app delegate singleton
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
