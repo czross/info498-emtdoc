@@ -10,7 +10,9 @@ import UIKit
 
 class VitalsViewController: UIViewController {
     var EmtDocModel = EmtDoc()
+
     
+    @IBOutlet weak var rhythmButton: UIButton!
     @IBOutlet weak var txtWeight: UITextField!
     @IBOutlet weak var txtBPSystolic: UITextField!
     @IBOutlet weak var txtBPDiastolic: UITextField!
@@ -22,8 +24,14 @@ class VitalsViewController: UIViewController {
     @IBOutlet weak var txtTemp: UITextField!
     @IBOutlet weak var txtPain: UITextField!
     
+    let rhythmAlert = UIAlertController(title: "Rhythm", message: "Please Choose Type of Rhythm", preferredStyle: .actionSheet)
+    
+    @IBAction func rhythmButtonPress(_ sender: Any) {
+        self.present(rhythmAlert, animated: true, completion:nil)
+    }
     
     @IBAction func updateButton(_ sender: Any) {
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let mainModel = appDelegate.EmtDocModel.vitals
         
@@ -31,9 +39,8 @@ class VitalsViewController: UIViewController {
         
         mainModel.bloodPrs["Systolic"] = Int(txtBPSystolic.text!)
         mainModel.bloodPrs["Diastolic"] = Int(txtBPSystolic.text!)
-        
         mainModel.heartRate = Int(txtHeartRate.text!)!
-        mainModel.rhythm = txtRhythm.text!
+        mainModel.rhythm = (self.rhythmButton.titleLabel!.text!)
         mainModel.respRate = Int(txtRespRate.text!)!
         mainModel.o2Saturation = Double(txtO2Saturation.text!)!
         mainModel.endTidalCO2 = Double(txtEndTitalCO2.text!)!
@@ -51,16 +58,15 @@ class VitalsViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         self.EmtDocModel = appDelegate.EmtDocModel
+        print("SUUPPP")
         
-        txtWeight.text = EmtDocModel.person.weight as! String
+        txtWeight.text = String(EmtDocModel.person.weight)
         
-        txtBPSystolic.text = EmtDocModel.vitals.bloodPrs["Systolic"] as! String
+        txtBPSystolic.text = String(EmtDocModel.vitals.bloodPrs["Systolic"]!)
         
-        txtBPDiastolic.text = EmtDocModel.vitals.bloodPrs["Diastolic"] as! String
+        txtBPDiastolic.text = String(EmtDocModel.vitals.bloodPrs["Diastolic"]!)
         
         txtHeartRate.text = String(EmtDocModel.vitals.heartRate)
-        
-        txtRhythm.text = EmtDocModel.vitals.rhythm
         
         txtRespRate.text = String(EmtDocModel.vitals.respRate)
         txtO2Saturation.text = String(EmtDocModel.vitals.o2Saturation)
@@ -70,16 +76,14 @@ class VitalsViewController: UIViewController {
         
         // Setup Rhythm Alert
         
-        let rhythmAlert = UIAlertController(title: "Rhythm", message: "Please Choose Type of Rhythm", preferredStyle: .actionSheet)
-        
         rhythmAlert.addAction(UIAlertAction(title: "Normal", style: .default, handler: { (action) in
             //execute some code when this option is selected
-            self.txtRhythm.text = "Normal"
+            self.rhythmButton.setTitle("Normal", for: .normal)
         }))
         
         rhythmAlert.addAction(UIAlertAction(title: "Irregular", style: .default, handler: { (action) in
             //execute some code when this option is selected
-            self.txtRhythm.text = "Irregular"
+            self.rhythmButton.setTitle("Irregular", for: .normal)
         }))
         
         
