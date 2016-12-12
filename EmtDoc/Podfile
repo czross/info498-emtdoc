@@ -10,6 +10,7 @@ target 'EmtDoc' do
   pod 'Alamofire', '~> 4.0'
   pod 'SwiftyJSON'
   pod 'IQKeyboardManager'
+  pod 'IQKeyboardManagerSwift'
 
   target 'EmtDocTests' do
     inherit! :search_paths
@@ -17,6 +18,7 @@ target 'EmtDoc' do
     pod 'Alamofire', '~> 4.0'
     pod 'SwiftyJSON'
     pod 'IQKeyboardManager'
+    pod 'IQKeyboardManagerSwift'
 
   end
 
@@ -26,6 +28,7 @@ target 'EmtDoc' do
     pod 'Alamofire', '~> 4.0'
     pod 'SwiftyJSON'
     pod 'IQKeyboardManager'
+    pod 'IQKeyboardManagerSwift'
 
   end
 
