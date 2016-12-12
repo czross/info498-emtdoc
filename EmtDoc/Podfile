@@ -9,12 +9,14 @@ target 'EmtDoc' do
   # Pods for EmtDoc
   pod 'Alamofire', '~> 4.0'
   pod 'SwiftyJSON'
+  pod 'IQKeyboardManager'
 
   target 'EmtDocTests' do
     inherit! :search_paths
     # Pods for testing
     pod 'Alamofire', '~> 4.0'
     pod 'SwiftyJSON'
+    pod 'IQKeyboardManager'
 
   end
 
@@ -23,6 +25,7 @@ target 'EmtDoc' do
     # Pods for testing
     pod 'Alamofire', '~> 4.0'
     pod 'SwiftyJSON'
+    pod 'IQKeyboardManager'
 
   end
 
