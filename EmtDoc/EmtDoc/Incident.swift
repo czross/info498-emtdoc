@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class Incident {
     public var dateTime: Date?
@@ -22,6 +23,7 @@ class Incident {
     }
     
     func set(latitude: Float, longitude: Float) {
+        
         self.latitude = latitude
         self.longitude = longitude
     }
