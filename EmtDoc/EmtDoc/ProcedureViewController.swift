@@ -57,14 +57,37 @@ class ProcedureViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print("component \(component)")
-        print("row \(row)")
-        print(self.pickerData[component][row])
+//        print("component \(component)")
+//        print("row \(row)")
+//        print(self.pickerData[component][row])
+        if (component == 0) {
+            self.procedureChosen = self.pickerData[component][row]
+        } else {
+            self.locationChosen = self.pickerData[component][row]
+        }
+        print(self.EmtDocModel.procedures.getInput())
     }
     
     @IBAction func commitProcedure(_ sender: AnyObject) {
-        
+        self.EmtDocModel.procedures.done(procedure: self.procedureChosen, location: self.locationChosen)
     }
+    
+    @IBAction func addMed(_ sender: UIButton) {
+        let choice = String.init(describing: sender.titleLabel)
+        var med = ""
+        print(choice)
+        if (choice == "Epinephrine Given") {
+            med = "Epinephrine"
+        } else if (choice == "Bicarb Given") {
+            med = "Bicarb"
+        } else if (choice == "Insulin Given") {
+            med = "Insulin"
+        } else {
+            med = "Amiodarone"
+        }
+        self.EmtDocModel.procedures.done(procedure: med, location: "med")
+    }
+    
  
     /*
     // MARK: - Navigation
