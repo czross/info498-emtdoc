@@ -9,17 +9,46 @@
 import UIKit
 import Alamofire
 import CoreLocation
+import MessageUI
 
-class HomeTableViewController: UITableViewController {
+class HomeTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
     var EmtDocModel = EmtDoc()
-    var email = Email()
+//    var email = Email()
     var hospitals: [Dictionary<String,String>]?
     // hospitals array of array structure: [["name": "", "email": ""],[...],[...]]
     
-    
-    
     @IBOutlet weak var titleLabel: UILabel!
     
+    
+    @IBAction func sendEmailButton(_ sender: UIBarButtonItem) {
+        var tempEmail = EmtDocModel.selectedHospital?["email"]
+        var emailString = "\(tempEmail!)@uw.edu"
+        var arrayEmail: [String] = [emailString]
+//        arrayEmail.append(emailTestString)
+        NSLog("temp Email \(arrayEmail)")
+        sendEmail(email: arrayEmail)
+    }
+    
+    // MARK: - Email set up
+    
+    func sendEmail(email: [String]) {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(email)
+            NSLog("Email sending data to: \(email)")
+            mail.setSubject("Testing EmtDoc")
+            mail.setMessageBody("You're so awesome!", isHTML: false)
+            
+            present(mail, animated: true)
+        } else {
+            // show failure alert
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
     
     var options : [String] = []
     
@@ -70,9 +99,6 @@ class HomeTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func sendEmailButton(_ sender: Any) {
-        email.prepareEmail()
-    }
 
     // MARK: - Table view data source
 
