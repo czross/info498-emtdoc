@@ -44,16 +44,20 @@ class ProcedureViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.pickerData.count
+        return 10
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        print("component \(component)")
+        print("row \(row)")
+        print(" \n \(pickerData[component][row]) \n")
         return self.pickerData[component][row]
     }
     
-    @IBAction func addProcedure(_ sender: Any) {
+    @IBAction func commitProcedure(_ sender: AnyObject) {
         
     }
+ 
     /*
     // MARK: - Navigation
 
