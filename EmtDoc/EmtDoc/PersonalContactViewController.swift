@@ -19,25 +19,16 @@ class PersonalContactViewController: UIViewController {
     @IBOutlet weak var txtTelephone: UITextField!
     @IBOutlet weak var txtPhysician: UITextField!
 
-    @IBAction func updateButton(_ sender: Any) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let mainModel = appDelegate.EmtDocModel.person
-        
-        mainModel.set(address: txtAddress.text!)
-        mainModel.set(city: txtCity.text!)
-        mainModel.set(state: txtState.text!)
-        mainModel.set(zip: txtZip.text!)
-        mainModel.set(telephone: txtTelephone.text!)
-        mainModel.set(physician: txtPhysician.text!)
-        
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
+        // Get Model singleton
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.EmtDocModel = appDelegate.EmtDocModel
+        
+        txtTelephone.keyboardType = UIKeyboardType.numbersAndPunctuation
         
         txtAddress.text = EmtDocModel.person.address
         txtCity.text = EmtDocModel.person.city
@@ -47,10 +38,23 @@ class PersonalContactViewController: UIViewController {
         txtPhysician.text = EmtDocModel.person.physician
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let mainModel = appDelegate.EmtDocModel.person
+        
+        mainModel.set(address: txtAddress.text!)
+        mainModel.set(city: txtCity.text!)
+        mainModel.set(state: txtState.text!)
+        mainModel.set(zip: txtZip.text!)
+        mainModel.set(telephone: txtTelephone.text!)
+        mainModel.set(physician: txtPhysician.text!)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*

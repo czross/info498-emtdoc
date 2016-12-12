@@ -11,11 +11,12 @@ import Alamofire
 
 class HomeTableViewController: UITableViewController {
     var EmtDocModel = EmtDoc()
+    var hospitals: [Dictionary<String,String>]?
+    // hospitals array of array structure: [["name": "", "email": ""],[...],[...]]
     
     @IBOutlet weak var titleLabel: UILabel!
     
     var options : [String] = []
-    var hospitals: [Dictionary<String,String>]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +28,7 @@ class HomeTableViewController: UITableViewController {
         options = self.EmtDocModel.mainChoices
         
         // testing http function downloadData
-        downloadData {
-            self.tableView.reloadData()
-//            NSLog("Downloaded: \(self.hospitals![0]["name"]!)!")
-        }
+        updateHospitalData()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -51,11 +49,19 @@ class HomeTableViewController: UITableViewController {
         Alamofire.request(BASE_URL).responseJSON { response in
 //            NSLog("inside alamofire")
             let result = response.result
-//            NSLog("result: \(result)")
+            NSLog("HTTP Request: \(result)")
             if let hospitalList = result.value as? [Dictionary<String, String>] {
                 self.hospitals = hospitalList
             }
             completed()
+        }
+        
+    }
+    
+    func updateHospitalData() {
+        self.hospitals?.removeAll()
+        downloadData {
+            self.tableView.reloadData()
         }
     }
     
@@ -79,6 +85,21 @@ class HomeTableViewController: UITableViewController {
         // Configure the cell...
         cell.titleLabel.text = options[indexPath.row]
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let choice = options[indexPath.row]
+        if indexPath.row == 0 {
+            performSegue(withIdentifier: "ComplaintViewController", sender: nil)
+        } else if indexPath.row == 1 {
+            performSegue(withIdentifier: "VitalsViewController", sender: nil)
+        } else if indexPath.row == 2 {
+            performSegue(withIdentifier: "ExamViewController", sender: nil)
+        } else if indexPath.row == 3 {
+            performSegue(withIdentifier: "ProcedureViewController", sender: nil)
+        }
+            
+        NSLog("Choice picked: \(choice)")
     }
     
 
@@ -117,14 +138,25 @@ class HomeTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ComplaintViewController" {
+            if segue.destination is ComplaintViewController { }
+        } else if segue.identifier == "VitalsViewController" {
+            if segue.destination is VitalsViewController { }
+        } else if segue.identifier == "ExamViewController" {
+            if segue.destination is ExamViewController { }
+        } else if segue.identifier == "ProcedureViewController" {
+            if segue.destination is ProcedureViewController { }
+        } else if segue.identifier == "HospitalTableViewController" {
+            if let destination = segue.destination as? HospitalTableViewController {
+                destination.hospitals = self.hospitals
+            }
+        }
     }
-    */
+    
 
 }

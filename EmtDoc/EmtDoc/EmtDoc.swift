@@ -9,10 +9,12 @@
 import Foundation
 
 class EmtDoc {
+    var chiefComplaint : String = ""
     var person: PersonID = PersonID()
     let exam: Exam = Exam()
     let procedures: Procedure = Procedure()
     let vitals: VitalSigns = VitalSigns()
+    var selectedHospital: [String:String]?
 //    let glascow: GlascowDscp = GlascowDscp()
     
     let mainChoices: [String] = [
