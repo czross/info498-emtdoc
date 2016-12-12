@@ -65,26 +65,28 @@ class ProcedureViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         } else {
             self.locationChosen = self.pickerData[component][row]
         }
-        print(self.EmtDocModel.procedures.getInput())
+        
     }
     
     @IBAction func commitProcedure(_ sender: AnyObject) {
         self.EmtDocModel.procedures.done(procedure: self.procedureChosen, location: self.locationChosen)
+        print(self.EmtDocModel.procedures.getInput())
     }
     
     @IBAction func addMed(_ sender: UIButton) {
-        let choice = String.init(describing: sender.titleLabel)
+        let choice = sender.restorationIdentifier
         var med = ""
-        print(choice)
-        if (choice == "Epinephrine Given") {
+        print("button choice \(choice)")
+        if (choice == "Epi") {
             med = "Epinephrine"
-        } else if (choice == "Bicarb Given") {
+        } else if (choice == "Bicarb") {
             med = "Bicarb"
-        } else if (choice == "Insulin Given") {
+        } else if (choice == "Insulin") {
             med = "Insulin"
         } else {
             med = "Amiodarone"
         }
+        print(med)
         self.EmtDocModel.procedures.done(procedure: med, location: "med")
     }
     
