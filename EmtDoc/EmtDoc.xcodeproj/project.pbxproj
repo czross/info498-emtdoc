@@ -18,6 +18,7 @@
 		492241931DFDEF7E00B53A78 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492241921DFDEF7E00B53A78 /* PersonalInfoViewController.swift */; };
 		492241971DFDEFE000B53A78 /* PersonalMedicalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492241961DFDEFE000B53A78 /* PersonalMedicalViewController.swift */; };
 		492241991DFDF0BA00B53A78 /* PersonalContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492241981DFDF0BA00B53A78 /* PersonalContactViewController.swift */; };
+		4922419D1DFE0E2500B53A78 /* GlascowTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4922419C1DFE0E2500B53A78 /* GlascowTestViewController.swift */; };
 		5C334B6D1DFCC1540041283E /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B6B1DFCC1540041283E /* HospitalTableViewCell.swift */; };
 		5C334B6E1DFCC1540041283E /* HospitalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B6C1DFCC1540041283E /* HospitalTableViewController.swift */; };
 		5C334B721DFDCFD80041283E /* ProcedureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B711DFDCFD80041283E /* ProcedureViewController.swift */; };
@@ -88,6 +89,7 @@
 		492241921DFDEF7E00B53A78 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 		492241961DFDEFE000B53A78 /* PersonalMedicalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalMedicalViewController.swift; sourceTree = "<group>"; };
 		492241981DFDF0BA00B53A78 /* PersonalContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalContactViewController.swift; sourceTree = "<group>"; };
+		4922419C1DFE0E2500B53A78 /* GlascowTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlascowTestViewController.swift; sourceTree = "<group>"; };
 		5C334B6B1DFCC1540041283E /* HospitalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalTableViewCell.swift; sourceTree = "<group>"; };
 		5C334B6C1DFCC1540041283E /* HospitalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalTableViewController.swift; sourceTree = "<group>"; };
 		5C334B711DFDCFD80041283E /* ProcedureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcedureViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				5C334B6C1DFCC1540041283E /* HospitalTableViewController.swift */,
 				5C334B6B1DFCC1540041283E /* HospitalTableViewCell.swift */,
 				5C334B711DFDCFD80041283E /* ProcedureViewController.swift */,
+				4922419C1DFE0E2500B53A78 /* GlascowTestViewController.swift */,
 				5C334B731DFDCFE10041283E /* VitalsViewController.swift */,
 				5C334B751DFDCFEB0041283E /* ExamViewController.swift */,
 				5C334B7F1DFDD3980041283E /* ComplaintViewController.swift */,
@@ -577,6 +580,7 @@
 				5C334B821DFDD4080041283E /* Complaint.swift in Sources */,
 				9DED19291DEE7B770092D747 /* Exam.swift in Sources */,
 				5C334B801DFDD3980041283E /* ComplaintViewController.swift in Sources */,
+				4922419D1DFE0E2500B53A78 /* GlascowTestViewController.swift in Sources */,
 				5C334B721DFDCFD80041283E /* ProcedureViewController.swift in Sources */,
 				5C334B7E1DFDD1BD0041283E /* JsonIO.swift in Sources */,
 				5C334B761DFDCFEB0041283E /* ExamViewController.swift in Sources */,
