@@ -81,6 +81,21 @@ class HomeTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let choice = options[indexPath.row]
+        if indexPath.row == 0 {
+            performSegue(withIdentifier: "ComplaintViewController", sender: nil)
+        } else if indexPath.row == 1 {
+            performSegue(withIdentifier: "VitalsViewController", sender: nil)
+        } else if indexPath.row == 2 {
+            performSegue(withIdentifier: "ExamViewController", sender: nil)
+        } else if indexPath.row == 3 {
+            performSegue(withIdentifier: "ProcedureViewController", sender: nil)
+        }
+            
+        NSLog("Choice picked: \(choice)")
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -117,14 +132,29 @@ class HomeTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ComplaintViewController" {
+            if segue.destination is ComplaintViewController {
+                
+            }
+        } else if segue.identifier == "VitalsViewController" {
+            if segue.destination is VitalsViewController {
+                
+            }
+        } else if segue.identifier == "ExamViewController" {
+            if segue.destination is ExamViewController {
+                
+            }
+        } else if segue.identifier == "ProcedureViewController" {
+            if segue.destination is ProcedureViewController {
+                
+            }
+        }
     }
-    */
+    
 
 }
