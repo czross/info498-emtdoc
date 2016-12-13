@@ -10,6 +10,7 @@ import XCTest
 @testable import EmtDoc
 
 class EmtDocTests: XCTestCase {
+  /*
     var proc: Procedure? = nil
 
     
@@ -116,5 +117,5 @@ class EmtDocTests: XCTestCase {
 //            // Put the code you want to measure the time of here.
 //        }
 //    }
-    
+    */
 }
