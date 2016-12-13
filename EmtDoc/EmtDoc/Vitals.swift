@@ -41,8 +41,8 @@ public class VitalSigns {
     public var temp : Double = -1.0
     public var pain : Int = -1
     
-    public var glascow : [String: Int] = ["Eye" : -1, "Verbal" : -1, "Motor" : -1]
-    public var glascowTtl: Int = 0
+    private var glascow : [String: Int] = ["Eye" : -1, "Verbal" : -1, "Motor" : -1]
+    private var glascowTtl: Int = 0
     
     let painDscp = "1-10"
     //Choices for rhythm
@@ -71,10 +71,27 @@ public class VitalSigns {
         glascowTtl = glascow["Eye"]! + glascow["Verbal"]!
         glascowTtl += glascow["Motor"]!
     }
+    func setGlascow(eye: Int){
+        glascow["Eye"] = eye
+        self.glascowTtl = self.glascow["Eye"]! + self.glascow["Verbal"]!
+        self.glascowTtl += self.glascow["Motor"]!
+    }
+    func setGlascow(verbal: Int){
+        glascow["Verbal"] = verbal
+        glascowTtl = glascow["Eye"]! + glascow["Verbal"]!
+        glascowTtl += glascow["Motor"]!
+    }
+    func setGlascow(motor: Int) {
+        glascow["Motor"] = motor
+        glascowTtl = glascow["Eye"]! + glascow["Verbal"]!
+        glascowTtl += glascow["Motor"]!
+    }
     func getGlascow() -> [String: Int] {
         return self.glascow
     }
-    
+    func getGlascowTtl() -> Int{
+        return self.glascowTtl
+    }
     func getPainDscp() -> String {
         return self.painDscp
     }

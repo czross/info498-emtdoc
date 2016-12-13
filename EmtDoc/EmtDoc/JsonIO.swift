@@ -240,8 +240,8 @@ public class JsonIO {
         json["endTidalCO2"].doubleValue = vital.endTidalCO2
         json["temp"].doubleValue = vital.temp
         json["pain"].intValue = vital.pain
-        json["glascow"].dictionaryObject = vital.glascow
-        json["glascowTtl"].int = vital.glascowTtl
+        json["glascow"].dictionaryObject = vital.getGlascow()
+        json["glascowTtl"].int = vital.getGlascowTtl()
         
         if let jsonString = json.rawString() {
             do {
@@ -278,10 +278,9 @@ public class JsonIO {
                 vital.temp = json["temp"].doubleValue
                 vital.pain = json["pain"].intValue
                 let glascow = json["glascow"].dictionaryValue
-                for (key, value) in glascow{
-                    vital.glascow[key] = value.intValue
-                }
-                vital.glascowTtl = json["glascowTtl"].intValue
+                vital.setGlascow(eye: (glascow["Eye"]?.intValue)!)
+                vital.setGlascow(motor: (glascow["Motor"]?.intValue)!)
+                vital.setGlascow(verbal: (glascow["Verbal"]?.intValue)!)
             }
             catch{}
         }
