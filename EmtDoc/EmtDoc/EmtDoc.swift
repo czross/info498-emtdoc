@@ -12,11 +12,20 @@ class EmtDoc {
     var incident: Incident = Incident()
     var chiefComplaint : String = ""
     var person: PersonID = PersonID()
-    let exam: Exam = Exam()
-    let procedures: Procedure = Procedure()
-    let vitals: VitalSigns = VitalSigns()
+    var exam: Exam = Exam()
+    var procedures: Procedure = Procedure()
+    var vitals: VitalSigns = VitalSigns()
     var selectedHospital: [String:String]?
-//    let glascow: GlascowDscp = GlascowDscp()
+    
+    func clear() {
+        self.incident = Incident()
+        self.chiefComplaint = ""
+        self.person = PersonID()
+        self.exam = Exam()
+        self.procedures = Procedure()
+        self.vitals = VitalSigns()
+        self.selectedHospital = nil
+    }
     
     let mainChoices: [String] = [
         "Chief Complaint",
@@ -77,4 +86,6 @@ class EmtDoc {
     
     init() {
     }
+    
+    
 }
