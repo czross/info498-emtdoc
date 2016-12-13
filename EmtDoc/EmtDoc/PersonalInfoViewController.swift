@@ -43,10 +43,30 @@ class PersonalInfoViewController: UIViewController {
         txtLName.placeholder = EmtDocModel.person.lName
         txtMiddleInitial.placeholder = EmtDocModel.person.middleInitial
         
-        txtGender.placeholder = EmtDocModel.person.gender
-        txtDob.placeholder = "\(EmtDocModel.person.dob) YY/MM/DD"
-        txtAge.placeholder = String(EmtDocModel.person.age)
+        if (EmtDocModel.person.gender == "") {
+            txtGender.placeholder = "Gender"
+        } else {
+            txtGender.placeholder = EmtDocModel.person.gender
+        }
+        
+        if (EmtDocModel.person.dob == "") {
+            txtDob.placeholder = "YY/MM/DD"
+        } else {
+            txtDob.placeholder = EmtDocModel.person.dob
+        }
+        
+        if (EmtDocModel.person.age == -1) {
+            txtAge.placeholder = "Years")
+        } else {
+            txtAge.placeholder = "\(EmtDocModel.person.age) years"
+        }
+        
+        if () {
+            
+        }
         txtWeight.placeholder = "\(String(EmtDocModel.person.weight)) lbs"
+        
+        
         txtRace.placeholder = EmtDocModel.person.race
         txtAdvanced.placeholder = EmtDocModel.person.advanced
     }
