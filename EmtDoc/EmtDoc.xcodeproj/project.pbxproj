@@ -236,17 +236,9 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		5C334B831DFDD4190041283E /* Home Main Screen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Home Main Screen";
-			sourceTree = "<group>";
-		};
 		9DED19201DEE7B5C0092D747 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5C334B831DFDD4190041283E /* Home Main Screen */,
 				5C334B7B1DFDD1B60041283E /* Internaltesting.json */,
 				5C334B791DFDD1AE0041283E /* HttpJSON.swift */,
 				5C334B771DFDD1A50041283E /* File.swift */,
