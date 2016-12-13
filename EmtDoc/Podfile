@@ -11,6 +11,7 @@ target 'EmtDoc' do
   pod 'SwiftyJSON'
   pod 'IQKeyboardManager'
   pod 'IQKeyboardManagerSwift'
+  pod 'AES256CBC'
 
   target 'EmtDocTests' do
     inherit! :search_paths
@@ -19,6 +20,7 @@ target 'EmtDoc' do
     pod 'SwiftyJSON'
     pod 'IQKeyboardManager'
     pod 'IQKeyboardManagerSwift'
+    pod 'AES256CBC'
 
   end
 
@@ -29,6 +31,7 @@ target 'EmtDoc' do
     pod 'SwiftyJSON'
     pod 'IQKeyboardManager'
     pod 'IQKeyboardManagerSwift'
+    pod 'AES256CBC'
 
   end
 
