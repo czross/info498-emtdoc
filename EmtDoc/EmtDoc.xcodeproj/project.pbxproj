@@ -39,6 +39,7 @@
 		60556228C0C766CDF49E0999 /* Pods_EmtDoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98252B61D6D72A5C04759293 /* Pods_EmtDoc.framework */; };
 		9D268CC11DF7AD2B005D585C /* EmtDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D268CC01DF7AD2B005D585C /* EmtDoc.swift */; };
 		9D268CC71DF7B588005D585C /* EmtDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D268CC01DF7AD2B005D585C /* EmtDoc.swift */; };
+		9D2FDD4F1DFF7A1D003CEFDB /* SetTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2FDD4E1DFF7A1D003CEFDB /* SetTimeViewController.swift */; };
 		9D365E7A1DF7A12200089DA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E967A1DE54EB000595E22 /* AppDelegate.swift */; };
 		9D365E7B1DF7A13C00089DA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067E96841DE54EB100595E22 /* Assets.xcassets */; };
 		9D365E871DF7A6E800089DA0 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D365E861DF7A6E800089DA0 /* HomeTableViewController.swift */; };
@@ -112,6 +113,7 @@
 		86D8D0E9D41F032E8C6B61DA /* Pods-EmtDocUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDocUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDocUITests/Pods-EmtDocUITests.release.xcconfig"; sourceTree = "<group>"; };
 		98252B61D6D72A5C04759293 /* Pods_EmtDoc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmtDoc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D268CC01DF7AD2B005D585C /* EmtDoc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmtDoc.swift; sourceTree = "<group>"; };
+		9D2FDD4E1DFF7A1D003CEFDB /* SetTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetTimeViewController.swift; sourceTree = "<group>"; };
 		9D365E861DF7A6E800089DA0 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		9D365E8A1DF7A8B600089DA0 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		9DED19221DEE7B770092D747 /* Exam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exam.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				492241961DFDEFE000B53A78 /* PersonalMedicalViewController.swift */,
 				492241981DFDF0BA00B53A78 /* PersonalContactViewController.swift */,
 				4982C6171DFF5C2C00B17850 /* SetLocationTimeViewController.swift */,
+				9D2FDD4E1DFF7A1D003CEFDB /* SetTimeViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				492241991DFDF0BA00B53A78 /* PersonalContactViewController.swift in Sources */,
 				067E967B1DE54EB000595E22 /* AppDelegate.swift in Sources */,
 				5C334B741DFDCFE10041283E /* VitalsViewController.swift in Sources */,
+				9D2FDD4F1DFF7A1D003CEFDB /* SetTimeViewController.swift in Sources */,
 				4982C6181DFF5C2C00B17850 /* SetLocationTimeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

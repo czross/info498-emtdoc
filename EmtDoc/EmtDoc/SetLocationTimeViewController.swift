@@ -25,11 +25,6 @@ class SetLocationTimeViewController: UIViewController, CLLocationManagerDelegate
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let mainModel = appDelegate.EmtDocModel.incident
         
-        // Check for authorization
-        if CLLocationManager.authorizationStatus() == .notDetermined {
-            self.locationManager.requestWhenInUseAuthorization()
-        }
-        
         // Grab the annotation
         let allAnnotations = self.mapView.annotations
         
@@ -51,7 +46,10 @@ class SetLocationTimeViewController: UIViewController, CLLocationManagerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Check for authorization
+        if CLLocationManager.authorizationStatus() == .notDetermined {
+            self.locationManager.requestWhenInUseAuthorization()
+        }
         
         // Add long press recognizer
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotationOnLongPress(gesture:)))
