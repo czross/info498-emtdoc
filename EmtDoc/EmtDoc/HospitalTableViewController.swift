@@ -56,7 +56,7 @@ class HospitalTableViewController: UITableViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.EmtDocModel.selectedHospital = selectedHospital
         NSLog("Saved EmtDoc hospital selected: \(appDelegate.EmtDocModel.selectedHospital!)")
-        
+        self.navigationController?.popViewController(animated: true)
         // Screen dismissal back to HomeTableViewController
         
     }
