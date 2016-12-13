@@ -12,11 +12,11 @@ class GlascowTestViewController: UIViewController {
     
     var EmtDocModel = EmtDoc()
     
-    let eyeAlert = UIAlertController(title: "Eye", message: "Please Choose Type of Response", preferredStyle: .actionSheet)
+    let eyeAlert = UIAlertController(title: "Eye", message: "Please Choose Type of Response", preferredStyle: .alert)
     
-    let verbalAlert = UIAlertController(title: "Verbal", message: "Please Choose Type of Response", preferredStyle: .actionSheet)
+    let verbalAlert = UIAlertController(title: "Verbal", message: "Please Choose Type of Response", preferredStyle: .alert)
     
-    let motorAlert = UIAlertController(title: "Motor", message: "Please Choose Type of Response", preferredStyle: .actionSheet)
+    let motorAlert = UIAlertController(title: "Motor", message: "Please Choose Type of Response", preferredStyle: .alert)
     
     @IBOutlet weak var eyeButton: UIButton!
     @IBOutlet weak var verbalButton: UIButton!
