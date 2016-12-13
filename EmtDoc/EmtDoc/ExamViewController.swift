@@ -84,8 +84,11 @@ class ExamViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         EmtDocModel = appDelegate.EmtDocModel
+        self.hideKeyboardWhenTappedAround()
+
 
         // Do any additional setup after loading the view.
     }

@@ -21,12 +21,21 @@ class HomeTableViewController: UITableViewController, MFMailComposeViewControlle
     
     
     @IBAction func sendEmailButton(_ sender: UIBarButtonItem) {
-        var tempEmail = EmtDocModel.selectedHospital?["email"]
-        var emailString = "\(tempEmail!)@uw.edu"
-        var arrayEmail: [String] = [emailString]
-//        arrayEmail.append(emailTestString)
-        NSLog("temp Email \(arrayEmail)")
-        sendEmail(email: arrayEmail)
+        if EmtDocModel.selectedHospital != nil {
+            let tempEmail = EmtDocModel.selectedHospital?["email"]
+            let emailString = "\(tempEmail!)"
+            let arrayEmail: [String] = [emailString]
+            NSLog("temp Email \(arrayEmail)")
+            sendEmail(email: arrayEmail)
+        } else {
+            NSLog("No Hosptial Checked")
+            let checkAction = UIAlertController(title: "Hospital", message: "No hospital designated", preferredStyle: .alert)
+            let checkOk = UIAlertAction(title: "Select", style: .default) { (_) in
+                self.performSegue(withIdentifier: "HospitalTableViewController", sender: nil)
+            }
+            checkAction.addAction(checkOk)
+            self.present(checkAction, animated: true, completion: nil)
+        }
     }
     
     // MARK: - Email set up
@@ -38,12 +47,16 @@ class HomeTableViewController: UITableViewController, MFMailComposeViewControlle
             mail.setToRecipients(email)
             NSLog("Email sending data to: \(email)")
             mail.setSubject("Testing EmtDoc")
-            mail.setMessageBody("You're so awesome!", isHTML: false)
+            let message = "Chief Complaint: \(EmtDocModel.chiefComplaint)\nGender: \(EmtDocModel.person.gender), Age: \(EmtDocModel.person.age), Weight: \(EmtDocModel.person.weight)\n"
+            mail.setMessageBody(message, isHTML: false)
             
             present(mail, animated: true)
         } else {
             // show failure alert
         }
+        //to test the MessageBody string
+        let message = "Chief Complaint: \(EmtDocModel.chiefComplaint)\nGender: \(EmtDocModel.person.gender), Age: \(EmtDocModel.person.age), Weight: \(EmtDocModel.person.weight)\n"
+        print (message)
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
