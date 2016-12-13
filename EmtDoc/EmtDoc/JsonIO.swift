@@ -180,6 +180,45 @@ public class JsonIO {
     return exam
   }
   
+  public static func writeProcedure(procedure: Procedure) -> Void {
+    let data = ["procedure": "procedure", "location": "location"]
+    var json = JSON(data)
+    json["procedure"].arrayObject = procedure.getProcedures()
+    json["location"].arrayObject = procedure.getProcLocation()
+    if let jsonString = json.rawString() {
+      do {
+        let documentDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+        let fileURL = documentDirectoryURL.appendingPathComponent("procedure.json")
+        do {
+          try jsonString.write(to: fileURL, atomically: false, encoding: String.Encoding.utf8)
+        }
+        catch {}
+        
+      }
+      catch {}
+    }
+  }
+  
+  public static func readProcedure() -> Procedure {
+    let procedure = Procedure()
+    do {
+      let documentDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+      let fileURL = documentDirectoryURL.appendingPathComponent("procedure.json")
+      do {
+        let jsonData = try Data(contentsOf: fileURL)
+        let json = JSON(data: jsonData)
+        let procs = json["procedure"].arrayValue
+        let locs = json["location"].arrayValue
+        for i in 0...procs.count {
+          procedure.done(procedure: procs[i].string!, location: locs[i].string!)
+        }
+      }
+      catch {}
+    }
+    catch {}
+    return procedure
+  }
+  
 }
 
 

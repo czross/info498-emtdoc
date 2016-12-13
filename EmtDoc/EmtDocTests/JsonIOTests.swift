@@ -110,6 +110,20 @@ class JsonIOTests: XCTestCase {
     XCTAssert(exam.neuro == examRead.neuro)
     XCTAssert(exam.pelvic == examRead.pelvic)
     XCTAssert(exam.skin == examRead.skin)
-
+  }
+  
+  
+  private func makeProcedure() -> Procedure {
+    let procedure = Procedure()
+    procedure.done(procedure: "proc1", location: "loc1")
+    procedure.done(procedure: "proc2", location: "loc2")
+    return procedure
+  }
+  
+  public func testReadWriteProcedure() -> Void {
+    let procedure = makeProcedure()
+    JsonIO.writeProcedure(procedure: procedure)
+    let procedureRead = JsonIO.readProcedure()
+    XCTAssert(procedure.getProcLocation() == procedureRead.getProcLocation())
   }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Procedure {
+public class Procedure {
     let medChoices: [String] = [
         "Epinephrine",
         "Bircarb",
