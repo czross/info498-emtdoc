@@ -133,6 +133,7 @@ public class JsonIO {
     json["extremityRL"].string = exam.extremities["rightLower"]
     json["back"].string = exam.back
     json["abdomen"].string = exam.abdomen
+    
     if let jsonString = json.rawString() {
       do {
         let documentDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -182,8 +183,8 @@ public class JsonIO {
   public static func writeProcedure(procedure: Procedure) -> Void {
     let data = ["procedure": "procedure", "location": "location"]
     var json = JSON(data)
-    json["procedure"].arrayObject = procedure.getProcedures()
-    json["location"].arrayObject = procedure.getProcLocation()
+    json["procedure"].arrayObject = procedure.getInput()[0]
+    json["location"].arrayObject = procedure.getInput()[1]
     if let jsonString = json.rawString() {
       do {
         let documentDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -208,7 +209,7 @@ public class JsonIO {
         let json = JSON(data: jsonData)
         let procs = json["procedure"].arrayValue
         let locs = json["location"].arrayValue
-        for i in 0...procs.count {
+        for i in 0...procs.count-1 {
           procedure.done(procedure: procs[i].string!, location: locs[i].string!)
         }
       }
