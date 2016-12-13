@@ -10,7 +10,40 @@ import Foundation
 import SwiftyJSON
 
 public class JsonIO {
+  
+  public static func clearPerson() -> Void {
+    do {
+      let documentDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+      let fileURL = documentDirectoryURL.appendingPathComponent("persons.json")
+      if (FileManager.default.fileExists(atPath: fileURL.path)) {
+        do {
+          try " ".write(to: fileURL, atomically: false, encoding: String.Encoding.utf8)
+        }
+      }
+    }
+    catch{}
+  }
+  
   public static func writePerson(person: PersonID) -> Void {
+    var history = JSON(["persons": "persons"])
+    do {
+      let documentDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+      let fileURL = documentDirectoryURL.appendingPathComponent("persons.json")
+      if (FileManager.default.fileExists(atPath: fileURL.path)) {
+        print("has the file")
+        do {
+          let jsonData = try Data(contentsOf: fileURL)
+          history = JSON(data: jsonData)
+        }
+        catch {}
+      }
+      if history["persons"].arrayObject == nil {
+        history = JSON(["persons": "persons"])
+        history["persons"].arrayObject = Array()
+      }
+    }
+    catch{}
+
     let data = ["fname": "fname",
                 "lname": "lname",
                 "middleInitial": "middleInitial",
@@ -26,8 +59,7 @@ public class JsonIO {
                 "medications": ["medications"],
                 "city": "city",
                 "state": "state",
-                "zip": "zip",
-                "allergies": ["allergies"]] as [String : Any]
+                "zip": "zip"] as [String : Any]
     var json = JSON(data)
     json["fname"].string = person.fName
     json["lname"].string = person.lName
@@ -46,13 +78,16 @@ public class JsonIO {
     json["physician"].string = person.physician
     json["medications"].string = person.medications
     json["allergies"].string = person.allergies
-    
-    if let jsonString = json.rawString() {
+    var tmp = history["persons"].arrayValue
+    tmp.append(json)
+    history["persons"] = JSON(tmp)
+    print("historycount \(history.count)")
+    if let historyData = history.description.data(using: String.Encoding.utf8) {
       do {
         let documentDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-        let fileURL = documentDirectoryURL.appendingPathComponent("person.json")
+        let fileURL = documentDirectoryURL.appendingPathComponent("persons.json")
         do {
-          try jsonString.write(to: fileURL, atomically: false, encoding: String.Encoding.utf8)
+          try historyData.write(to: fileURL, options: Data.WritingOptions.atomic)
         }
         catch {}
       
@@ -61,38 +96,40 @@ public class JsonIO {
     }
   }
   
-  public static func readPerson() -> PersonID {
-    let person = PersonID()
+  public static func readPerson() -> [PersonID] {
+    var persons = [PersonID]()
     do {
       let documentDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-      let fileURL = documentDirectoryURL.appendingPathComponent("person.json")
+      let fileURL = documentDirectoryURL.appendingPathComponent("persons.json")
       do {
         let jsonData = try Data(contentsOf: fileURL)
-        let json = JSON(data: jsonData)
-        print(jsonData)
-        person.set(age: json["age"].intValue)
-        person.set(fName: json["fname"].string!)
-        person.set(lName: json["lname"].string!)
-        person.set(middleInitial: json["middleInitial"].string!)
-        let dob = json["dob"].string!
-        let dobArray = dob.components(separatedBy: "/")
-        person.set(dob: json["dob"].string!)
-        person.set(advanced: json["advanced"].string!)
-        person.set(race: json["race"].string!)
-        person.set(gender: json["gender"].string!)
-        person.set(age: json["age"].intValue)
-        person.set(address: json["address"].string!)
-        person.set(city: json["city"].string!)
-        person.set(state: json["state"].string!)
-        person.set(zip: json["zip"].string!)
-        person.set(telephone: json["telephone"].string!)
-        person.set(physician: json["physician"].string!)
-        person.set(medications: json["medications"].string!)
-        person.set(allergies: json["allergies"].string!)
+        let jsons = JSON(data: jsonData)
+        for json in jsons["persons"].arrayValue {
+          let person = PersonID()
+          
+          person.set(age: json["age"].intValue)
+          person.set(fName: json["fname"].string!)
+          person.set(lName: json["lname"].string!)
+          person.set(middleInitial: json["middleInitial"].string!)
+          person.set(dob: json["dob"].string!)
+          person.set(advanced: json["advanced"].string!)
+          person.set(race: json["race"].string!)
+          person.set(gender: json["gender"].string!)
+          person.set(age: json["age"].intValue)
+          person.set(address: json["address"].string!)
+          person.set(city: json["city"].string!)
+          person.set(state: json["state"].string!)
+          person.set(zip: json["zip"].string!)
+          person.set(telephone: json["telephone"].string!)
+          person.set(physician: json["physician"].string!)
+          person.set(medications: json["medications"].string!)
+          person.set(allergies: json["allergies"].string!)
+          persons.append(person)
+        }
       }
     }
     catch {}
-    return person
+    return persons
   }
   
   public static func writeExam(exam: Exam) -> Void {

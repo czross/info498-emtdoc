@@ -57,6 +57,7 @@ class HomeTableViewController: UITableViewController, MFMailComposeViewControlle
         //to test the MessageBody string
         let message = "Chief Complaint: \(EmtDocModel.chiefComplaint)\nGender: \(EmtDocModel.person.gender), Age: \(EmtDocModel.person.age), Weight: \(EmtDocModel.person.weight)\n"
         print (message)
+      JsonIO.writePerson(person: EmtDocModel.person)
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
