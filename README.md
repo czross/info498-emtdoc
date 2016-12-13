@@ -1,13 +1,14 @@
 # EmtDoc  
-INFO 498. This is an app that helps EMT and hospitals in patient care.  
-## By  
-Litthideth Phansiri  Peter Lu  Changming Feng  Hanzhen Yi  Christopher Ross  
+##INFO 498  
+This is an app that helps EMT and hospitals in patient care.  
+
 
 ## Personas
 ### The EMT
 * Needs to be able to send info to hospital while in route  
 * Track patient information easily  
-Have a device that can be used easily with one hand  
+* Have a device that can be used easily with one hand  
+
 ### The Hospital
 * Needs to get Patient information before arrival to have best prep  
 * Able to get a holistic record of what assessments were made and the results  
@@ -27,13 +28,20 @@ Select assessments performed and input their results
 * Automatically fill in incident location
 
 ## Built with
-This app is built with the following packages.
+This app is built with the following packages:
 * SwiftyJSON
 * Alamofire
 
 ## Requirements
 * iOS 9
 * Xcode 8
+
+## Creators  
+Litthideth Phansiri  
+Peter Lu  
+Changming Feng  
+Hanzhen Yi  
+Christopher Ross  
 
 
 
