@@ -10,7 +10,7 @@ import Foundation
 import SwiftyJSON
 
 public class JsonIO {
-  public static func writeJson(person: PersonID) -> Void {
+  public static func writePerson(person: PersonID) -> Void {
     let data = ["fname": "fname",
                 "lname": "lname",
                 "middleInitial": "middleInitial",
@@ -62,7 +62,7 @@ public class JsonIO {
     }
   }
   
-  public static func readJson() -> PersonID {
+  public static func readPerson() -> PersonID {
     let person = PersonID()
     do {
       let documentDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -95,6 +95,91 @@ public class JsonIO {
     catch {}
     return person
   }
+  
+  public static func writeExam(exam: Exam) -> Void {
+    let data = ["mentalStatus": "mentalStatus",
+                "pupils": "pupils",
+                "ears": "ears",
+                "throat": "throat",
+                "nose": "nose",
+                "head": "head",
+                "heartSounds": "heartSound",
+                "lungs": "lungs",
+                "neuro": "neuro",
+                "extremityLU": "extremityLU",
+                "extremityRU": "extremityRU",
+                "extremityLL": "extremityLL",
+                "extremityRL": "extremityRL",
+                "abdomen": "abdomen",
+                "pelvic": "pelvic",
+                "back": "back"
+                ] as [String : Any]
+    
+    var json = JSON(data)
+    json["mentalStatus"].string = exam.mentalStatus
+    json["skin"].string = exam.skin
+    json["pupils"].string = exam.facial["pupils"]
+    json["ears"].string = exam.facial["ears"]
+    json["nose"].string = exam.facial["nose"]
+    json["throat"].string = exam.facial["throat"]
+    json["head"].string = exam.facial["head"]
+    json["heartSounds"].string = exam.chest["heartSounds"]
+    json["lungs"].string = exam.chest["lungs"]
+    json["neuro"].string = exam.neuro
+    json["pelvic"].string = exam.pelvic
+    json["abdomen"].string = exam.abdomen
+    json["extremityLU"].string = exam.extremities["leftUpper"]
+    json["extremityRU"].string = exam.extremities["rightUpper"]
+    json["extremityLL"].string = exam.extremities["leftLower"]
+    json["extremityRL"].string = exam.extremities["rightLower"]
+    json["back"].string = exam.back
+    json["abdomen"].string = exam.abdomen
+    if let jsonString = json.rawString() {
+      do {
+        let documentDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+        let fileURL = documentDirectoryURL.appendingPathComponent("exam.json")
+        do {
+          try jsonString.write(to: fileURL, atomically: false, encoding: String.Encoding.utf8)
+        }
+        catch {}
+        
+      }
+      catch {}
+    }
+  }
+  
+  public static func readExam() -> Exam {
+    let exam = Exam()
+    do {
+      let documentDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+      let fileURL = documentDirectoryURL.appendingPathComponent("exam.json")
+      do {
+        let jsonData = try Data(contentsOf: fileURL)
+        let json = JSON(data: jsonData)
+        exam.abdomen = json["abdomen"].string!
+        exam.back = json["back"].string!
+        exam.chest["heartSounds"] = json["heartSounds"].string!
+        exam.chest["lungs"] = json["lungs"].string!
+        exam.facial["pupils"] = json["pupils"].string!
+        exam.facial["ears"] = json["ears"].string!
+        exam.facial["nose"] = json["nose"].string!
+        exam.facial["head"] = json["head"].string!
+        exam.facial["throat"] = json["throat"].string!
+        exam.extremities["leftLower"] = json["extremityLL"].string!
+        exam.extremities["leftUpper"] = json["extremityLU"].string!
+        exam.extremities["rightLower"] = json["extremityRL"].string!
+        exam.extremities["rightUpper"] = json["extremityRU"].string!
+        exam.skin = json["skin"].string!
+        exam.pelvic = json["pelvic"].string!
+        exam.neuro = json["neuro"].string!
+        exam.mentalStatus = json["mentalStatus"].string!
+      }
+      catch {}
+    }
+    catch {}
+    return exam
+  }
+  
 }
 
 
