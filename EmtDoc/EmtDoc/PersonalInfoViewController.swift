@@ -57,19 +57,24 @@ class PersonalInfoViewController: UIViewController {
         }
         
         if (EmtDocModel.person.age == -1) {
-            txtAge.placeholder = "Years")
+            txtAge.placeholder = "Years"
         } else {
             txtAge.placeholder = "\(EmtDocModel.person.age) years"
         }
         
-        if () {
-            
+        if (EmtDocModel.person.weight == 0) {
+            txtWeight.placeholder = "lbs"
+        } else {
+            txtWeight.placeholder = "\(String(EmtDocModel.person.weight)) lbs"
         }
-        txtWeight.placeholder = "\(String(EmtDocModel.person.weight)) lbs"
         
+        if (EmtDocModel.person.race == "") {
+            txtRace.placeholder = "Race"
+        } else {
+            txtRace.placeholder = EmtDocModel.person.race
+        }
         
-        txtRace.placeholder = EmtDocModel.person.race
-        txtAdvanced.placeholder = EmtDocModel.person.advanced
+        txtAdvanced.text = EmtDocModel.person.advanced
     }
     
     override func viewDidDisappear(_ animated: Bool) {
