@@ -31,8 +31,10 @@ class HomeTableViewController: UITableViewController, MFMailComposeViewControlle
             NSLog("No Hosptial Checked")
             let checkAction = UIAlertController(title: "Hospital", message: "No hospital designated", preferredStyle: .alert)
             let checkOk = UIAlertAction(title: "Select", style: .default) { (_) in
-            
+                self.performSegue(withIdentifier: "HospitalTableViewController", sender: nil)
             }
+            checkAction.addAction(checkOk)
+            self.present(checkAction, animated: true, completion: nil)
         }
     }
     
