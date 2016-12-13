@@ -9,11 +9,31 @@
 import UIKit
 
 class ExamViewController: UIViewController {
+    
+    var EmtDocModel = EmtDoc()
 
-  @IBOutlet weak var mentalStatusTextField: UITextField!
+  // @IBOutlet weak var mentalStatusTextField: UITextField!
+    let mentalAlert = UIAlertController(title: "Mental Status", message: "Please choose status", preferredStyle: .actionSheet)
+    
+    @IBAction func mentalButton(_ sender: AnyObject) {
+        self.present(mentalAlert, animated: true, completion:nil)
+    }
+
+  // @IBOutlet weak var skinTextField: UITextField!
+    let skinAlert = UIAlertController(title: "Skin Status", message: "Please choose status", preferredStyle: .actionSheet)
   
-  @IBOutlet weak var skinTextField: UITextField!
-  
+    @IBAction func skinButton(_ sender: AnyObject) {
+        self.present(skinAlert, animated: true, completion:nil)
+    }
+    
+    for index in 1...glascowDscp.eyeDscp.keys.count - 1 {
+    eyeAlert.addAction(UIAlertAction(title: "\(index) : \((glascowDscp.eyeDscp[index])!)", style: .default, handler: { (action) in
+    //execute some code when this option is selected
+    mainModel.glascow["Eye"] = index
+    self.eyeButton.setTitle((glascowDscp.eyeDscp[index])!, for: .normal)
+    }))
+    }
+    
   @IBOutlet weak var headTextField: UITextField!
   
   @IBOutlet weak var pupilsTextField: UITextField!
@@ -43,8 +63,7 @@ class ExamViewController: UIViewController {
   @IBOutlet weak var neuroTextField: UITextField!
   
   @IBAction func updateButtonClicked(_ sender: Any) {
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    let exam = appDelegate.EmtDocModel.exam
+    let exam = EmtDocModel.exam
     exam.mentalStatus = mentalStatusTextField.text!
     exam.skin = skinTextField.text!
     exam.facial["pupils"] = pupilsTextField.text!
@@ -65,6 +84,8 @@ class ExamViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        EmtDocModel = appDelegate.EmtDocModel
 
         // Do any additional setup after loading the view.
     }
