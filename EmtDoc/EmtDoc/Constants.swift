@@ -16,28 +16,14 @@ var baseURL = "https://raw.githubusercontent.com/czross/info498-emtdoc/master/JS
 let BASE_URL = URL(string: baseURL)!
 typealias DownloadComplete = () -> ()
 
-// MARK: - Email
-class Email: MFMailComposeViewController, MFMailComposeViewControllerDelegate {
-    
-    func prepareEmail() {
-        NSLog("Inside prepare Email")
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
-    func sendEmail(email: [String]) {
-        if MFMailComposeViewController.canSendMail() {
-            let mail = MFMailComposeViewController()
-            mail.mailComposeDelegate = self
-            mail.setToRecipients(email)
-            NSLog("Email sending data to: \(email)")
-            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
-            
-            present(mail, animated: true)
-        } else {
-            // show failure alert
-        }
-    }
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true)
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
