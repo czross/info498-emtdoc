@@ -29,7 +29,8 @@ class PersonalContactViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.EmtDocModel = appDelegate.EmtDocModel
         
-        txtTelephone.keyboardType = UIKeyboardType.numbersAndPunctuation
+        txtTelephone.keyboardType = UIKeyboardType.numberPad
+        txtZip.keyboardType = UIKeyboardType.numberPad
         
         if (EmtDocModel.person.address == "") {
             txtAddress.placeholder = "Street"
