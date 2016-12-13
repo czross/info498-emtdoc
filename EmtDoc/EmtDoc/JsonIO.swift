@@ -217,6 +217,76 @@ public class JsonIO {
     catch {}
     return procedure
   }
+    
+    
+    public static func writeVital(vital: VitalSigns) -> Void{
+        let data = ["bloodPrs": ["bloodPrs": -1],
+                    "heartRate": -1,
+                    "rhythm": "rhythm",
+                    "respRate": -1,
+                    "o2Saturation": -1.0,
+                    "endTidalCO2": -1.0,
+                    "temp": -1.0,
+                    "pain": -1,
+                    "glascow": ["glascow":-1],
+                    "glascowTtl": -1] as [String : Any]
+        var json = JSON(data)
+        json["bloodPrs"].dictionaryObject = vital.bloodPrs
+        json["heartRate"].intValue = vital.heartRate
+        json["rhythm"].string = vital.rhythm
+        json["respRate"].intValue = vital.respRate
+        json["o2Saturation"].doubleValue = vital.o2Saturation
+        json["endTidalCO2"].doubleValue = vital.endTidalCO2
+        json["temp"].doubleValue = vital.temp
+        json["pain"].intValue = vital.pain
+        json["glascow"].dictionaryObject = vital.glascow
+        json["glascowTtl"].int = vital.glascowTtl
+        
+        if let jsonString = json.rawString() {
+            do {
+                let documentDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+                let fileURL = documentDirectoryURL.appendingPathComponent("vitalSigns.json")
+                do {
+                    try jsonString.write(to: fileURL, atomically: false, encoding: String.Encoding.utf8)
+                }
+                catch {}
+                
+            }
+            catch {}
+        }
+    }
+    
+    public static func readVital() -> VitalSigns{
+        let vital = VitalSigns()
+        do {
+            let documentDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            let fileURL = documentDirectoryURL.appendingPathComponent("vitalSigns.json")
+            do {
+                let jsonData = try Data(contentsOf: fileURL)
+                let json = JSON(data: jsonData)
+                print (jsonData)
+                let bloodprs = json["bloodPrs"].dictionaryValue
+                for (key, value) in bloodprs{
+                    vital.bloodPrs[key] = value.intValue
+                }
+                vital.heartRate = json["heartRate"].intValue
+                vital.rhythm = json["rhythm"].string!
+                vital.respRate = json["respRate"].intValue
+                vital.o2Saturation = json["o2Saturation"].doubleValue
+                vital.endTidalCO2 = json["endTidalCO2"].doubleValue
+                vital.temp = json["temp"].doubleValue
+                vital.pain = json["pain"].intValue
+                let glascow = json["glascow"].dictionaryValue
+                for (key, value) in glascow{
+                    vital.glascow[key] = value.intValue
+                }
+                vital.glascowTtl = json["glascowTtl"].intValue
+            }
+            catch{}
+        }
+        catch{}
+        return vital
+    }
   
 }
 
