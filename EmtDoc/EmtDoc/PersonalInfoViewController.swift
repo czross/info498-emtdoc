@@ -21,7 +21,8 @@ class PersonalInfoViewController: UIViewController {
     @IBOutlet weak var txtAge: UITextField!
     @IBOutlet weak var txtWeight: UITextField!
     @IBOutlet weak var txtRace: UITextField!
-    @IBOutlet weak var txtAdvanced: UITextField!
+//    @IBOutlet weak var txtAdvanced: UITextField!
+    @IBOutlet weak var txtAdvanced: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
