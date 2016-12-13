@@ -14,7 +14,7 @@ class ExamViewController: UIViewController {
     var exam = EmtDoc().exam
 
 // @IBOutlet weak var mentalStatusTextField: UITextField!
-    let mentalAlert = UIAlertController(title: "Mental Status", message: "Please choose status", preferredStyle: .actionSheet)
+    let mentalAlert = UIAlertController(title: "Mental Status", message: "Please choose status", preferredStyle: .alert)
     @IBOutlet weak var mentalBtn: UIButton!
     
     @IBAction func mentalPress(_ sender: UIButton!) {
@@ -22,7 +22,7 @@ class ExamViewController: UIViewController {
     }
 
   // @IBOutlet weak var skinTextField: UITextField!
-    let skinAlert = UIAlertController(title: "Skin Status", message: "Please choose status", preferredStyle: .actionSheet)
+    let skinAlert = UIAlertController(title: "Skin Status", message: "Please choose status", preferredStyle: .alert)
   
     @IBOutlet weak var skinBtn: UIButton!
     
@@ -34,7 +34,7 @@ class ExamViewController: UIViewController {
     
   @IBOutlet weak var headTextField: UITextField!
     
-    let pupilAlert = UIAlertController(title: "Pupil Status", message: "Please choose status", preferredStyle: .actionSheet)
+    let pupilAlert = UIAlertController(title: "Pupil Status", message: "Please choose status", preferredStyle: .alert)
   
     @IBOutlet weak var pupilsBtn: UIButton!
     
@@ -42,7 +42,7 @@ class ExamViewController: UIViewController {
         self.present(pupilAlert, animated: true, completion:nil)
     }
     
-    let earsAlert = UIAlertController(title: "Ear Status", message: "Please choose status", preferredStyle: .actionSheet)
+    let earsAlert = UIAlertController(title: "Ear Status", message: "Please choose status", preferredStyle: .alert)
     
     @IBOutlet weak var earsBtn: UIButton!
     
@@ -53,7 +53,7 @@ class ExamViewController: UIViewController {
   
   @IBOutlet weak var throatTextField: UITextField!
   
-    let noseAlert = UIAlertController(title: "Nose Status", message: "Please choose status", preferredStyle: .actionSheet)
+    let noseAlert = UIAlertController(title: "Nose Status", message: "Please choose status", preferredStyle: .alert)
 
     @IBOutlet weak var noseBtn: UIButton!
     
@@ -63,7 +63,7 @@ class ExamViewController: UIViewController {
   
   @IBOutlet weak var heartSoundsTextField: UITextField!
     
-     let lungAlert = UIAlertController(title: "Lung Status", message: "Please choose status", preferredStyle: .actionSheet)
+     let lungAlert = UIAlertController(title: "Lung Status", message: "Please choose status", preferredStyle: .alert)
   
     @IBOutlet weak var lungsBtn: UIButton!
     
@@ -75,7 +75,7 @@ class ExamViewController: UIViewController {
   
   @IBOutlet weak var pelvicTextField: UITextField!
     
-    let lUpExtAlert = UIAlertController(title: "Left Upper Extremity Status", message: "Please choose status", preferredStyle: .actionSheet)
+    let lUpExtAlert = UIAlertController(title: "Left Upper Extremity Status", message: "Please choose status", preferredStyle: .alert)
   
     @IBOutlet weak var leftUpperExtBtn: UIButton!
     
@@ -83,7 +83,7 @@ class ExamViewController: UIViewController {
         self.present(lUpExtAlert, animated: true, completion:nil)
     }
   
-    let rUpExtAlert = UIAlertController(title: "Right Upper Extremity Status", message: "Please choose status", preferredStyle: .actionSheet)
+    let rUpExtAlert = UIAlertController(title: "Right Upper Extremity Status", message: "Please choose status", preferredStyle: .alert)
     
     @IBOutlet weak var rightUpperExtBtn: UIButton!
     
@@ -91,7 +91,7 @@ class ExamViewController: UIViewController {
         self.present(rUpExtAlert, animated: true, completion:nil)
     }
     
-    let lLoExtAlert = UIAlertController(title: "Left Lower Extremity Status", message: "Please choose status", preferredStyle: .actionSheet)
+    let lLoExtAlert = UIAlertController(title: "Left Lower Extremity Status", message: "Please choose status", preferredStyle: .alert)
   
     @IBOutlet weak var leftLowerExtBtn: UIButton!
     
@@ -99,7 +99,7 @@ class ExamViewController: UIViewController {
         self.present(lLoExtAlert, animated: true, completion:nil)
     }
   
-    let rLoExtAlert = UIAlertController(title: "Right Lower Extremity Status", message: "Please choose status", preferredStyle: .actionSheet)
+    let rLoExtAlert = UIAlertController(title: "Right Lower Extremity Status", message: "Please choose status", preferredStyle: .alert)
     
     @IBOutlet weak var rightLowerExtBtn: UIButton!
     
