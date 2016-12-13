@@ -10,7 +10,6 @@ import UIKit
 import Alamofire
 import CoreLocation
 import MessageUI
-import AES256CBC
 
 class HomeTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
     var EmtDocModel = EmtDoc()
@@ -49,11 +48,8 @@ class HomeTableViewController: UITableViewController, MFMailComposeViewControlle
             NSLog("Email sending data to: \(email)")
             mail.setSubject("Testing EmtDoc")
             let message = "Chief Complaint: \(EmtDocModel.chiefComplaint)\nGender: \(EmtDocModel.person.gender), Age: \(EmtDocModel.person.age), Weight: \(EmtDocModel.person.weight)\n"
-            let encrypted = AES256CBC.encryptString(message, password: "itslit")
             
-            mail.setMessageBody(encrypted!, isHTML: false)
-
-            //mail.setMessageBody(message, isHTML: false)
+            mail.setMessageBody(message, isHTML: false)
             
             present(mail, animated: true)
         } else {

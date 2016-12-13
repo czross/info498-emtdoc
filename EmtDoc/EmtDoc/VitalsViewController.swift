@@ -52,15 +52,21 @@ class VitalsViewController: UIViewController{
         self.EmtDocModel = appDelegate.EmtDocModel
         
         // Populate text fields
-        txtWeight.text = String(EmtDocModel.person.weight)
-        txtBPSystolic.text = String(EmtDocModel.vitals.bloodPrs["Systolic"]!)
-        txtBPDiastolic.text = String(EmtDocModel.vitals.bloodPrs["Diastolic"]!)
-        txtHeartRate.text = String(EmtDocModel.vitals.heartRate)
-        txtRespRate.text = String(EmtDocModel.vitals.respRate)
-        txtO2Saturation.text = String(EmtDocModel.vitals.o2Saturation)
-        txtEndTitalCO2.text = String(EmtDocModel.vitals.endTidalCO2)
-        txtTemp.text = String(EmtDocModel.vitals.temp)
-        txtPain.text = String(EmtDocModel.vitals.pain)
+        
+        
+        txtWeight.placeholder = "\(String(EmtDocModel.person.weight)) lbs"
+        
+        
+        
+        txtBPSystolic.placeholder = "\(String(EmtDocModel.vitals.bloodPrs["Systolic"]!)) mmHg"
+        txtBPDiastolic.placeholder = "\(String(EmtDocModel.vitals.bloodPrs["Diastolic"]!)) mmHg"
+        txtHeartRate.placeholder = "\(String(EmtDocModel.vitals.heartRate)) BPM"
+        txtRespRate.placeholder = "\(String(EmtDocModel.vitals.respRate)) RR"
+        txtO2Saturation.placeholder = "\(String(EmtDocModel.vitals.o2Saturation)) %"
+        txtEndTitalCO2.placeholder = "\(String(EmtDocModel.vitals.endTidalCO2)) mmHg"
+        txtTemp.placeholder = "\(String(EmtDocModel.vitals.temp)) C"
+        txtPain.placeholder = "\(String(EmtDocModel.vitals.pain)) / 10"
+        
         
         // Setup Rhythm Alert
         
@@ -80,17 +86,45 @@ class VitalsViewController: UIViewController{
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let mainModel = appDelegate.EmtDocModel.vitals
         
-        appDelegate.EmtDocModel.person.weight = Int(txtWeight.text!)!
+        if (Int(txtWeight.text!) != nil) {
+            appDelegate.EmtDocModel.person.weight = Int(txtWeight.text!)!
+        }
         
-        mainModel.bloodPrs["Systolic"] = Int(txtBPSystolic.text!)
-        mainModel.bloodPrs["Diastolic"] = Int(txtBPSystolic.text!)
-        mainModel.heartRate = Int(txtHeartRate.text!)!
+        if (Int(txtBPSystolic.text!) != nil) {
+            mainModel.bloodPrs["Systolic"] = Int(txtBPSystolic.text!)
+        }
+        
+        if (Int(txtBPSystolic.text!) != nil) {
+            mainModel.bloodPrs["Diastolic"] = Int(txtBPSystolic.text!)
+        }
+        
+        if (Int(txtHeartRate.text!) != nil) {
+            mainModel.heartRate = Int(txtHeartRate.text!)!
+        }
+        
         mainModel.rhythm = (self.rhythmButton.titleLabel!.text!)
-        mainModel.respRate = Int(txtRespRate.text!)!
-        mainModel.o2Saturation = Double(txtO2Saturation.text!)!
-        mainModel.endTidalCO2 = Double(txtEndTitalCO2.text!)!
-        mainModel.temp = Double(txtTemp.text!)!
-        mainModel.pain = Int(txtPain.text!)!
+        
+        if (Int(txtRespRate.text!) != nil) {
+            mainModel.respRate = Int(txtRespRate.text!)!
+        }
+        
+        if (Double(txtO2Saturation.text!) != nil) {
+            mainModel.o2Saturation = Double(txtO2Saturation.text!)!
+        }
+        
+        if (Double(txtEndTitalCO2.text!) != nil) {
+            mainModel.endTidalCO2 = Double(txtEndTitalCO2.text!)!
+        }
+        
+        if (Double(txtTemp.text!) != nil) {
+            mainModel.temp = Double(txtTemp.text!)!
+        }
+        
+        if (Int(txtPain.text!) != nil) {
+            mainModel.pain = Int(txtPain.text!)!
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
