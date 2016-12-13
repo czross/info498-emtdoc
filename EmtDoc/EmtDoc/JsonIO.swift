@@ -76,7 +76,6 @@ public class JsonIO {
         person.set(lName: json["lname"].string!)
         person.set(middleInitial: json["middleInitial"].string!)
         let dob = json["dob"].string!
-        let dobArray = dob.components(separatedBy: "/")
         person.set(dob: json["dob"].string!)
         person.set(advanced: json["advanced"].string!)
         person.set(race: json["race"].string!)
