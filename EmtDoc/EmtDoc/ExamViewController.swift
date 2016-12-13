@@ -26,12 +26,12 @@ class ExamViewController: UIViewController {
         self.present(skinAlert, animated: true, completion:nil)
     }
     
-    for index in 1...glascowDscp.eyeDscp.keys.count - 1 {
-    eyeAlert.addAction(UIAlertAction(title: "\(index) : \((glascowDscp.eyeDscp[index])!)", style: .default, handler: { (action) in
-    //execute some code when this option is selected
-    mainModel.glascow["Eye"] = index
-    self.eyeButton.setTitle((glascowDscp.eyeDscp[index])!, for: .normal)
-    }))
+    for (index in 0...EmtDocModel.) {
+        eyeAlert.addAction(UIAlertAction(title: ")", style: .default, handler: { (action) in
+        //execute some code when this option is selected
+        mainModel.glascow["Eye"] = index
+        self.eyeButton.setTitle((glascowDscp.eyeDscp[index])!, for: .normal)
+        }))
     }
     
   @IBOutlet weak var headTextField: UITextField!
