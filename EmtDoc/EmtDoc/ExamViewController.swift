@@ -74,36 +74,72 @@ class ExamViewController: UIViewController {
   @IBOutlet weak var abdomenTextField: UITextField!
   
   @IBOutlet weak var pelvicTextField: UITextField!
+    
+    let lUpExtAlert = UIAlertController(title: "Left Upper Extremity Status", message: "Please choose status", preferredStyle: .actionSheet)
   
-  @IBOutlet weak var leftUpperExtremityTextField: UITextField!
+    @IBOutlet weak var leftUpperExtBtn: UIButton!
+    
+    @IBAction func lUpExtPress(_ sender: AnyObject) {
+        self.present(lUpExtAlert, animated: true, completion:nil)
+    }
   
-  @IBOutlet weak var rightUpperExtremityTextField: UITextField!
+    let rUpExtAlert = UIAlertController(title: "Right Upper Extremity Status", message: "Please choose status", preferredStyle: .actionSheet)
+    
+    @IBOutlet weak var rightUpperExtBtn: UIButton!
+    
+    @IBAction func rUpExtPress(_ sender: AnyObject) {
+        self.present(rUpExtAlert, animated: true, completion:nil)
+    }
+    
+    let lLoExtAlert = UIAlertController(title: "Left Lower Extremity Status", message: "Please choose status", preferredStyle: .actionSheet)
   
-  @IBOutlet weak var leftLowerExtremityTextField: UITextField!
+    @IBOutlet weak var leftLowerExtBtn: UIButton!
+    
+    @IBAction func lLoExtPress(_ sender: AnyObject) {
+        self.present(lLoExtAlert, animated: true, completion:nil)
+    }
   
-  @IBOutlet weak var rightLowerExtremityTextField: UITextField!
+    let rLoExtAlert = UIAlertController(title: "Right Lower Extremity Status", message: "Please choose status", preferredStyle: .actionSheet)
+    
+    @IBOutlet weak var rightLowerExtBtn: UIButton!
+    
+    @IBAction func rLoExtPress(_ sender: AnyObject) {
+        self.present(rLoExtAlert, animated: true, completion:nil)
+    }
   
   @IBOutlet weak var neuroTextField: UITextField!
   
-  @IBAction func updateButtonClicked(_ sender: Any) {
-    let exam = EmtDocModel.exam
-//    exam.mentalStatus = mentalStatusTextField.text!
-//    exam.skin = skinTextField.text!
-//    exam.facial["pupils"] = pupilsTextField.text!
-//    exam.facial["ears"] headTextFieldld.text!
-    exam.facial["throat"] = throatTextField.text!
-//    exam.facial["nose"] = noseTextField.text!
-    exam.facial["head"] = headTextField.text!
-//    exam.chest["lungs"] = lungsTextField.text!
-    exam.chest["heartSounds"] = heartSoundsTextField.text!
-    exam.abdomen = abdomenTextField.text!
-    exam.pelvic = pelvicTextField.text!
-    exam.neuro = neuroTextField.text!
-    exam.extremities["leftLower"] = leftLowerExtremityTextField.text!
-    exam.extremities["rightLower"] = rightLowerExtremityTextField.text!
-    exam.extremities["leftUpper"] = leftUpperExtremityTextField.text!
-    exam.extremities["rightUpper"] = rightUpperExtremityTextField.text!
-  }
+    @IBAction func updateBtnClicked(_ sender: AnyObject) {
+        exam.facial["throat"] = throatTextField.text!
+        //    exam.facial["nose"] = noseTextField.text!
+        exam.facial["head"] = headTextField.text!
+        //    exam.chest["lungs"] = lungsTextField.text!
+        exam.chest["heartSounds"] = heartSoundsTextField.text!
+        exam.abdomen = abdomenTextField.text!
+        exam.pelvic = pelvicTextField.text!
+        exam.neuro = neuroTextField.text!
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+//  @IBAction func updateButtonClicked(_ sender: Any) {
+//    let exam = EmtDocModel.exam
+////    exam.mentalStatus = mentalStatusTextField.text!
+////    exam.skin = skinTextField.text!
+////    exam.facial["pupils"] = pupilsTextField.text!
+////    exam.facial["ears"] headTextFieldld.text!
+//    exam.facial["throat"] = throatTextField.text!
+////    exam.facial["nose"] = noseTextField.text!
+//    exam.facial["head"] = headTextField.text!
+////    exam.chest["lungs"] = lungsTextField.text!
+//    exam.chest["heartSounds"] = heartSoundsTextField.text!
+//    exam.abdomen = abdomenTextField.text!
+//    exam.pelvic = pelvicTextField.text!
+//    exam.neuro = neuroTextField.text!
+////    exam.extremities["leftLower"] = leftLowerExtremityTextField.text!
+////    exam.extremities["rightLower"] = rightLowerExtremityTextField.text!
+////    exam.extremities["leftUpper"] = leftUpperExtremityTextField.text!
+////    exam.extremities["rightUpper"] = rightUpperExtremityTextField.text!
+//  }
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,7 +149,7 @@ class ExamViewController: UIViewController {
         exam = EmtDocModel.exam
         self.hideKeyboardWhenTappedAround()
 
-        for index in 0...exam.mentalStatusChoices.count {
+        for index in 0...exam.mentalStatusChoices.count - 1 {
             mentalAlert.addAction(UIAlertAction(title: "\(exam.mentalStatusChoices[index])", style: .default, handler: { (action) in
                 //execute some code when this option is selected
                 self.exam.mentalStatus = self.exam.mentalStatusChoices[index]
@@ -121,55 +157,81 @@ class ExamViewController: UIViewController {
             }))
         }
         
-        for index in 0...exam.skinChoices.count {
-            mentalAlert.addAction(UIAlertAction(title: "\(exam.skinChoices[index])", style: .default, handler: { (action) in
+        for index in 1...exam.skinChoices.count - 1 {
+            skinAlert.addAction(UIAlertAction(title: "\(exam.skinChoices[index])", style: .default, handler: { (action) in
                 //execute some code when this option is selected
                 self.exam.mentalStatus = self.exam.skinChoices[index]
                 self.skinBtn.setTitle((self.exam.skin), for: .normal)
             }))
         }
-        
-        for index in 0...exam.skinChoices.count {
-            mentalAlert.addAction(UIAlertAction(title: "\(exam.skinChoices[index])", style: .default, handler: { (action) in
-                //execute some code when this option is selected
-                self.exam.mentalStatus = self.exam.skinChoices[index]
-                self.skinBtn.setTitle((self.exam.skin), for: .normal)
-            }))
-        }
+    
         
         let pupilArray = exam.facialChoices["pupils"]!
-        for index in 0...pupilArray.count {
-            mentalAlert.addAction(UIAlertAction(title: "\(pupilArray[index])", style: .default, handler: { (action) in
+        for index in 0...pupilArray.count - 1 {
+            pupilAlert.addAction(UIAlertAction(title: "\(pupilArray[index])", style: .default, handler: { (action) in
                 //execute some code when this option is selected
                 self.exam.facial["pupils"] = pupilArray[index]
                 self.pupilsBtn.setTitle((self.exam.facial["pupils"]), for: .normal)
             }))
         }
         
-        let earArray = exam.facialChoices["Ears"]!
-        for index in 0...earArray.count {
-            mentalAlert.addAction(UIAlertAction(title: "\(earArray[index])", style: .default, handler: { (action) in
+        let earArray = exam.facialChoices["ears"]!
+        for index in 0...earArray.count - 1 {
+            earsAlert.addAction(UIAlertAction(title: "\(earArray[index])", style: .default, handler: { (action) in
                 //execute some code when this option is selected
-                self.exam.facial["Ears"] = earArray[index]
-                self.earsBtn.setTitle((self.exam.facial["Ears"]), for: .normal)
+                self.exam.facial["ears"] = earArray[index]
+                self.earsBtn.setTitle((self.exam.facial["ears"]), for: .normal)
             }))
         }
         
-        let noseArray = exam.facialChoices["Nose"]!
-        for index in 0...noseArray.count {
-            mentalAlert.addAction(UIAlertAction(title: "\(noseArray[index])", style: .default, handler: { (action) in
+        let noseArray = exam.facialChoices["nose"]!
+        for index in 0...noseArray.count - 1 {
+            noseAlert.addAction(UIAlertAction(title: "\(noseArray[index])", style: .default, handler: { (action) in
                 //execute some code when this option is selected
-                self.exam.facial["Nose"] = noseArray[index]
-                self.earsBtn.setTitle((self.exam.facial["Nose"]), for: .normal)
+                self.exam.facial["nose"] = noseArray[index]
+                self.noseBtn.setTitle((self.exam.facial["nose"]), for: .normal)
             }))
         }
         
-        let lungArray = exam.chestChoices["Lungs"]!
-        for index in 0...lungArray.count {
-            mentalAlert.addAction(UIAlertAction(title: "\(lungArray[index])", style: .default, handler: { (action) in
+        let lungArray = exam.chestChoices["lungs"]!
+        for index in 0...lungArray.count - 1 {
+            lungAlert.addAction(UIAlertAction(title: "\(lungArray[index])", style: .default, handler: { (action) in
                 //execute some code when this option is selected
-                self.exam.facial["Lungs"] = lungArray[index]
-                self.earsBtn.setTitle((self.exam.facial["Lungs"]), for: .normal)
+                self.exam.facial["lungs"] = lungArray[index]
+                self.lungsBtn.setTitle((self.exam.facial["lungs"]), for: .normal)
+            }))
+        }
+        
+        let extArray = exam.extremityChoices["leftUpper"]!
+        for index in 0...extArray.count - 1 {
+            lUpExtAlert.addAction(UIAlertAction(title: "\(extArray[index])", style: .default, handler: { (action) in
+                //execute some code when this option is selected
+                self.exam.extremities["leftUpper"] = extArray[index]
+                self.leftUpperExtBtn.setTitle((self.exam.extremities["leftUpper"]), for: .normal)
+            }))
+        }
+        
+        for index in 0...extArray.count - 1 {
+            rUpExtAlert.addAction(UIAlertAction(title: "\(extArray[index])", style: .default, handler: { (action) in
+                //execute some code when this option is selected
+                self.exam.extremities["rightUpper"] = extArray[index]
+                self.rightUpperExtBtn.setTitle((self.exam.extremities["rightUpper"]), for: .normal)
+            }))
+        }
+        
+        for index in 0...extArray.count - 1 {
+            lLoExtAlert.addAction(UIAlertAction(title: "\(extArray[index])", style: .default, handler: { (action) in
+                //execute some code when this option is selected
+                self.exam.extremities["leftLower"] = extArray[index]
+                self.leftLowerExtBtn.setTitle((self.exam.extremities["leftLower"]), for: .normal)
+            }))
+        }
+        
+        for index in 0...extArray.count - 1 {
+            rLoExtAlert.addAction(UIAlertAction(title: "\(extArray[index])", style: .default, handler: { (action) in
+                //execute some code when this option is selected
+                self.exam.extremities["rightLower"] = extArray[index]
+                self.rightLowerExtBtn.setTitle((self.exam.extremities["rightLower"]), for: .normal)
             }))
         }
 
