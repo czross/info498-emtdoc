@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Procedure {
+public class Procedure {
     let medChoices: [String] = [
         "Epinephrine",
         "Bircarb",
@@ -59,8 +59,8 @@ class Procedure {
         self.procedureLocation?.append(location)
     }
     
-    func getInput() -> ([String], [String]) {
-        return (self.proceduresDone!, self.procedureLocation!)
+    func getInput() -> [[String]] {
+        return [self.proceduresDone!, self.procedureLocation!]
     }
     
     func getMeds() -> [String]{
