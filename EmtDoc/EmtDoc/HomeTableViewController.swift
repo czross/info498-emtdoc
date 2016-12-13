@@ -49,8 +49,13 @@ class HomeTableViewController: UITableViewController, MFMailComposeViewControlle
             NSLog("Email sending data to: \(email)")
             mail.setSubject("Testing EmtDoc")
             let message = "Chief Complaint: \(EmtDocModel.chiefComplaint)\nGender: \(EmtDocModel.person.gender), Age: \(EmtDocModel.person.age), Weight: \(EmtDocModel.person.weight)\n"
-            let encrypted = AES256CBC.encryptString(message, password: "itslit")
+            NSLog("message before encryption: \(message)")
+            let encrypted = AES256CBC.encryptString(message, password: "thecowjumpthecowjumpthecowjumped")
+            NSLog("message after encryption: \(encrypted)")
             
+            let decrypted = AES256CBC.decryptString(encrypted!, password: "thecowjumpthecowjumpthecowjumped")
+            NSLog("message after decryption: \(decrypted)")
+
             mail.setMessageBody(encrypted!, isHTML: false)
 
             //mail.setMessageBody(message, isHTML: false)

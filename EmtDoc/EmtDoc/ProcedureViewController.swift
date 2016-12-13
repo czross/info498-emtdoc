@@ -18,6 +18,7 @@ class ProcedureViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var locationChosen: String = ""
     
     @IBOutlet weak var picker: UIPickerView!
+    
    
     
     override func viewDidLoad() {
