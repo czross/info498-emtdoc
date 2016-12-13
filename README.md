@@ -22,7 +22,7 @@ This is an app that helps EMT and hospitals in patient care.
 
 ## Features
 * Look up available hospitals and information from online resource  
-Select assessments performed and input their results  
+* Select assessments performed and input their results  
 * Send email that automatically generates an overview of the recorded information to the selected hospital  
 * Local storage of the information on the application  
 * Automatically fill in incident location
