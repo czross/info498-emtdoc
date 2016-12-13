@@ -354,6 +354,52 @@
             </objects>
             <point key="canvasLocation" x="1377" y="-1400"/>
         </scene>
+        <!--Set Time View Controller-->
+        <scene sceneID="7WN-9N-Whk">
+            <objects>
+                <viewController id="JUu-7C-Pva" customClass="SetTimeViewController" customModule="EmtDoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="geI-b7-lkc"/>
+                        <viewControllerLayoutGuide type="bottom" id="PfA-GR-Eb5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="94G-HO-Nz9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0Ae-8r-sp1">
+                                <rect key="frame" x="16" y="225" width="343" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="503282256.68667001">
+                                    <!--2016-12-13 00:37:36 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WtB-wj-DTo">
+                                <rect key="frame" x="298" y="72" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Set Time"/>
+                                <connections>
+                                    <action selector="setTimeButton:" destination="JUu-7C-Pva" eventType="touchUpInside" id="1Iu-2Q-crb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZz-YB-AH5">
+                                <rect key="frame" x="166" y="133" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="0Ae-8r-sp1" id="b8f-gy-73P"/>
+                        <outlet property="setTimeLabel" destination="bZz-YB-AH5" id="Hkm-58-7BG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZW-EB-s9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="596" y="-1316.4917541229386"/>
+        </scene>
         <!--Set Location Time View Controller-->
         <scene sceneID="9hJ-nK-4A0">
             <objects>
@@ -379,7 +425,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nM8-ar-4dk">
-                                <rect key="frame" x="248" y="617" width="111" height="30"/>
+                                <rect key="frame" x="234" y="617" width="125" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Current location"/>
@@ -410,10 +456,15 @@
                             <rect key="frame" x="0.0" y="136" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
-                                <barButtonItem title="Set Incident Loc/Time" id="CO2-FT-nkI">
+                                <barButtonItem title="Set Location" id="CO2-FT-nkI">
                                     <connections>
                                         <action selector="setIncidentLocation:" destination="qeg-CP-ITE" id="Nqv-tV-du0"/>
                                         <segue destination="lf6-aN-ZpQ" kind="show" id="yNo-Og-cE7"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem title="Set Time" id="5md-CP-Qx4">
+                                    <connections>
+                                        <segue destination="JUu-7C-Pva" kind="show" id="dIr-tb-xax"/>
                                     </connections>
                                 </barButtonItem>
                                 <barButtonItem style="plain" systemItem="flexibleSpace" id="2J1-v9-AVN"/>
