@@ -3,6 +3,7 @@ PODS:
   - Alamofire (4.0.1)
   - IQKeyboardManager (4.0.7)
   - IQKeyboardManagerSwift (4.0.7)
+  - SwiftHEXColors (1.1.0)
   - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
@@ -10,6 +11,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.0)
   - IQKeyboardManager
   - IQKeyboardManagerSwift
+  - SwiftHEXColors
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -17,8 +19,9 @@ SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   IQKeyboardManager: 69002bb4fea60596b710e57d426abc00e5063630
   IQKeyboardManagerSwift: 58bbcf46b5cf9fd4ed625d28a60cb2fbae4ab0f4
+  SwiftHEXColors: 8f7e364df7929e32cff9f9eeb044bb215167d6be
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: 07d56172a2209590220b69b843d70cf5f6226e02
+PODFILE CHECKSUM: 462fb5690d70098c581299ef43dbab7ac81da265
 
 COCOAPODS: 1.1.1
