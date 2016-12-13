@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftHEXColors
 
 class ProcedureViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -16,6 +17,18 @@ class ProcedureViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var pickerData: [[String]] = []
     var procedureChosen: String = ""
     var locationChosen: String = ""
+    
+    // Amiodarone
+    @IBOutlet weak var medALabel: UIButton!
+    
+    // Epinephrine
+    @IBOutlet weak var medBLabel: UIButton!
+    
+    // Bicarb
+    @IBOutlet weak var medCLabel: UIButton!
+    
+    // Insulin
+    @IBOutlet weak var medDLabel: UIButton!
     
     @IBOutlet weak var picker: UIPickerView!
     
@@ -34,6 +47,7 @@ class ProcedureViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         self.picker.delegate = self
         self.picker.dataSource = self
+        
         
 
         // Do any additional setup after loading the view.
@@ -78,14 +92,47 @@ class ProcedureViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         let choice = sender.restorationIdentifier
         var med = ""
         print("button choice \(choice)")
+        
+        // Amiodarone
+        if sender.tag == 0 {
+            medALabel.backgroundColor = UIColor(hexString: "#51CABD")
+            medBLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            medCLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            medDLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            med = "Amiodarone"
+        } else if sender.tag == 1 {
+            medALabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            medBLabel.backgroundColor = UIColor(hexString: "#51CABD")
+            medCLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            medDLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            med = "Epinephrine"
+        } else if sender.tag == 2 {
+            medALabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            medBLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            medCLabel.backgroundColor = UIColor(hexString: "#51CABD")
+            medDLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            med = "Bicarb"
+        } else if sender.tag == 3 {
+            medALabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            medBLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            medCLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            medDLabel.backgroundColor = UIColor(hexString: "#51CABD")
+            med = "Insulin"
+        }
+        
+        
         if (choice == "Epi") {
             med = "Epinephrine"
+            sender.backgroundColor = UIColor(hexString: "#51CABD")
         } else if (choice == "Bicarb") {
             med = "Bicarb"
+            sender.backgroundColor = UIColor(hexString: "#51CABD")
         } else if (choice == "Insulin") {
             med = "Insulin"
+            sender.backgroundColor = UIColor(hexString: "#51CABD")
         } else {
             med = "Amiodarone"
+            sender.backgroundColor = UIColor(hexString: "#51CABD")
         }
         print(med)
         self.EmtDocModel.procedures.done(procedure: med, location: "med")
