@@ -1,5 +1,5 @@
 # EmtDoc  
-##INFO 498  
+##INFO 498 Final Project  
 This is an app that helps EMT and hospitals in patient care.  
 
 
