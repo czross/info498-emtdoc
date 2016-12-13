@@ -80,7 +80,6 @@ class ProcedureViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         print("button choice \(choice)")
         if (choice == "Epi") {
             med = "Epinephrine"
-            sender.backgroundColor = UIColor(hue: 207, saturation: <#T##CGFloat#>, brightness: <#T##CGFloat#>, alpha: <#T##CGFloat#>)
         } else if (choice == "Bicarb") {
             med = "Bicarb"
         } else if (choice == "Insulin") {
