@@ -40,9 +40,25 @@ class PersonalInfoViewController: UIViewController {
         txtWeight.keyboardType = UIKeyboardType.decimalPad
         
         // Prepopulate
-        txtFName.placeholder = EmtDocModel.person.fName
-        txtLName.placeholder = EmtDocModel.person.lName
-        txtMiddleInitial.placeholder = EmtDocModel.person.middleInitial
+        
+        if (EmtDocModel.person.fName == "") {
+            txtFName.placeholder = "First"
+        } else {
+            txtFName.placeholder = EmtDocModel.person.fName
+        }
+        
+        if (EmtDocModel.person.lName == "") {
+            txtLName.placeholder = "Last"
+        } else {
+            txtLName.placeholder = EmtDocModel.person.lName
+        }
+        
+        if (EmtDocModel.person.middleInitial == "") {
+            txtMiddleInitial.placeholder = "Middle Initial"
+        } else {
+            txtMiddleInitial.placeholder = EmtDocModel.person.middleInitial
+        }
+        
         
         if (EmtDocModel.person.gender == "") {
             txtGender.placeholder = "Gender"
