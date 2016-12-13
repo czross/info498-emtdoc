@@ -30,8 +30,8 @@ class VitalsTests: XCTestCase {
         XCTAssert(vitals != nil)
     }
     
-    func testSetValuesOtherThanGlascow(){
-        vitals.weight = 77
+    func testSetValues(){
+        //vitals.weight = 77
         vitals.bloodPrs = ["Systolic" : 20, "Diastolic" : 10]
         vitals.heartRate = 68
         vitals.rhythm = "Normal"
@@ -42,7 +42,7 @@ class VitalsTests: XCTestCase {
         vitals.pain = 8
         vitals.setGlascow(eye: 3, verbal: 2, motor: 5)
         
-        XCTAssertEqual(vitals.weight, 77)
+        //XCTAssertEqual(vitals.weight, 77)
         XCTAssertEqual(vitals.bloodPrs["Systolic"], 20)
         XCTAssertEqual(vitals.bloodPrs["Diastolic"], 10)
         XCTAssertEqual(vitals.heartRate, 68)
@@ -53,7 +53,19 @@ class VitalsTests: XCTestCase {
         XCTAssertEqual(vitals.getGlascow()["Eye"], 3)
         XCTAssertEqual(vitals.getGlascow()["Verbal"], 2)
         XCTAssertEqual(vitals.getGlascow()["Motor"], 5)
-        XCTAssertEqual(vitals.glascowTtl, 10)
+        XCTAssertEqual(vitals.getGlascowTtl(), 10)
+        
+        vitals.setGlascow(verbal: 4)
+        /*
+        print ("Eye \(vitals.getGlascow()["Eye"])")
+        print ("Verbal \(vitals.getGlascow()["Verbal"])")
+        print ("Motor \(vitals.getGlascow()["Motor"])")
+        print ("TTL \(vitals.getGlascowTtl())")*/
+        XCTAssertEqual(vitals.getGlascowTtl(), 12)
+        vitals.setGlascow(motor: 1)
+        XCTAssertEqual(vitals.getGlascowTtl(), 8)
+        vitals.setGlascow(eye: 6)
+        XCTAssertEqual(vitals.getGlascowTtl(), 11)
         
     }
     
@@ -68,17 +80,19 @@ class VitalsTests: XCTestCase {
         XCTAssertEqual(s3, ["Eye (E)", "Verbal (V)", "Motor (M)"])
         
         let s4 = vitals.getEyeChoices()
-        XCTAssertEqual(s4, [4 : "spontaneous- open with blinking",
-                            3 : "opens to verbal command, speech, or shout",
-                            2 : "opens to pain, not applied to face",
-                            1 : "none"])
+        XCTAssertEqual(s4, [4 : "Spontaneous- open with blinking",
+                            3 : "Opens to verbal command, speech, or shout",
+                            2 : "Opens to pain, not applied to face",
+                            1 : "None",
+                            -1: "Unspecified"])
         
         let s5 = vitals.getVerbalChoices()
         XCTAssertEqual(s5, [5 : "Oriented",
                             4 : "Confused conversation, but able to answer questions",
                             3 : "Inappropriate responses, words discernible",
                             2 : "Incomplete ensible speech",
-                            1 : "None"])
+                            1 : "None",
+                            -1: "Unspecified"])
         
         let s6 = vitals.getMotorChoices()
         XCTAssertEqual(s6, [6 : "Obeys commands for movement",
@@ -86,7 +100,8 @@ class VitalsTests: XCTestCase {
                             4 : "Withdraws from pain",
                             3 : "Abnormal (spastic) flexion, decorticate posture",
                             2 : "Extensor (rigid) response, decerebrate posture",
-                            1 : "None"])
+                            1 : "None",
+                            -1: "Unspecified"])
         XCTAssertEqual(s6[4], "Withdraws from pain")
     }
 
