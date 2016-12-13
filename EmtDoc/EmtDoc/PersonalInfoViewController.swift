@@ -40,15 +40,56 @@ class PersonalInfoViewController: UIViewController {
         txtWeight.keyboardType = UIKeyboardType.decimalPad
         
         // Prepopulate
-        txtFName.text = EmtDocModel.person.fName
-        txtLName.text = EmtDocModel.person.lName
-        txtMiddleInitial.text = EmtDocModel.person.middleInitial
         
-        txtGender.text = EmtDocModel.person.gender
-        txtDob.text = EmtDocModel.person.dob
-        txtAge.text = String(EmtDocModel.person.age)
-        txtWeight.text = String(EmtDocModel.person.weight)
-        txtRace.text = EmtDocModel.person.race
+        if (EmtDocModel.person.fName == "") {
+            txtFName.placeholder = "First"
+        } else {
+            txtFName.placeholder = EmtDocModel.person.fName
+        }
+        
+        if (EmtDocModel.person.lName == "") {
+            txtLName.placeholder = "Last"
+        } else {
+            txtLName.placeholder = EmtDocModel.person.lName
+        }
+        
+        if (EmtDocModel.person.middleInitial == "") {
+            txtMiddleInitial.placeholder = "Middle Initial"
+        } else {
+            txtMiddleInitial.placeholder = EmtDocModel.person.middleInitial
+        }
+        
+        
+        if (EmtDocModel.person.gender == "") {
+            txtGender.placeholder = "Gender"
+        } else {
+            txtGender.placeholder = EmtDocModel.person.gender
+        }
+        
+        if (EmtDocModel.person.dob == "") {
+            txtDob.placeholder = "YY/MM/DD"
+        } else {
+            txtDob.placeholder = EmtDocModel.person.dob
+        }
+        
+        if (EmtDocModel.person.age == -1) {
+            txtAge.placeholder = "Years"
+        } else {
+            txtAge.placeholder = "\(EmtDocModel.person.age) years"
+        }
+        
+        if (EmtDocModel.person.weight == 0) {
+            txtWeight.placeholder = "lbs"
+        } else {
+            txtWeight.placeholder = "\(String(EmtDocModel.person.weight)) lbs"
+        }
+        
+        if (EmtDocModel.person.race == "") {
+            txtRace.placeholder = "Race"
+        } else {
+            txtRace.placeholder = EmtDocModel.person.race
+        }
+        
         txtAdvanced.text = EmtDocModel.person.advanced
     }
     
@@ -56,16 +97,42 @@ class PersonalInfoViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let mainModel = appDelegate.EmtDocModel.person
         
-        mainModel.set(fName: txtFName.text!)
-        mainModel.set(lName: txtLName.text!)
-        mainModel.set(middleInitial: txtMiddleInitial.text!)
         
-        mainModel.set(gender: txtGender.text!)
-        mainModel.set(dob: txtDob.text!)
-        mainModel.set(age: Int(txtAge.text!)!)
-        mainModel.set(weight: Int(txtWeight.text!)!)
-        mainModel.set(race: txtRace.text!)
-        mainModel.set(advanced: txtAdvanced.text!)
+        if (txtFName.text != "") {
+            mainModel.set(fName: txtFName.text!)
+        }
+        
+        if (txtLName.text != "") {
+            mainModel.set(lName: txtLName.text!)
+        }
+        
+        if (txtMiddleInitial.text != "") {
+            mainModel.set(middleInitial: txtMiddleInitial.text!)
+        }
+        
+        if (txtGender.text != "") {
+            mainModel.set(gender: txtGender.text!)
+        }
+        
+        if (txtDob.text != "") {
+            mainModel.set(dob: txtDob.text!)
+        }
+        
+        if (Int(txtAge.text!) != nil) {
+            mainModel.set(age: Int(txtAge.text!)!)
+        }
+        
+        if (Int(txtWeight.text!) != nil) {
+            mainModel.set(weight: Int(txtWeight.text!)!)
+        }
+        
+        if (txtRace.text != "") {
+            mainModel.set(race: txtRace.text!)
+        }
+        
+        if (txtAdvanced.text != "") {
+            mainModel.set(advanced: txtAdvanced.text!)
+        }
     }
 
     override func didReceiveMemoryWarning() {
