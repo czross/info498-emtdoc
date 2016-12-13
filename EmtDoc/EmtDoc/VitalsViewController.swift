@@ -24,7 +24,7 @@ class VitalsViewController: UIViewController{
     @IBOutlet weak var txtTemp: UITextField!
     @IBOutlet weak var txtPain: UITextField!
     
-    let rhythmAlert = UIAlertController(title: "Rhythm", message: "Please Choose Type of Rhythm", preferredStyle: .actionSheet)
+    let rhythmAlert = UIAlertController(title: "Rhythm", message: "Please Choose Type of Rhythm", preferredStyle: .alert)
     
     @IBAction func rhythmButtonPress(_ sender: Any) {
         self.present(rhythmAlert, animated: true, completion:nil)
@@ -32,6 +32,7 @@ class VitalsViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
 
         // Do any additional setup after loading the view.
         
