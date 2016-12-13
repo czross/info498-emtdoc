@@ -34,7 +34,9 @@ class PersonalMedicalViewController: UIViewController {
         let mainModel = appDelegate.EmtDocModel.person
         
         mainModel.set(allergies: txtAllergies.text!)
+        
         mainModel.set(medications: txtMedications.text!)
+        
     }
 
     override func didReceiveMemoryWarning() {
