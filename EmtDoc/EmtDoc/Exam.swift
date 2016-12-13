@@ -66,13 +66,15 @@ public class Exam {
     skinChoices = ["Normal", "Pale", "Mottled"]
     facialChoices = [String: [String]]()
     facialChoices["pupils"] = ["Equal", "Unequal", "Responsive", "Fixed", "Dilated"]
-    facialChoices["Ears"] = ["No Blood", "Blood", "Clear Fluid"]
-    facialChoices["Nose"] = ["No Blood", "Blood", "Clear Fluid"]
-    facialChoices["Throat"] = ["Normal", "Injury"]
+    facialChoices["ears"] = ["No Blood", "Blood", "Clear Fluid"]
+    facialChoices["nose"] = ["No Blood", "Blood", "Clear Fluid"]
+    facialChoices["throat"] = ["Normal", "Injury"]
+    facialChoices["head"] = ["No sign of injury", "Injury"]
     
     chestChoices = [String: [String]]()
-    chestChoices["Lungs"] = ["Bilateral Breath Sounds", "L unclear", "R unclear"]
-
+    chestChoices["lungs"] = ["Bilateral Breath Sounds", "L unclear", "R unclear"]
+    chestChoices["heartSounds"] = ["Normal", "Murmur"]
+    
     abdomenChoices = ["Vomiting", "Normal", "Left upper quadrant – normal",
                       "Right upper quadrant – normal", "Left lower quadrant – normal",
                       "Right lower quadrant – normal"]
