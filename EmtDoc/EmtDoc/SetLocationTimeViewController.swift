@@ -63,17 +63,14 @@ class SetLocationTimeViewController: UIViewController, CLLocationManagerDelegate
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let mainModel = appDelegate.EmtDocModel.incident
         
-        // If we don't have something already stored then
+        // If we don't have something already stored then go to current
         if (mainModel.coordinates == nil) {
-            // Go to current Location
             self.currentCoordinate = CLLocationCoordinate2DMake((locationManager.location?.coordinate.latitude)!, (locationManager.location?.coordinate.longitude)!)
         // Else go to the saved location
         } else {
             self.currentCoordinate = mainModel.coordinates!
 
         }
-        
-        
         
         // Create non-2d coordinate
         let non2DLocation = CLLocation(latitude: self.currentCoordinate.latitude, longitude: self.currentCoordinate.longitude)
