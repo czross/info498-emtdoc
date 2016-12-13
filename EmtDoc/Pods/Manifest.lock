@@ -1,21 +1,24 @@
 PODS:
+  - AES256CBC (1.1.1)
   - Alamofire (4.0.1)
   - IQKeyboardManager (4.0.7)
   - IQKeyboardManagerSwift (4.0.7)
   - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
+  - AES256CBC
   - Alamofire (~> 4.0)
   - IQKeyboardManager
   - IQKeyboardManagerSwift
   - SwiftyJSON
 
 SPEC CHECKSUMS:
+  AES256CBC: 22b584fbea28b46ab3c52d44213902ab5c6f801f
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   IQKeyboardManager: 69002bb4fea60596b710e57d426abc00e5063630
   IQKeyboardManagerSwift: 58bbcf46b5cf9fd4ed625d28a60cb2fbae4ab0f4
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: 74460a4ecc119e833420d6a4a5847e308cfc4add
+PODFILE CHECKSUM: 07d56172a2209590220b69b843d70cf5f6226e02
 
 COCOAPODS: 1.1.1

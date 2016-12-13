@@ -27,7 +27,7 @@ public class Procedure {
         "Chest Tube",
         "Central Line",
         "Compression Bandage",
-        "Spint"
+        "Splint"
     ]
     
     let splintLocation : [String] = [
@@ -54,7 +54,7 @@ public class Procedure {
         self.procedureLocation = []
     }
     
-    func done(procedure: String, location : String = "not specified") {
+    func done(procedure: String, location : String ) {
         self.proceduresDone?.append(procedure)
         self.procedureLocation?.append(location)
     }

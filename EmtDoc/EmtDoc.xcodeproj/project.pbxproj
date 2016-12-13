@@ -14,11 +14,17 @@
 		067E96881DE54EB100595E22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 067E96861DE54EB100595E22 /* LaunchScreen.storyboard */; };
 		067E96931DE54EB100595E22 /* EmtDocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E96921DE54EB100595E22 /* EmtDocTests.swift */; };
 		067E969E1DE54EB100595E22 /* EmtDocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E969D1DE54EB100595E22 /* EmtDocUITests.swift */; };
+		069A19241DFF5236009E86D7 /* ProcedureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B711DFDCFD80041283E /* ProcedureViewController.swift */; };
+		069A19251DFF5238009E86D7 /* ProcedureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B711DFDCFD80041283E /* ProcedureViewController.swift */; };
+		06EBA27D1DFDD92C009B8DC0 /* JsonIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B7D1DFDD1BD0041283E /* JsonIO.swift */; };
+		06EBA27E1DFDD92C009B8DC0 /* JsonIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B7D1DFDD1BD0041283E /* JsonIO.swift */; };
 		44C138F4D6E4EF797A4E8557 /* Pods_EmtDocUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5284E64E501FA02CBDCE62 /* Pods_EmtDocUITests.framework */; };
 		492241931DFDEF7E00B53A78 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492241921DFDEF7E00B53A78 /* PersonalInfoViewController.swift */; };
 		492241971DFDEFE000B53A78 /* PersonalMedicalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492241961DFDEFE000B53A78 /* PersonalMedicalViewController.swift */; };
 		492241991DFDF0BA00B53A78 /* PersonalContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492241981DFDF0BA00B53A78 /* PersonalContactViewController.swift */; };
 		4922419D1DFE0E2500B53A78 /* GlascowTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4922419C1DFE0E2500B53A78 /* GlascowTestViewController.swift */; };
+		4982C6161DFF500B00B17850 /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982C6151DFF500B00B17850 /* Incident.swift */; };
+		4982C6181DFF5C2C00B17850 /* SetLocationTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982C6171DFF5C2C00B17850 /* SetLocationTimeViewController.swift */; };
 		5C334B6D1DFCC1540041283E /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B6B1DFCC1540041283E /* HospitalTableViewCell.swift */; };
 		5C334B6E1DFCC1540041283E /* HospitalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B6C1DFCC1540041283E /* HospitalTableViewController.swift */; };
 		5C334B721DFDCFD80041283E /* ProcedureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C334B711DFDCFD80041283E /* ProcedureViewController.swift */; };
@@ -33,6 +39,7 @@
 		60556228C0C766CDF49E0999 /* Pods_EmtDoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98252B61D6D72A5C04759293 /* Pods_EmtDoc.framework */; };
 		9D268CC11DF7AD2B005D585C /* EmtDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D268CC01DF7AD2B005D585C /* EmtDoc.swift */; };
 		9D268CC71DF7B588005D585C /* EmtDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D268CC01DF7AD2B005D585C /* EmtDoc.swift */; };
+		9D2FDD4F1DFF7A1D003CEFDB /* SetTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2FDD4E1DFF7A1D003CEFDB /* SetTimeViewController.swift */; };
 		9D365E7A1DF7A12200089DA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067E967A1DE54EB000595E22 /* AppDelegate.swift */; };
 		9D365E7B1DF7A13C00089DA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 067E96841DE54EB100595E22 /* Assets.xcassets */; };
 		9D365E871DF7A6E800089DA0 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D365E861DF7A6E800089DA0 /* HomeTableViewController.swift */; };
@@ -89,6 +96,8 @@
 		492241961DFDEFE000B53A78 /* PersonalMedicalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalMedicalViewController.swift; sourceTree = "<group>"; };
 		492241981DFDF0BA00B53A78 /* PersonalContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalContactViewController.swift; sourceTree = "<group>"; };
 		4922419C1DFE0E2500B53A78 /* GlascowTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlascowTestViewController.swift; sourceTree = "<group>"; };
+		4982C6151DFF500B00B17850 /* Incident.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Incident.swift; sourceTree = "<group>"; };
+		4982C6171DFF5C2C00B17850 /* SetLocationTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetLocationTimeViewController.swift; sourceTree = "<group>"; };
 		5C334B6B1DFCC1540041283E /* HospitalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalTableViewCell.swift; sourceTree = "<group>"; };
 		5C334B6C1DFCC1540041283E /* HospitalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalTableViewController.swift; sourceTree = "<group>"; };
 		5C334B711DFDCFD80041283E /* ProcedureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcedureViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +113,7 @@
 		86D8D0E9D41F032E8C6B61DA /* Pods-EmtDocUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDocUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDocUITests/Pods-EmtDocUITests.release.xcconfig"; sourceTree = "<group>"; };
 		98252B61D6D72A5C04759293 /* Pods_EmtDoc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmtDoc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D268CC01DF7AD2B005D585C /* EmtDoc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmtDoc.swift; sourceTree = "<group>"; };
+		9D2FDD4E1DFF7A1D003CEFDB /* SetTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetTimeViewController.swift; sourceTree = "<group>"; };
 		9D365E861DF7A6E800089DA0 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		9D365E8A1DF7A8B600089DA0 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		9DED19221DEE7B770092D747 /* Exam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exam.swift; sourceTree = "<group>"; };
@@ -223,21 +233,15 @@
 				492241921DFDEF7E00B53A78 /* PersonalInfoViewController.swift */,
 				492241961DFDEFE000B53A78 /* PersonalMedicalViewController.swift */,
 				492241981DFDF0BA00B53A78 /* PersonalContactViewController.swift */,
+				4982C6171DFF5C2C00B17850 /* SetLocationTimeViewController.swift */,
+				9D2FDD4E1DFF7A1D003CEFDB /* SetTimeViewController.swift */,
 			);
 			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		5C334B831DFDD4190041283E /* Home Main Screen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Home Main Screen";
 			sourceTree = "<group>";
 		};
 		9DED19201DEE7B5C0092D747 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5C334B831DFDD4190041283E /* Home Main Screen */,
 				5C334B7B1DFDD1B60041283E /* Internaltesting.json */,
 				5C334B791DFDD1AE0041283E /* HttpJSON.swift */,
 				5C334B771DFDD1A50041283E /* File.swift */,
@@ -248,6 +252,7 @@
 				9DED19231DEE7B770092D747 /* PersonID.swift */,
 				9DED19241DEE7B770092D747 /* Procedure.swift */,
 				9DED19251DEE7B770092D747 /* Vitals.swift */,
+				4982C6151DFF500B00B17850 /* Incident.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -347,7 +352,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = FormatHealth;
 				TargetAttributes = {
 					067E96761DE54EB000595E22 = {
@@ -567,6 +572,7 @@
 				9D268CC11DF7AD2B005D585C /* EmtDoc.swift in Sources */,
 				492241931DFDEF7E00B53A78 /* PersonalInfoViewController.swift in Sources */,
 				9DED192F1DEE7B770092D747 /* Procedure.swift in Sources */,
+				4982C6161DFF500B00B17850 /* Incident.swift in Sources */,
 				5C334B6E1DFCC1540041283E /* HospitalTableViewController.swift in Sources */,
 				9D365E8B1DF7A8B600089DA0 /* HomeTableViewCell.swift in Sources */,
 				9D365E871DF7A6E800089DA0 /* HomeTableViewController.swift in Sources */,
@@ -583,6 +589,8 @@
 				492241991DFDF0BA00B53A78 /* PersonalContactViewController.swift in Sources */,
 				067E967B1DE54EB000595E22 /* AppDelegate.swift in Sources */,
 				5C334B741DFDCFE10041283E /* VitalsViewController.swift in Sources */,
+				9D2FDD4F1DFF7A1D003CEFDB /* SetTimeViewController.swift in Sources */,
+				4982C6181DFF5C2C00B17850 /* SetLocationTimeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,9 +599,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				067E96931DE54EB100595E22 /* EmtDocTests.swift in Sources */,
+				06EBA27D1DFDD92C009B8DC0 /* JsonIO.swift in Sources */,
 				9DED192D1DEE7B770092D747 /* PersonID.swift in Sources */,
 				9DED19301DEE7B770092D747 /* Procedure.swift in Sources */,
 				9D365E7A1DF7A12200089DA0 /* AppDelegate.swift in Sources */,
+				069A19241DFF5236009E86D7 /* ProcedureViewController.swift in Sources */,
 				9D268CC71DF7B588005D585C /* EmtDoc.swift in Sources */,
 				9DED19331DEE7B770092D747 /* Vitals.swift in Sources */,
 				9DED192A1DEE7B770092D747 /* Exam.swift in Sources */,
@@ -607,7 +617,9 @@
 				067E969E1DE54EB100595E22 /* EmtDocUITests.swift in Sources */,
 				9DED192E1DEE7B770092D747 /* PersonID.swift in Sources */,
 				9DED19311DEE7B770092D747 /* Procedure.swift in Sources */,
+				06EBA27E1DFDD92C009B8DC0 /* JsonIO.swift in Sources */,
 				9DED19341DEE7B770092D747 /* Vitals.swift in Sources */,
+				069A19251DFF5238009E86D7 /* ProcedureViewController.swift in Sources */,
 				9DED192B1DEE7B770092D747 /* Exam.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,6 +679,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -717,6 +730,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -746,11 +760,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DBB2EE83E06E34D1CA48699F /* Pods-EmtDoc.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EmtDoc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ischool.uw.eduFormatHealth.EmtDoc;
+				PRODUCT_BUNDLE_IDENTIFIER = co.litphansiri;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -761,11 +777,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 25E2568B028F1F8C9BB19557 /* Pods-EmtDoc.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EmtDoc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ischool.uw.eduFormatHealth.EmtDoc;
+				PRODUCT_BUNDLE_IDENTIFIER = co.litphansiri;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
