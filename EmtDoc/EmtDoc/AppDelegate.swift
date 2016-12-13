@@ -18,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // Model for our EmtDoc
     var EmtDocModel = EmtDoc()
+    
+    func clearModel() {
+        self.EmtDocModel = EmtDoc()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.sharedManager().enable = true

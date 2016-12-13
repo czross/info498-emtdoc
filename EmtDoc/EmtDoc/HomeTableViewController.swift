@@ -17,16 +17,22 @@ class HomeTableViewController: UITableViewController, MFMailComposeViewControlle
     var hospitals: [Dictionary<String,String>]?
     // hospitals array of array structure: [["name": "", "email": ""],[...],[...]]
     
+    let confirmAlert = UIAlertController(title: "Are you sure?", message: "Once information is sent, you will no longer be able to make changes to current patient", preferredStyle: .alert)
+    
+    let failEmailAlert = UIAlertController(title: "This device is not configured to send e-mails", message: "Patient information is still available locally.", preferredStyle: .alert)
+    
     @IBOutlet weak var titleLabel: UILabel!
     
     
     @IBAction func sendEmailButton(_ sender: UIBarButtonItem) {
-        if EmtDocModel.selectedHospital != nil {
-            let tempEmail = EmtDocModel.selectedHospital?["email"]
-            let emailString = "\(tempEmail!)"
-            let arrayEmail: [String] = [emailString]
-            NSLog("temp Email \(arrayEmail)")
-            sendEmail(email: arrayEmail)
+        // Fetch the EmtDocModel from app delegate singleton
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.EmtDocModel = appDelegate.EmtDocModel
+        
+        // If we have a hospital selected, generate email and send
+        if appDelegate.EmtDocModel.selectedHospital != nil {
+            self.present(confirmAlert, animated: true, completion:nil)
+            
         } else {
             NSLog("No Hosptial Checked")
             let checkAction = UIAlertController(title: "Hospital", message: "No hospital designated", preferredStyle: .alert)
@@ -36,12 +42,20 @@ class HomeTableViewController: UITableViewController, MFMailComposeViewControlle
             checkAction.addAction(checkOk)
             self.present(checkAction, animated: true, completion: nil)
         }
+        
     }
     
     // MARK: - Email set up
     
     func sendEmail(email: [String]) {
+        // Fetch the EmtDocModel from app delegate singleton
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.EmtDocModel = appDelegate.EmtDocModel
+        
+        // Check to see if device can send mail
         if MFMailComposeViewController.canSendMail() {
+            
+            // If it can, generate email
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
             mail.setToRecipients(email)
@@ -50,14 +64,18 @@ class HomeTableViewController: UITableViewController, MFMailComposeViewControlle
             let message = "Chief Complaint: \(EmtDocModel.chiefComplaint)\nGender: \(EmtDocModel.person.gender), Age: \(EmtDocModel.person.age), Weight: \(EmtDocModel.person.weight)\n"
             mail.setMessageBody(message, isHTML: false)
             
+            // Present email sender
             present(mail, animated: true)
         } else {
+            self.present(failEmailAlert, animated: true, completion:nil)
             // show failure alert
         }
         //to test the MessageBody string
         let message = "Chief Complaint: \(EmtDocModel.chiefComplaint)\nGender: \(EmtDocModel.person.gender), Age: \(EmtDocModel.person.age), Weight: \(EmtDocModel.person.weight)\n"
         print (message)
-      JsonIO.writePerson(person: EmtDocModel.person)
+        /// Regardless of if it can or can't, write person to memory and clear peron
+        JsonIO.writePerson(person: EmtDocModel.person)
+        appDelegate.clearModel()
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
@@ -71,9 +89,34 @@ class HomeTableViewController: UITableViewController, MFMailComposeViewControlle
         
         // Fetch the EmtDocModel from app delegate singleton
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
         self.EmtDocModel = appDelegate.EmtDocModel
+        
         options = self.EmtDocModel.mainChoices
+        
+        // Email unable to be sent alert
+        failEmailAlert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) in
+            //execute some code when this option is selected
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        // We click confirm
+        confirmAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action) in
+            // Pop to root
+            self.navigationController?.popToRootViewController(animated: true)
+            let tempEmail = appDelegate.EmtDocModel.selectedHospital?["email"]
+            let emailString = "\(tempEmail!)"
+            let arrayEmail: [String] = [emailString]
+            NSLog("temp Email \(arrayEmail)")
+            // Send Email
+            self.sendEmail(email: arrayEmail)
+        }))
+        
+        confirmAlert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action) in
+            //execute some code when this option is selected
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        
         
         // testing http function downloadData
         updateHospitalData()
