@@ -72,7 +72,7 @@ public class Exam {
     facialChoices["head"] = ["No sign of injury", "Injury"]
     
     chestChoices = [String: [String]]()
-    chestChoices["lungs"] = ["Bilateral Breath Sounds", "L unclear", "R unclear"]
+    chestChoices["lungs"] = ["Bilateral Breath Sounds", "L unclear", "R unclear", "Both unclear"]
     chestChoices["heartSounds"] = ["Normal", "Murmur"]
     
     abdomenChoices = ["Vomiting", "Normal", "Left upper quadrant – normal",
@@ -82,10 +82,10 @@ public class Exam {
     backChoices = ["Cervical", "Thoracic", "Lumbar"]
     
     extremityChoices = [String: [String]]()
-    extremityChoices["leftUpper"] = ["Normal", "NotNormal"]
-    extremityChoices["rightUpper"] = ["Normal", "NotNormal"]
-    extremityChoices["leftLower"] = ["Normal", "NotNormal"]
-    extremityChoices["rightLower"] = ["Normal", "NotNormal"]
+    extremityChoices["leftUpper"] = ["Normal", "Not Normal"]
+    extremityChoices["rightUpper"] = ["Normal", "Not Normal"]
+    extremityChoices["leftLower"] = ["Normal", "Not Normal"]
+    extremityChoices["rightLower"] = ["Normal", "Not Normal"]
     
     pelvicChoices = ["Stable", "Unstable"]
     
