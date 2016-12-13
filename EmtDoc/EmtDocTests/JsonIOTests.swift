@@ -40,10 +40,10 @@ class JsonIOTests: XCTestCase {
     public func testReadWritePerson() -> Void {
       let persons = makePersons()
       JsonIO.writePerson(person: persons[0])
-      //JsonIO.writePerson(person: persons[1])
+      JsonIO.writePerson(person: persons[1])
       let personsRead = JsonIO.readPerson()
       print (personsRead.count)
-      XCTAssert(personsRead.count == 1)
+      XCTAssert(personsRead.count == 2)
   }
   
   

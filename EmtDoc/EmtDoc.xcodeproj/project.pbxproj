@@ -56,6 +56,10 @@
 		9DED19321DEE7B770092D747 /* Vitals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED19251DEE7B770092D747 /* Vitals.swift */; };
 		9DED19331DEE7B770092D747 /* Vitals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED19251DEE7B770092D747 /* Vitals.swift */; };
 		9DED19341DEE7B770092D747 /* Vitals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED19251DEE7B770092D747 /* Vitals.swift */; };
+		C92FB7D61DFFDE7A007307D2 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92FB7D51DFFDE7A007307D2 /* HistoryTableViewController.swift */; };
+		C92FB7DA1DFFE360007307D2 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92FB7D91DFFE360007307D2 /* HistoryTableViewCell.swift */; };
+		C93B6E731DFFAEE000838324 /* JsonIOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B6E721DFFAEE000838324 /* JsonIOTests.swift */; };
+		C93B6E751DFFAFD700838324 /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982C6151DFF500B00B17850 /* Incident.swift */; };
 		F2CA798B55710F1C74D27597 /* Pods_EmtDocTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D277CD17115CD4BE34A6E3DE /* Pods_EmtDocTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +124,9 @@
 		9DED19231DEE7B770092D747 /* PersonID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonID.swift; sourceTree = "<group>"; };
 		9DED19241DEE7B770092D747 /* Procedure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Procedure.swift; sourceTree = "<group>"; };
 		9DED19251DEE7B770092D747 /* Vitals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vitals.swift; sourceTree = "<group>"; };
+		C92FB7D51DFFDE7A007307D2 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		C92FB7D91DFFE360007307D2 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		C93B6E721DFFAEE000838324 /* JsonIOTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonIOTests.swift; sourceTree = "<group>"; };
 		D277CD17115CD4BE34A6E3DE /* Pods_EmtDocTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmtDocTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB2EE83E06E34D1CA48699F /* Pods-EmtDoc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDoc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDoc/Pods-EmtDoc.debug.xcconfig"; sourceTree = "<group>"; };
 		F2DFC9A7E32E1F7AC70EB2ED /* Pods-EmtDocUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmtDocUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmtDocUITests/Pods-EmtDocUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +200,7 @@
 		067E96911DE54EB100595E22 /* EmtDocTests */ = {
 			isa = PBXGroup;
 			children = (
+				C93B6E721DFFAEE000838324 /* JsonIOTests.swift */,
 				067E96921DE54EB100595E22 /* EmtDocTests.swift */,
 				067E96941DE54EB100595E22 /* Info.plist */,
 			);
@@ -235,6 +243,8 @@
 				492241981DFDF0BA00B53A78 /* PersonalContactViewController.swift */,
 				4982C6171DFF5C2C00B17850 /* SetLocationTimeViewController.swift */,
 				9D2FDD4E1DFF7A1D003CEFDB /* SetTimeViewController.swift */,
+				C92FB7D51DFFDE7A007307D2 /* HistoryTableViewController.swift */,
+				C92FB7D91DFFE360007307D2 /* HistoryTableViewCell.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -567,9 +577,11 @@
 			files = (
 				492241971DFDEFE000B53A78 /* PersonalMedicalViewController.swift in Sources */,
 				067E96831DE54EB100595E22 /* EmtDoc.xcdatamodeld in Sources */,
+				C92FB7DA1DFFE360007307D2 /* HistoryTableViewCell.swift in Sources */,
 				9DED192C1DEE7B770092D747 /* PersonID.swift in Sources */,
 				5C334B6D1DFCC1540041283E /* HospitalTableViewCell.swift in Sources */,
 				9D268CC11DF7AD2B005D585C /* EmtDoc.swift in Sources */,
+				C92FB7D61DFFDE7A007307D2 /* HistoryTableViewController.swift in Sources */,
 				492241931DFDEF7E00B53A78 /* PersonalInfoViewController.swift in Sources */,
 				9DED192F1DEE7B770092D747 /* Procedure.swift in Sources */,
 				4982C6161DFF500B00B17850 /* Incident.swift in Sources */,
@@ -598,6 +610,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93B6E751DFFAFD700838324 /* Incident.swift in Sources */,
 				067E96931DE54EB100595E22 /* EmtDocTests.swift in Sources */,
 				06EBA27D1DFDD92C009B8DC0 /* JsonIO.swift in Sources */,
 				9DED192D1DEE7B770092D747 /* PersonID.swift in Sources */,
@@ -607,6 +620,7 @@
 				9D268CC71DF7B588005D585C /* EmtDoc.swift in Sources */,
 				9DED19331DEE7B770092D747 /* Vitals.swift in Sources */,
 				9DED192A1DEE7B770092D747 /* Exam.swift in Sources */,
+				C93B6E731DFFAEE000838324 /* JsonIOTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

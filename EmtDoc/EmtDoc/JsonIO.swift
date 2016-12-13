@@ -10,6 +10,20 @@ import Foundation
 import SwiftyJSON
 
 public class JsonIO {
+  
+  public static func clearPerson() -> Void {
+    do {
+      let documentDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+      let fileURL = documentDirectoryURL.appendingPathComponent("persons.json")
+      if (FileManager.default.fileExists(atPath: fileURL.path)) {
+        do {
+          try " ".write(to: fileURL, atomically: false, encoding: String.Encoding.utf8)
+        }
+      }
+    }
+    catch{}
+  }
+  
   public static func writePerson(person: PersonID) -> Void {
     var history = JSON(["persons": "persons"])
     do {
@@ -29,8 +43,7 @@ public class JsonIO {
       }
     }
     catch{}
-    history = JSON(["persons": "persons"])
-    history["persons"].arrayObject = Array()
+
     let data = ["fname": "fname",
                 "lname": "lname",
                 "middleInitial": "middleInitial",
@@ -65,8 +78,9 @@ public class JsonIO {
     json["physician"].string = person.physician
     json["medications"].string = person.medications
     json["allergies"].string = person.allergies
-    history["persons"].arrayObject!.append(json)
-    history["persons"] = JSON(history["persons"].arrayObject!)
+    var tmp = history["persons"].arrayValue
+    tmp.append(json)
+    history["persons"] = JSON(tmp)
     print("historycount \(history.count)")
     if let historyData = history.description.data(using: String.Encoding.utf8) {
       do {
