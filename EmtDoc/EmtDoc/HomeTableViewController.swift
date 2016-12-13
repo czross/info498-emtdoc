@@ -47,12 +47,16 @@ class HomeTableViewController: UITableViewController, MFMailComposeViewControlle
             mail.setToRecipients(email)
             NSLog("Email sending data to: \(email)")
             mail.setSubject("Testing EmtDoc")
-            mail.setMessageBody("You're so awesome!", isHTML: false)
+            let message = "Chief Complaint: \(EmtDocModel.chiefComplaint)\nGender: \(EmtDocModel.person.gender), Age: \(EmtDocModel.person.age), Weight: \(EmtDocModel.person.weight)\n"
+            mail.setMessageBody(message, isHTML: false)
             
             present(mail, animated: true)
         } else {
             // show failure alert
         }
+        //to test the MessageBody string
+        let message = "Chief Complaint: \(EmtDocModel.chiefComplaint)\nGender: \(EmtDocModel.person.gender), Age: \(EmtDocModel.person.age), Weight: \(EmtDocModel.person.weight)\n"
+        print (message)
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
