@@ -17,7 +17,6 @@ class SetLocationTimeViewController: UIViewController, CLLocationManagerDelegate
     var currentCoordinate: CLLocationCoordinate2D = CLLocationCoordinate2DMake(0, 0)
     
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var locationLabel: UILabel!
     
     @IBAction func useCurrentLocationButton(_ sender: Any) {
         locationManager.delegate = self
