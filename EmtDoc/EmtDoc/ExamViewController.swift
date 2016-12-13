@@ -160,7 +160,7 @@ class ExamViewController: UIViewController {
         for index in 1...exam.skinChoices.count - 1 {
             skinAlert.addAction(UIAlertAction(title: "\(exam.skinChoices[index])", style: .default, handler: { (action) in
                 //execute some code when this option is selected
-                self.exam.mentalStatus = self.exam.skinChoices[index]
+                self.exam.skin = self.exam.skinChoices[index]
                 self.skinBtn.setTitle((self.exam.skin), for: .normal)
             }))
         }
