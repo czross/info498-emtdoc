@@ -108,7 +108,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contact" id="FJw-Bw-ZGu"/>
+                    <tabBarItem key="tabBarItem" title="Contact" image="contact" id="FJw-Bw-ZGu"/>
                     <connections>
                         <outlet property="txtAddress" destination="cs0-0H-qVp" id="dXZ-kH-mkY"/>
                         <outlet property="txtCity" destination="LpP-Eg-hRz" id="BaA-Ab-Ldj"/>
@@ -167,7 +167,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Med/Allergy" id="BBY-5M-Gh9"/>
+                    <tabBarItem key="tabBarItem" title="Med/Allergy" image="medication" id="BBY-5M-Gh9"/>
                     <connections>
                         <outlet property="txtAllergies" destination="yJT-mC-Ch1" id="FGo-RN-oyZ"/>
                         <outlet property="txtMedications" destination="tAJ-DL-uvZ" id="bfD-h4-2uf"/>
@@ -319,7 +319,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Personal" id="v6c-wj-7Nc"/>
+                    <tabBarItem key="tabBarItem" title="Personal" image="person" id="v6c-wj-7Nc"/>
                     <connections>
                         <outlet property="txtAdvanced" destination="eqI-DD-S88" id="bbC-PH-Vkd"/>
                         <outlet property="txtAge" destination="77u-g0-C3U" id="V5b-bl-zUz"/>
@@ -1000,4 +1000,9 @@
             <point key="canvasLocation" x="-311" y="116"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="contact" width="25" height="25"/>
+        <image name="medication" width="25" height="25"/>
+        <image name="person" width="25" height="25"/>
+    </resources>
 </document>
