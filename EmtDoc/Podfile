@@ -12,6 +12,7 @@ target 'EmtDoc' do
   pod 'IQKeyboardManager'
   pod 'IQKeyboardManagerSwift'
   pod 'AES256CBC'
+  pod 'SwiftHEXColors'
 
   target 'EmtDocTests' do
     inherit! :search_paths
@@ -21,6 +22,7 @@ target 'EmtDoc' do
     pod 'IQKeyboardManager'
     pod 'IQKeyboardManagerSwift'
     pod 'AES256CBC'
+    pod 'SwiftHEXColors'
 
   end
 
@@ -32,6 +34,7 @@ target 'EmtDoc' do
     pod 'IQKeyboardManager'
     pod 'IQKeyboardManagerSwift'
     pod 'AES256CBC'
+    pod 'SwiftHEXColors'
 
   end
 

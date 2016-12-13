@@ -106,6 +106,42 @@ class JsonIOTests: XCTestCase {
     let procedureRead = JsonIO.readProcedure()
     XCTAssert(procedure.getProcLocation() == procedureRead.getProcLocation())
   }
+    
+    private func makeVital() -> VitalSigns{
+        let vital = VitalSigns()
+        vital.bloodPrs = ["Systolic" : 12, "Diastolic" : 10]
+        vital.heartRate = 34
+        vital.rhythm = "Normal"
+        vital.respRate = 48
+        vital.o2Saturation = 77.4
+        vital.endTidalCO2 = 23.9
+        vital.temp = 34.2
+        vital.pain = 8
+        vital.setGlascow(eye: 3, verbal: 5, motor: 1)
+        return vital
+    }
+    public func testVitalReadWrite(){
+        let vital = makeVital()
+        JsonIO.writeVital(vital: vital)
+        let vitalRead = JsonIO.readVital()
+        for (key, value) in vitalRead.bloodPrs{
+            XCTAssert(vitalRead.bloodPrs[key] == vital.bloodPrs[key])
+        }
+        XCTAssert(vitalRead.heartRate == vital.heartRate)
+        XCTAssert(vitalRead.rhythm == vital.rhythm)
+        XCTAssert(vitalRead.respRate == vital.respRate)
+        XCTAssert(vitalRead.o2Saturation == vital.o2Saturation)
+        XCTAssert(vitalRead.endTidalCO2 == vital.endTidalCO2)
+        XCTAssert(vitalRead.temp == vital.temp)
+        XCTAssert(vitalRead.pain == vital.pain)
+        XCTAssert(vitalRead.glascowTtl == vital.glascowTtl)
+        XCTAssert((vitalRead.glascow["Eye"] != nil))
+        XCTAssert(vitalRead.glascow["Eye"] == vital.glascow["Eye"])
+        XCTAssert(vitalRead.glascow["Verbal"] == vital.glascow["Verbal"])
+        XCTAssert(vitalRead.glascow["Motor"] == vital.glascow["Motor"])
+    }
+    
+    
 }
 
 

@@ -51,15 +51,15 @@ class GlascowTestViewController: UIViewController {
         let mainModel = appDelegate.EmtDocModel.vitals
         
         // Set Button labels based on current model
-        eyeButton.setTitle(glascowDscp.eyeDscp[mainModel.glascow["Eye"]!], for: .normal)
-        verbalButton.setTitle(glascowDscp.verbalDscp[mainModel.glascow["Verbal"]!], for: .normal)
-        motorButton.setTitle(glascowDscp.motorDscp[mainModel.glascow["Motor"]!], for: .normal)
+        eyeButton.setTitle(glascowDscp.eyeDscp[mainModel.getGlascow()["Eye"]!], for: .normal)
+        verbalButton.setTitle(glascowDscp.verbalDscp[mainModel.getGlascow()["Verbal"]!], for: .normal)
+        motorButton.setTitle(glascowDscp.motorDscp[mainModel.getGlascow()["Motor"]!], for: .normal)
         
         // Eye Alert
         for index in 1...glascowDscp.eyeDscp.keys.count - 1 {
             eyeAlert.addAction(UIAlertAction(title: "\(index) : \((glascowDscp.eyeDscp[index])!)", style: .default, handler: { (action) in
                 //execute some code when this option is selected
-                mainModel.glascow["Eye"] = index
+                mainModel.setGlascow(eye: index)
                 self.eyeButton.setTitle((glascowDscp.eyeDscp[index])!, for: .normal)
             }))
         }
@@ -68,7 +68,7 @@ class GlascowTestViewController: UIViewController {
         for index in 1...glascowDscp.verbalDscp.keys.count - 1 {
             verbalAlert.addAction(UIAlertAction(title: "\(index) : \((glascowDscp.verbalDscp[index])!)", style: .default, handler: { (action) in
                 //execute some code when this option is selected
-                mainModel.glascow["Verbal"] = index
+                mainModel.setGlascow(verbal: index)
                 self.verbalButton.setTitle((glascowDscp.verbalDscp[index])!, for: .normal)
             }))
         }
@@ -77,7 +77,7 @@ class GlascowTestViewController: UIViewController {
         for index in 1...glascowDscp.motorDscp.keys.count - 1 {
             motorAlert.addAction(UIAlertAction(title: "\(index) : \((glascowDscp.motorDscp[index])!)", style: .default, handler: { (action) in
                 //execute some code when this option is selected
-                mainModel.glascow["Motor"] = index
+                mainModel.setGlascow(motor: index)
                 self.motorButton.setTitle((glascowDscp.motorDscp[index])!, for: .normal)
             }))
         }

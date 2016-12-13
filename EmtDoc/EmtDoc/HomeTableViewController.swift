@@ -48,7 +48,6 @@ class HomeTableViewController: UITableViewController, MFMailComposeViewControlle
             NSLog("Email sending data to: \(email)")
             mail.setSubject("Testing EmtDoc")
             let message = "Chief Complaint: \(EmtDocModel.chiefComplaint)\nGender: \(EmtDocModel.person.gender), Age: \(EmtDocModel.person.age), Weight: \(EmtDocModel.person.weight)\n"
-            
             mail.setMessageBody(message, isHTML: false)
             
             present(mail, animated: true)
