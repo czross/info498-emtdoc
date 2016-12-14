@@ -102,7 +102,7 @@ class HomeTableViewController: UITableViewController, MFMailComposeViewControlle
         // We click confirm
         confirmAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action) in
             // Pop to root
-            self.navigationController?.popToRootViewController(animated: true)
+            _ = self.navigationController?.popToRootViewController(animated: true)
             let tempEmail = appDelegate.EmtDocModel.selectedHospital?["email"]
             let emailString = "\(tempEmail!)"
             let arrayEmail: [String] = [emailString]
