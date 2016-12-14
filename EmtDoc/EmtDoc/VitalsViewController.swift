@@ -23,10 +23,20 @@ class VitalsViewController: UIViewController{
     @IBOutlet weak var txtEndTitalCO2: UITextField!
     @IBOutlet weak var txtTemp: UITextField!
     @IBOutlet weak var txtPain: UITextField!
+    @IBOutlet weak var heartRhythmLabel: UIButton!
+    
+    var heartRythmBool = true
     
     let rhythmAlert = UIAlertController(title: "Rhythm", message: "Please Choose Type of Rhythm", preferredStyle: .alert)
     
-    @IBAction func rhythmButtonPress(_ sender: Any) {
+    @IBAction func rhythmButtonPress(_ sender: UIButton) {
+        if heartRythmBool {
+            heartRhythmLabel.backgroundColor = UIColor(hexString: "#51CABD")
+            heartRythmBool = false
+        } else {
+            heartRhythmLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            heartRythmBool = true
+        }
         self.present(rhythmAlert, animated: true, completion:nil)
     }
 

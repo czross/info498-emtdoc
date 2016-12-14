@@ -488,7 +488,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="81"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kyi-rP-Vuh" id="bod-1a-XzY">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Cs-dD-UEn">
@@ -844,6 +844,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="heartRhythmLabel" destination="lbe-Ob-4X2" id="Shq-Zc-qL4"/>
                         <outlet property="rhythmButton" destination="lbe-Ob-4X2" id="9pg-DN-iEH"/>
                         <outlet property="txtBPDiastolic" destination="kc1-3C-H86" id="vwq-ZG-xul"/>
                         <outlet property="txtBPSystolic" destination="QPq-m3-v2W" id="O57-WQ-zdw"/>
@@ -1132,17 +1133,6 @@
                                             <action selector="lLoExtPress:" destination="gth-Hv-6IT" eventType="touchUpInside" id="cCN-R5-0hX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpo-7f-RD8">
-                                        <rect key="frame" x="199" y="433" width="168" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.65932362349999996" green="0.95823904039999996" blue="0.92585089639999996" alpha="0.41703345069999997" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Right Low Extremity">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="rLoExtPress:" destination="gth-Hv-6IT" eventType="touchUpInside" id="lZ4-gv-pMR"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehq-D7-bh6">
                                         <rect key="frame" x="127" y="481" width="124" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1155,6 +1145,17 @@
                                             <action selector="updateBtnClicked:" destination="gth-Hv-6IT" eventType="touchUpInside" id="JPf-PK-s3P"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpo-7f-RD8">
+                                        <rect key="frame" x="199" y="433" width="168" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.65932362349999996" green="0.95823904039999996" blue="0.92585089639999996" alpha="0.41703345069999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Right Low Extremity">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rLoExtPress:" destination="gth-Hv-6IT" eventType="touchUpInside" id="lZ4-gv-pMR"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -1162,20 +1163,30 @@
                     </view>
                     <connections>
                         <outlet property="abdomenTextField" destination="N3U-xM-7M2" id="CHm-ZR-2L2"/>
+                        <outlet property="earStatusLabel" destination="6Yk-El-geg" id="yEw-nq-adx"/>
                         <outlet property="earsBtn" destination="6Yk-El-geg" id="BG4-28-QuB"/>
                         <outlet property="headTextField" destination="Dnd-41-EI8" id="TfO-Hd-ksO"/>
                         <outlet property="heartSoundsTextField" destination="1Th-p7-UQV" id="b19-kv-uw5"/>
+                        <outlet property="leftLowExtremityLabel" destination="JSq-0t-d5l" id="XqR-zn-yAB"/>
                         <outlet property="leftLowerExtBtn" destination="JSq-0t-d5l" id="YCE-PV-NLk"/>
+                        <outlet property="leftUpExtremityLabel" destination="IY4-6p-4hL" id="Zfk-Un-yzU"/>
                         <outlet property="leftUpperExtBtn" destination="IY4-6p-4hL" id="ct4-xh-7MY"/>
+                        <outlet property="lungStatusLabel" destination="iST-dW-4hh" id="Btg-3A-MGw"/>
                         <outlet property="lungsBtn" destination="iST-dW-4hh" id="Sx8-yh-7t0"/>
                         <outlet property="mentalBtn" destination="rTR-Ny-xeK" id="WmI-ku-o2K"/>
+                        <outlet property="mentalStatusLabel" destination="rTR-Ny-xeK" id="yXu-6n-0X8"/>
                         <outlet property="neuroTextField" destination="99g-Hw-Eoh" id="jWI-ab-6sZ"/>
                         <outlet property="noseBtn" destination="XSQ-gd-doZ" id="Ibj-HL-DUc"/>
+                        <outlet property="noseStatusLabel" destination="XSQ-gd-doZ" id="bds-en-4zq"/>
                         <outlet property="pelvicTextField" destination="Tpx-B5-LQH" id="l27-Qc-TEK"/>
+                        <outlet property="pupilStatusLabel" destination="y94-cm-YuD" id="JIB-3o-SMl"/>
                         <outlet property="pupilsBtn" destination="y94-cm-YuD" id="8RA-E3-RtS"/>
+                        <outlet property="rightLowExtremityLabel" destination="hpo-7f-RD8" id="CTH-bF-S1p"/>
                         <outlet property="rightLowerExtBtn" destination="hpo-7f-RD8" id="4pO-b9-8wX"/>
+                        <outlet property="rightUpExtremityLabel" destination="tyW-Yj-rVb" id="nzw-Yc-5az"/>
                         <outlet property="rightUpperExtBtn" destination="tyW-Yj-rVb" id="mXz-Cf-gNb"/>
                         <outlet property="skinBtn" destination="2eF-SC-xXv" id="gam-fb-IFk"/>
+                        <outlet property="skinStatusLabel" destination="2eF-SC-xXv" id="Ljc-a2-JLS"/>
                         <outlet property="throatTextField" destination="duy-se-qgy" id="aqe-D5-dOs"/>
                     </connections>
                 </viewController>
@@ -1196,7 +1207,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h3m-jl-LvD" id="Wop-2j-XZa">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9r-55-Lx1">
@@ -1247,7 +1258,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o8T-qt-oNs" id="VPu-sg-wt5">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJu-5g-aAp">

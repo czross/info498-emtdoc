@@ -12,12 +12,41 @@ class ExamViewController: UIViewController {
     
     var EmtDocModel = EmtDoc()
     var exam = EmtDoc().exam
+    
+    @IBOutlet weak var mentalStatusLabel: UIButton!
+    @IBOutlet weak var skinStatusLabel: UIButton!
+    @IBOutlet weak var earStatusLabel: UIButton!
+    @IBOutlet weak var pupilStatusLabel: UIButton!
+    @IBOutlet weak var noseStatusLabel: UIButton!
+    @IBOutlet weak var lungStatusLabel: UIButton!
+    @IBOutlet weak var leftUpExtremityLabel: UIButton!
+    @IBOutlet weak var rightUpExtremityLabel: UIButton!
+    @IBOutlet weak var leftLowExtremityLabel: UIButton!
+    @IBOutlet weak var rightLowExtremityLabel: UIButton!
+    
+    var mentalBool = true
+    var skinBool = true
+    var earBool = true
+    var pupilBool = true
+    var noseBool = true
+    var lungBool = true
+    var leftUpBoo = true
+    var rightUpBool = true
+    var leftLowBool = true
+    var rightLowBool = true
 
 // @IBOutlet weak var mentalStatusTextField: UITextField!
     let mentalAlert = UIAlertController(title: "Mental Status", message: "Please choose status", preferredStyle: .alert)
     @IBOutlet weak var mentalBtn: UIButton!
     
     @IBAction func mentalPress(_ sender: UIButton!) {
+        if mentalBool {
+            mentalStatusLabel.backgroundColor = UIColor(hexString: "#51CABD")
+            mentalBool = false
+        } else {
+            mentalStatusLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            mentalBool = true
+        }
         self.present(mentalAlert, animated: true, completion:nil)
     }
 
@@ -27,6 +56,13 @@ class ExamViewController: UIViewController {
     @IBOutlet weak var skinBtn: UIButton!
     
     @IBAction func skinPress(_ sender: AnyObject) {
+        if skinBool {
+            skinStatusLabel.backgroundColor = UIColor(hexString: "#51CABD")
+            skinBool = false
+        } else {
+            skinStatusLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            skinBool = true
+        }
         self.present(skinAlert, animated: true, completion:nil)
     }
     
@@ -39,6 +75,13 @@ class ExamViewController: UIViewController {
     @IBOutlet weak var pupilsBtn: UIButton!
     
     @IBAction func pupilPress(_ sender: AnyObject) {
+        if pupilBool {
+            pupilStatusLabel.backgroundColor = UIColor(hexString: "#51CABD")
+            pupilBool = false
+        } else {
+            pupilStatusLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            pupilBool = true
+        }
         self.present(pupilAlert, animated: true, completion:nil)
     }
     
@@ -47,6 +90,13 @@ class ExamViewController: UIViewController {
     @IBOutlet weak var earsBtn: UIButton!
     
     @IBAction func earPress(_ sender: AnyObject) {
+        if earBool {
+            earStatusLabel.backgroundColor = UIColor(hexString: "#51CABD")
+            earBool = false
+        } else {
+            earStatusLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            earBool = true
+        }
         self.present(earsAlert, animated: true, completion:nil)
     }
     
@@ -58,6 +108,13 @@ class ExamViewController: UIViewController {
     @IBOutlet weak var noseBtn: UIButton!
     
     @IBAction func nosePress(_ sender: AnyObject) {
+        if noseBool {
+            noseStatusLabel.backgroundColor = UIColor(hexString: "#51CABD")
+            noseBool = false
+        } else {
+            noseStatusLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            noseBool = true
+        }
         self.present(noseAlert, animated: true, completion:nil)
     }
   
@@ -68,6 +125,13 @@ class ExamViewController: UIViewController {
     @IBOutlet weak var lungsBtn: UIButton!
     
     @IBAction func lungPress(_ sender: AnyObject) {
+        if lungBool {
+            lungStatusLabel.backgroundColor = UIColor(hexString: "#51CABD")
+            lungBool = false
+        } else {
+            lungStatusLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            lungBool = true
+        }
         self.present(lungAlert, animated: true, completion:nil)
     }
   
@@ -80,6 +144,13 @@ class ExamViewController: UIViewController {
     @IBOutlet weak var leftUpperExtBtn: UIButton!
     
     @IBAction func lUpExtPress(_ sender: AnyObject) {
+        if leftUpBoo {
+            leftUpExtremityLabel.backgroundColor = UIColor(hexString: "#51CABD")
+            leftUpBoo = false
+        } else {
+            leftUpExtremityLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            leftUpBoo = true
+        }
         self.present(lUpExtAlert, animated: true, completion:nil)
     }
   
@@ -88,6 +159,13 @@ class ExamViewController: UIViewController {
     @IBOutlet weak var rightUpperExtBtn: UIButton!
     
     @IBAction func rUpExtPress(_ sender: AnyObject) {
+        if rightUpBool {
+            rightUpExtremityLabel.backgroundColor = UIColor(hexString: "#51CABD")
+            rightUpBool = false
+        } else {
+            rightUpExtremityLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            rightUpBool = true
+        }
         self.present(rUpExtAlert, animated: true, completion:nil)
     }
     
@@ -96,6 +174,13 @@ class ExamViewController: UIViewController {
     @IBOutlet weak var leftLowerExtBtn: UIButton!
     
     @IBAction func lLoExtPress(_ sender: AnyObject) {
+        if leftLowBool {
+            leftLowExtremityLabel.backgroundColor = UIColor(hexString: "#51CABD")
+            leftLowBool = false
+        } else {
+            leftLowExtremityLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            leftLowBool = true
+        }
         self.present(lLoExtAlert, animated: true, completion:nil)
     }
   
@@ -104,6 +189,13 @@ class ExamViewController: UIViewController {
     @IBOutlet weak var rightLowerExtBtn: UIButton!
     
     @IBAction func rLoExtPress(_ sender: AnyObject) {
+        if rightLowBool {
+            rightLowExtremityLabel.backgroundColor = UIColor(hexString: "#51CABD")
+            rightLowBool = false
+        } else {
+            rightLowExtremityLabel.backgroundColor = UIColor(hexString: "#A8F4EC")
+            rightLowBool = true
+        }
         self.present(rLoExtAlert, animated: true, completion:nil)
     }
   
