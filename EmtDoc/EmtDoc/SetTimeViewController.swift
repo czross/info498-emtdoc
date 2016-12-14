@@ -18,7 +18,7 @@ class SetTimeViewController: UIViewController {
         let mainModel = appDelegate.EmtDocModel.incident
         
         mainModel.dateTime = datePicker.date
-        self.navigationController?.popViewController(animated: true)
+        _ = navigationController?.popViewController(animated: true)
     }
     
     let dateFormatter = DateFormatter()

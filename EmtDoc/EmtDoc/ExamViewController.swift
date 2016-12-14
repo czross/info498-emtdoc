@@ -210,7 +210,7 @@ class ExamViewController: UIViewController {
         exam.abdomen = abdomenTextField.text!
         exam.pelvic = pelvicTextField.text!
         exam.neuro = neuroTextField.text!
-        self.navigationController?.popViewController(animated: true)
+        _ = navigationController?.popViewController(animated: true)
     }
     
 //  @IBAction func updateButtonClicked(_ sender: Any) {

@@ -61,7 +61,10 @@ class HomeTableViewController: UITableViewController, MFMailComposeViewControlle
             mail.setToRecipients(email)
             NSLog("Email sending data to: \(email)")
             mail.setSubject("Testing EmtDoc")
-            let message = "Chief Complaint: \(EmtDocModel.chiefComplaint)\nGender: \(EmtDocModel.person.gender), Age: \(EmtDocModel.person.age), Weight: \(EmtDocModel.person.weight)\n"
+            var message = "Chief Complaint: \(EmtDocModel.chiefComplaint)\nGender: \(EmtDocModel.person.gender), Age: \(EmtDocModel.person.age), Weight: \(EmtDocModel.person.weight)"
+            if (EmtDocModel.incident.dateTime != nil) {
+                message = message + ", Time of Incident: \(EmtDocModel.incident.dateTime!)"
+            }
             mail.setMessageBody(message, isHTML: false)
             
             // Present email sender
@@ -71,7 +74,11 @@ class HomeTableViewController: UITableViewController, MFMailComposeViewControlle
             // show failure alert
         }
         //to test the MessageBody string
-        let message = "Chief Complaint: \(EmtDocModel.chiefComplaint)\nGender: \(EmtDocModel.person.gender), Age: \(EmtDocModel.person.age), Weight: \(EmtDocModel.person.weight)\n"
+        
+        var message = "Chief Complaint: \(EmtDocModel.chiefComplaint)\nGender: \(EmtDocModel.person.gender), Age: \(EmtDocModel.person.age), Weight: \(EmtDocModel.person.weight)"
+        if (EmtDocModel.incident.dateTime != nil) {
+            message = message + ", Time of Incident: \(EmtDocModel.incident.dateTime!)"
+        }
         print (message)
         /// Regardless of if it can or can't, write person to memory and clear peron
         if (EmtDocModel.person.weight != 0) {
@@ -106,7 +113,7 @@ class HomeTableViewController: UITableViewController, MFMailComposeViewControlle
         // We click confirm
         confirmAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action) in
             // Pop to root
-            self.navigationController?.popToRootViewController(animated: true)
+            _ = self.navigationController?.popToRootViewController(animated: true)
             let tempEmail = appDelegate.EmtDocModel.selectedHospital?["email"]
             let emailString = "\(tempEmail!)"
             let arrayEmail: [String] = [emailString]
