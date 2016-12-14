@@ -53,7 +53,7 @@ class SetLocationTimeViewController: UIViewController, CLLocationManagerDelegate
         
         // Add long press recognizer
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotationOnLongPress(gesture:)))
-        longPressGesture.minimumPressDuration = 1.0
+        longPressGesture.minimumPressDuration = 0.02
         self.mapView.addGestureRecognizer(longPressGesture)
         
         self.mapView.delegate = self
