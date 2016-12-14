@@ -11,15 +11,21 @@ import SwiftyJSON
 
 public class JsonIO {
   
-  public static func clearPerson() -> Void {
+  public static func clearHistory() -> Void {
     do {
       let documentDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-      let fileURL = documentDirectoryURL.appendingPathComponent("persons.json")
-      if (FileManager.default.fileExists(atPath: fileURL.path)) {
+      let fileURLPerson = documentDirectoryURL.appendingPathComponent("persons.json")
+        let fileURLVital = documentDirectoryURL.appendingPathComponent("vitalSigns.json")
+      if (FileManager.default.fileExists(atPath: fileURLPerson.path)) {
         do {
-          try " ".write(to: fileURL, atomically: false, encoding: String.Encoding.utf8)
+          try " ".write(to: fileURLPerson, atomically: false, encoding: String.Encoding.utf8)
         }
       }
+        if (FileManager.default.fileExists(atPath: fileURLVital.path)) {
+            do {
+                try " ".write(to: fileURLVital, atomically: false, encoding: String.Encoding.utf8)
+            }
+        }
     }
     catch{}
   }
@@ -124,6 +130,7 @@ public class JsonIO {
           person.set(physician: json["physician"].string!)
           person.set(medications: json["medications"].string!)
           person.set(allergies: json["allergies"].string!)
+            person.weight = json["weight"].intValue
           persons.append(person)
         }
       }
@@ -258,6 +265,26 @@ public class JsonIO {
     
     
     public static func writeVital(vital: VitalSigns) -> Void{
+        var history = JSON(["vitals": "vitals"])
+        
+        do {
+            let documentDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            let fileURL = documentDirectoryURL.appendingPathComponent("vitalSigns.json")
+            if (FileManager.default.fileExists(atPath: fileURL.path)) {
+                //print("has the file")
+                do {
+                    let jsonData = try Data(contentsOf: fileURL)
+                    history = JSON(data: jsonData)
+                }
+                catch {}
+            }
+            if history["vitals"].arrayObject == nil {
+                history = JSON(["vitals": "vitals"])
+                history["vitals"].arrayObject = Array()
+            }
+        }
+        catch{}
+        
         let data = ["bloodPrs": ["bloodPrs": -1],
                     "heartRate": -1,
                     "rhythm": "rhythm",
@@ -279,13 +306,16 @@ public class JsonIO {
         json["pain"].intValue = vital.pain
         json["glascow"].dictionaryObject = vital.getGlascow()
         json["glascowTtl"].int = vital.getGlascowTtl()
+        var tmp = history["vitals"].arrayValue
+        tmp.append(json)
+        history["vitals"] = JSON(tmp)
         
-        if let jsonString = json.rawString() {
+        if let historyData = history.description.data(using: String.Encoding.utf8) {
             do {
                 let documentDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
                 let fileURL = documentDirectoryURL.appendingPathComponent("vitalSigns.json")
                 do {
-                    try jsonString.write(to: fileURL, atomically: false, encoding: String.Encoding.utf8)
+                    try historyData.write(to: fileURL, options: Data.WritingOptions.atomic)
                 }
                 catch {}
                 
@@ -294,35 +324,39 @@ public class JsonIO {
         }
     }
     
-    public static func readVital() -> VitalSigns{
-        let vital = VitalSigns()
+    public static func readVital() -> [VitalSigns]{
+        var vitals = [VitalSigns]()
         do {
             let documentDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             let fileURL = documentDirectoryURL.appendingPathComponent("vitalSigns.json")
             do {
                 let jsonData = try Data(contentsOf: fileURL)
-                let json = JSON(data: jsonData)
-                print (jsonData)
-                let bloodprs = json["bloodPrs"].dictionaryValue
-                for (key, value) in bloodprs{
-                    vital.bloodPrs[key] = value.intValue
+                
+                let jsons = JSON(data: jsonData)
+                for json in jsons["vitals"].arrayValue {
+                    let vital = VitalSigns()
+                    let bloodprs = json["bloodPrs"].dictionaryValue
+                    for (key, value) in bloodprs{
+                        vital.bloodPrs[key] = value.intValue
+                    }
+                    vital.heartRate = json["heartRate"].intValue
+                    vital.rhythm = json["rhythm"].string!
+                    vital.respRate = json["respRate"].intValue
+                    vital.o2Saturation = json["o2Saturation"].doubleValue
+                    vital.endTidalCO2 = json["endTidalCO2"].doubleValue
+                    vital.temp = json["temp"].doubleValue
+                    vital.pain = json["pain"].intValue
+                    let glascow = json["glascow"].dictionaryValue
+                    vital.setGlascow(eye: (glascow["Eye"]?.intValue)!)
+                    vital.setGlascow(motor: (glascow["Motor"]?.intValue)!)
+                    vital.setGlascow(verbal: (glascow["Verbal"]?.intValue)!)
+                    vitals.append(vital)
                 }
-                vital.heartRate = json["heartRate"].intValue
-                vital.rhythm = json["rhythm"].string!
-                vital.respRate = json["respRate"].intValue
-                vital.o2Saturation = json["o2Saturation"].doubleValue
-                vital.endTidalCO2 = json["endTidalCO2"].doubleValue
-                vital.temp = json["temp"].doubleValue
-                vital.pain = json["pain"].intValue
-                let glascow = json["glascow"].dictionaryValue
-                vital.setGlascow(eye: (glascow["Eye"]?.intValue)!)
-                vital.setGlascow(motor: (glascow["Motor"]?.intValue)!)
-                vital.setGlascow(verbal: (glascow["Verbal"]?.intValue)!)
             }
             catch{}
         }
         catch{}
-        return vital
+        return vitals
     }
   
 }

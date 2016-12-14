@@ -10,11 +10,12 @@ import UIKit
 
 class HistoryTableViewController: UITableViewController {
   @IBAction func clearHistoryButtonCleared(_ sender: Any) {
-    JsonIO.clearPerson()
+    JsonIO.clearHistory()
     history = []
     self.tableView.reloadData()
   }
   var history: [PersonID] = JsonIO.readPerson()
+    var historyVitals: [VitalSigns] = JsonIO.readVital()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,7 +40,9 @@ class HistoryTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return history.count
+        print ("historyCount = \(history.count)")
+        print ("historyVitalCount = \(historyVitals.count)")
+        return min(history.count, historyVitals.count)
     }
 
   
@@ -47,7 +50,9 @@ class HistoryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath)
           as! HistoryTableViewCell
         // Configure the cell...
-        let s = history[indexPath.row].fName + " " + history[indexPath.row].lName + " Weight: " + String(history[indexPath.row].weight)
+        print (indexPath.row)
+        print (historyVitals.count)
+        let s = history[indexPath.row].fName + " " + history[indexPath.row].lName + ", " + String(history[indexPath.row].weight) + " lbs, GlasscowScore: " + String(historyVitals[indexPath.row].getGlascowTtl())
         cell.personNameLabel.text = s
 
         return cell

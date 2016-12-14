@@ -81,7 +81,11 @@ class HomeTableViewController: UITableViewController, MFMailComposeViewControlle
         }
         print (message)
         /// Regardless of if it can or can't, write person to memory and clear peron
-        JsonIO.writePerson(person: EmtDocModel.person)
+        if (EmtDocModel.person.weight != 0) {
+            JsonIO.writePerson(person: EmtDocModel.person)
+            JsonIO.writeVital(vital: EmtDocModel.vitals)
+
+        }
         appDelegate.clearModel()
     }
     
