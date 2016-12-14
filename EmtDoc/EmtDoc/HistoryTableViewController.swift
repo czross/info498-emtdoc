@@ -47,7 +47,9 @@ class HistoryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath)
           as! HistoryTableViewCell
         // Configure the cell...
-        cell.personNameLabel.text = history[indexPath.row].fName + " " + history[indexPath.row].lName
+        let s = history[indexPath.row].fName + " " + history[indexPath.row].lName + " Weight: " + String(history[indexPath.row].weight)
+        cell.personNameLabel.text = s
+
         return cell
     }
   
