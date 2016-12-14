@@ -35,9 +35,9 @@ class PersonalInfoViewController: UIViewController {
         self.EmtDocModel = appDelegate.EmtDocModel
         
         // Setup our keyboard types
-        txtDob.keyboardType = UIKeyboardType.numbersAndPunctuation
+        txtDob.keyboardType = UIKeyboardType.numberPad
         txtAge.keyboardType = UIKeyboardType.numberPad
-        txtWeight.keyboardType = UIKeyboardType.decimalPad
+        txtWeight.keyboardType = UIKeyboardType.numberPad
         
         // Prepopulate
         

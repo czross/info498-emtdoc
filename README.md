@@ -25,16 +25,21 @@ This is an app that helps EMT and hospitals in patient care.
 * Select assessments performed and input their results  
 * Send email that automatically generates an overview of the recorded information to the selected hospital  
 * Local storage of the information on the application  
-* Automatically fill in incident location
+* Automatically fill in incident location and time
 
 ## Built with
 This app is built with the following packages:
 * SwiftyJSON
 * Alamofire
+* IQKeyboardManager
+* IQKeyboardManagerSwift
+* AES256CBC
+* SwiftHEXColors
 
 ## Requirements
-* iOS 9
+* iOS 10
 * Xcode 8
+
 
 ## Creators  
 Litthideth Phansiri  
