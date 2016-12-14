@@ -496,14 +496,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XFg-2P-7Ng">
-                                <rect key="frame" x="0.0" y="72" width="375" height="557"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XFg-2P-7Ng">
+                                <rect key="frame" x="0.0" y="64" width="375" height="565"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nM8-ar-4dk">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nM8-ar-4dk">
                                 <rect key="frame" x="234" y="585" width="125" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="8tE-G1-2Ne"/>
+                                </constraints>
                                 <state key="normal" title="Current location"/>
                                 <connections>
                                     <action selector="goToCurrentLocation:" destination="lf6-aN-ZpQ" eventType="touchUpInside" id="bhV-iq-LgR"/>
@@ -511,6 +512,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XFg-2P-7Ng" firstAttribute="leading" secondItem="vtp-18-k0x" secondAttribute="leading" id="4cm-xf-JFs"/>
+                            <constraint firstItem="ZMj-To-9PP" firstAttribute="top" secondItem="nM8-ar-4dk" secondAttribute="bottom" constant="8" symbolic="YES" id="cbp-Fq-Dam"/>
+                            <constraint firstItem="XFg-2P-7Ng" firstAttribute="top" secondItem="2hr-0k-9iK" secondAttribute="bottom" id="d3X-7G-zDV"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="XFg-2P-7Ng" secondAttribute="bottom" constant="38" id="gqM-TM-gR3"/>
+                            <constraint firstItem="nM8-ar-4dk" firstAttribute="trailing" secondItem="vtp-18-k0x" secondAttribute="trailingMargin" id="tES-k9-J7i"/>
+                            <constraint firstAttribute="trailing" secondItem="XFg-2P-7Ng" secondAttribute="trailing" id="xKX-7W-gXh"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Incident Location" id="qFK-PB-SlO">
@@ -666,16 +675,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hu-H0-k6A">
-                                <rect key="frame" x="16" y="72" width="343" height="32"/>
+                                <rect key="frame" x="16" y="72" width="343" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3F-l6-NKd">
-                                <rect key="frame" x="16" y="315" width="343" height="216"/>
+                                <rect key="frame" x="16" y="314.5" width="343" height="216"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Procedures" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxw-71-nsJ">
-                                <rect key="frame" x="16" y="284" width="343" height="52"/>
+                                <rect key="frame" x="16" y="283.5" width="343" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="yGK-0f-9eM"/>
                                 </constraints>
@@ -684,7 +693,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNQ-dV-bqx">
-                                <rect key="frame" x="16" y="539" width="343" height="74"/>
+                                <rect key="frame" x="16" y="538.5" width="343" height="74"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="74" id="MKI-py-gre"/>
                                 </constraints>
@@ -695,7 +704,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="1DF-Ok-G1c">
-                                <rect key="frame" x="16" y="134" width="343" height="142"/>
+                                <rect key="frame" x="16" y="133.5" width="343" height="142"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="BgD-wN-lKL">
                                         <rect key="frame" x="0.0" y="0.0" width="165" height="142"/>
